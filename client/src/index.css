@@ -4,14 +4,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-retro-bg: #001a00;
-  --color-retro-green: #33ff33;
-  --color-retro-green-dim: #1a801a;
+  --color-retro-bg: #ffffff;
+  --color-retro-main: #000000;
+  --color-retro-accent: #00cc00;
+  --color-retro-dim: #666666;
   
   /* Map standard variables to retro theme to prevent errors */
   --color-background: var(--color-retro-bg);
-  --color-foreground: var(--color-retro-green);
-  --color-border: var(--color-retro-green-dim);
+  --color-foreground: var(--color-retro-main);
+  --color-border: var(--color-retro-main);
   
   --font-press-start: "Press Start 2P", cursive;
   --font-vt323: "VT323", monospace;
@@ -54,7 +55,7 @@
     @apply border-border;
   }
   body {
-    @apply font-vt323 antialiased bg-retro-bg text-retro-green overflow-hidden;
+    @apply font-vt323 antialiased bg-retro-bg text-retro-main overflow-hidden;
   }
 }
 
@@ -62,10 +63,10 @@
   .crt-scanline {
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0) 50%,
-      rgba(0, 0, 0, 0.2) 50%,
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.1)
     );
     background-size: 100% 4px;
     position: fixed;
@@ -80,8 +81,8 @@
   .crt-overlay {
     background: radial-gradient(
       circle,
-      rgba(51, 255, 51, 0) 0%,
-      rgba(0, 0, 0, 0.4) 100%
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.1) 100%
     );
     position: fixed;
     top: 0;
@@ -93,6 +94,6 @@
   }
   
   .text-glow {
-    text-shadow: 0 0 5px var(--color-retro-green), 0 0 10px var(--color-retro-green);
+    text-shadow: 0 0 5px var(--color-retro-accent), 0 0 10px var(--color-retro-accent);
   }
 }
