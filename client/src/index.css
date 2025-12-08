@@ -4,49 +4,34 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-retro-bg: #1a1a1a;
-  --color-retro-main: #a0a0a0;
-  --color-retro-accent: #33ff33;
-  --color-retro-dim: #4a4a4a;
+  --color-cyber-bg: #030508;
+  --color-cyber-dark: #0a0f16;
+  --color-cyber-primary: #00f0ff;
+  --color-cyber-secondary: #7000ff;
+  --color-cyber-text: #e0f0ff;
+  --color-cyber-dim: #4a5a6a;
   
-  /* Map standard variables to retro theme to prevent errors */
-  --color-background: var(--color-retro-bg);
-  --color-foreground: var(--color-retro-main);
-  --color-border: var(--color-retro-main);
+  /* Map standard variables to cyber theme */
+  --color-background: var(--color-cyber-bg);
+  --color-foreground: var(--color-cyber-text);
+  --color-border: var(--color-cyber-dim);
   
-  --font-press-start: "Press Start 2P", cursive;
-  --font-vt323: "VT323", monospace;
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
 
-  --animate-cursor-blink: cursor-blink 1s step-end infinite;
-  --animate-crt-flicker: crt-flicker 0.15s infinite;
+  --animate-scan-vertical: scan-vertical 3s linear infinite;
+  --animate-glitch: glitch 1s linear infinite;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
-  @keyframes cursor-blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+  @keyframes scan-vertical {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
   }
 
-  @keyframes crt-flicker {
-    0% { opacity: 0.97; }
-    5% { opacity: 0.95; }
-    10% { opacity: 0.9; }
-    15% { opacity: 0.95; }
-    20% { opacity: 0.99; }
-    25% { opacity: 0.95; }
-    30% { opacity: 0.9; }
-    35% { opacity: 0.96; }
-    40% { opacity: 0.98; }
-    45% { opacity: 0.95; }
-    50% { opacity: 0.99; }
-    55% { opacity: 0.93; }
-    60% { opacity: 0.9; }
-    65% { opacity: 0.96; }
-    70% { opacity: 1; }
-    75% { opacity: 0.97; }
-    80% { opacity: 0.95; }
-    85% { opacity: 0.93; }
-    90% { opacity: 0.96; }
-    95% { opacity: 0.98; }
-    100% { opacity: 0.94; }
+  @keyframes glitch {
+    2%, 64% { transform: translate(2px,0) skew(0deg); }
+    4%, 60% { transform: translate(-2px,0) skew(0deg); }
+    62% { transform: translate(0,0) skew(5deg); }
   }
 }
 
@@ -55,45 +40,46 @@
     @apply border-border;
   }
   body {
-    @apply font-vt323 antialiased bg-retro-bg text-retro-main overflow-hidden;
+    @apply font-rajdhani antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
+    background-image: 
+      linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
   }
 }
 
 @layer utilities {
-  .crt-scanline {
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0.25) 50%,
-      rgba(0, 0, 0, 0.25)
-    );
-    background-size: 100% 4px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 50;
-  }
-
-  .crt-overlay {
-    background: radial-gradient(
-      circle,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.4) 100%
-    );
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 40;
+  .text-glow-cyber {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
   }
   
-  .text-glow {
-    text-shadow: 0 0 5px var(--color-retro-accent), 0 0 10px var(--color-retro-accent);
+  .box-glow-cyber {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15), inset 0 0 15px rgba(0, 240, 255, 0.05);
+  }
+
+  .clip-corner-br {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      0 100%
+    );
+  }
+
+  .clip-corner-tl-br {
+    clip-path: polygon(
+      20px 0,
+      100% 0,
+      100% calc(100% - 20px),
+      calc(100% - 20px) 100%,
+      0 100%,
+      0 20px
+    );
+  }
+
+  /* HUD Grid Background */
+  .hud-grid {
+    mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
   }
 }
