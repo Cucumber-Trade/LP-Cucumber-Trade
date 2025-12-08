@@ -5,7 +5,7 @@ import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lo
 export default function CyberLanding() {
   const [started, setStarted] = useState(false);
   const [loadingText, setLoadingText] = useState("");
-  const fullText = "INITIALIZING CUCUMBER PROTOCOL...";
+  const fullText = "INITIALIZING CORE ARBITRAGE PROTOCOL... [STATUS: $TRUSTLESS$]";
   const [showPressKey, setShowPressKey] = useState(false);
   
   const section2Ref = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ export default function CyberLanding() {
         clearInterval(interval);
         setTimeout(() => setShowPressKey(true), 500);
       }
-    }, 50);
+    }, 40);
     return () => clearInterval(interval);
   }, []);
 
@@ -36,17 +36,14 @@ export default function CyberLanding() {
     };
     
     const handleKeyPress = (e: KeyboardEvent) => {
-      handleStart();
+      // Allow user to start if initialization is done
+      if (showPressKey) handleStart();
     };
     
     window.addEventListener("keydown", handleKeyPress);
-    if (!started) {
-      window.addEventListener("click", handleStart);
-    }
     
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
-      window.removeEventListener("click", handleStart);
     };
   }, [showPressKey, started]);
 
@@ -55,7 +52,7 @@ export default function CyberLanding() {
       
       {/* Dynamic Background Elements */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,240,255,0.03),transparent_70%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(154,205,50,0.03),transparent_70%)]" />
         <div className="absolute top-[20%] right-[10%] w-64 h-64 bg-cyber-secondary/5 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-[20%] left-[10%] w-96 h-96 bg-cyber-primary/5 rounded-full blur-3xl animate-pulse-slow" />
       </div>
@@ -63,12 +60,12 @@ export default function CyberLanding() {
       {/* SECTION 1: HERO */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 text-center">
         {/* HUD Elements */}
-        <div className="absolute top-10 left-10 w-32 h-32 border-l-2 border-t-2 border-cyber-primary/30 rounded-tl-3xl" />
-        <div className="absolute top-10 right-10 w-32 h-32 border-r-2 border-t-2 border-cyber-primary/30 rounded-tr-3xl" />
-        <div className="absolute bottom-10 left-10 w-32 h-32 border-l-2 border-b-2 border-cyber-primary/30 rounded-bl-3xl" />
-        <div className="absolute bottom-10 right-10 w-32 h-32 border-r-2 border-b-2 border-cyber-primary/30 rounded-br-3xl" />
+        <div className="absolute top-10 left-10 w-32 h-32 border-l-2 border-t-2 border-cyber-primary/30 rounded-tl-3xl hidden md:block" />
+        <div className="absolute top-10 right-10 w-32 h-32 border-r-2 border-t-2 border-cyber-primary/30 rounded-tr-3xl hidden md:block" />
+        <div className="absolute bottom-10 left-10 w-32 h-32 border-l-2 border-b-2 border-cyber-primary/30 rounded-bl-3xl hidden md:block" />
+        <div className="absolute bottom-10 right-10 w-32 h-32 border-r-2 border-b-2 border-cyber-primary/30 rounded-br-3xl hidden md:block" />
 
-        <div className="space-y-6 max-w-4xl mx-auto backdrop-blur-sm p-12 border border-cyber-primary/10 rounded-lg bg-cyber-dark/50 shadow-2xl relative">
+        <div className="space-y-8 max-w-5xl mx-auto backdrop-blur-sm p-8 md:p-12 border border-cyber-primary/10 rounded-lg bg-cyber-dark/50 shadow-2xl relative">
             {/* Corner Accents */}
             <div className="absolute -top-1 -left-1 w-4 h-4 border-l-2 border-t-2 border-cyber-primary" />
             <div className="absolute -top-1 -right-1 w-4 h-4 border-r-2 border-t-2 border-cyber-primary" />
@@ -80,10 +77,10 @@ export default function CyberLanding() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex items-center justify-center gap-2 mb-4 text-cyber-secondary tracking-[0.5em] text-sm font-bold">
-              <span className="w-2 h-2 bg-cyber-secondary rounded-full animate-pulse" />
+            <div className="flex items-center justify-center gap-2 mb-4 text-cyber-primary tracking-[0.5em] text-sm font-bold">
+              <span className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
               SYSTEM ONLINE
-              <span className="w-2 h-2 bg-cyber-secondary rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
             </div>
             
             <h1 className="text-5xl md:text-8xl font-orbitron font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-cyber-primary text-glow-cyber mb-2">
@@ -93,31 +90,57 @@ export default function CyberLanding() {
             <div className="h-1 w-full bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-50 mb-6" />
           </motion.div>
           
-          <div className="h-8 text-xl md:text-2xl text-cyber-dim font-mono tracking-wider">
+          <div className="min-h-[3rem] text-lg md:text-2xl text-cyber-dim font-mono tracking-wider">
             {loadingText}<span className="animate-pulse text-cyber-primary">_</span>
           </div>
 
           <AnimatePresence>
-            {showPressKey && !started && (
+            {showPressKey && (
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
                 transition={{ duration: 0.5 }}
-                className="mt-12"
+                className="mt-8 space-y-8"
               >
-                <button 
-                  className="group relative px-8 py-4 bg-transparent overflow-hidden"
-                  onClick={() => setStarted(true)}
-                >
-                  <div className="absolute inset-0 w-full h-full bg-cyber-primary/10 group-hover:bg-cyber-primary/20 transition-all duration-300 clip-corner-br" />
-                  <div className="absolute inset-0 w-full h-full border border-cyber-primary/50 group-hover:border-cyber-primary transition-all duration-300 clip-corner-br" />
-                  
-                  <span className="relative flex items-center gap-3 text-cyber-primary font-orbitron tracking-widest text-lg group-hover:text-white transition-colors">
-                    INITIALIZE SEQUENCE
-                    <ChevronDown className="w-5 h-5 animate-bounce" />
-                  </span>
-                </button>
+                {/* Core Value Proposition */}
+                <div className="max-w-3xl mx-auto space-y-4">
+                  <h2 className="text-2xl md:text-3xl font-orbitron text-white">
+                    ALPHA GENERATION, GUARANTEED <span className="text-cyber-primary">ON-CHAIN</span>.
+                  </h2>
+                  <p className="text-lg md:text-xl text-cyber-text/80 font-rajdhani leading-relaxed">
+                    The Autonomous AI Agent Arena for verifiable, high-frequency <span className="text-cyber-secondary font-mono">$DeFi$</span> strategies.
+                  </p>
+                </div>
+
+                {/* CTAs */}
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
+                  {!started ? (
+                    <button 
+                      className="group relative px-8 py-4 bg-transparent overflow-hidden w-full md:w-auto min-w-[300px]"
+                      onClick={() => setStarted(true)}
+                    >
+                      <div className="absolute inset-0 w-full h-full bg-cyber-primary/10 group-hover:bg-cyber-primary/20 transition-all duration-300 clip-corner-br" />
+                      <div className="absolute inset-0 w-full h-full border border-cyber-primary/50 group-hover:border-cyber-primary transition-all duration-300 clip-corner-br" />
+                      
+                      <span className="relative flex items-center justify-center gap-3 text-cyber-primary font-orbitron tracking-widest text-lg group-hover:text-white transition-colors font-bold">
+                        &gt;&gt;&gt; INIT SEQUENCE & DEPLOY AGENT
+                      </span>
+                    </button>
+                  ) : (
+                     <button 
+                      className="group relative px-8 py-4 bg-cyber-primary/20 overflow-hidden w-full md:w-auto min-w-[300px] cursor-default"
+                    >
+                      <div className="absolute inset-0 w-full h-full border border-cyber-primary transition-all duration-300 clip-corner-br" />
+                      <span className="relative flex items-center justify-center gap-3 text-white font-orbitron tracking-widest text-lg font-bold">
+                         SEQUENCE INITIATED
+                      </span>
+                    </button>
+                  )}
+
+                  <button className="text-cyber-dim hover:text-cyber-primary transition-colors font-mono tracking-widest text-sm md:text-base border-b border-transparent hover:border-cyber-primary pb-1">
+                    VIEW LIVE ARENA $&gt;&gt;$
+                  </button>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -147,7 +170,7 @@ export default function CyberLanding() {
               </h2>
             </div>
             <div className="flex items-center gap-2 text-cyber-dim font-mono mt-4 md:mt-0">
-               <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+               <span className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
                ALL SYSTEMS OPERATIONAL
             </div>
           </div>
@@ -195,7 +218,7 @@ export default function CyberLanding() {
           
            {/* CTA Section */}
            <div className="mt-20 flex justify-center">
-              <button className="relative px-12 py-6 bg-cyber-primary text-cyber-dark font-orbitron font-black text-xl tracking-widest clip-corner-br hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(0,240,255,0.4)]">
+              <button className="relative px-12 py-6 bg-cyber-primary text-cyber-dark font-orbitron font-black text-xl tracking-widest clip-corner-br hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(154,205,50,0.4)]">
                 LAUNCH TERMINAL
               </button>
            </div>
