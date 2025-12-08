@@ -6,8 +6,8 @@
 @theme inline {
   --color-cyber-bg: #030508;
   --color-cyber-dark: #0a0f16;
-  --color-cyber-primary: #00FFFF;
-  --color-cyber-secondary: #9ACD32;
+  --color-cyber-primary: #9ACD32;
+  --color-cyber-secondary: #00FFFF;
   --color-cyber-tertiary: #008000;
   --color-cyber-text: #e0f0ff;
   --color-cyber-dim: #4a5a6a;
@@ -43,19 +43,19 @@
   body {
     @apply font-rajdhani antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
     background-image: 
-      linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(154, 205, 50, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(154, 205, 50, 0.03) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 }
 
 @layer utilities {
   .text-glow-cyber {
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(154, 205, 50, 0.5), 0 0 20px rgba(154, 205, 50, 0.3);
   }
   
   .box-glow-cyber {
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15), inset 0 0 15px rgba(0, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(154, 205, 50, 0.15), inset 0 0 15px rgba(154, 205, 50, 0.05);
   }
 
   .clip-corner-br {
