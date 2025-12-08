@@ -1,21 +1,13 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "wouter";
 
 export default function RetroLanding() {
   const [started, setStarted] = useState(false);
   const [loadingText, setLoadingText] = useState("");
-  const fullText = "SYSTEM INITIALIZED...";
+  const fullText = "PICKLE AI INITIALIZED ...";
   const [showPressKey, setShowPressKey] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   
-  // Pong Game State
-  const [ballPos, setBallPos] = useState({ x: 50, y: 50 });
-  const [ballVel, setBallVel] = useState({ x: 0.5, y: 0.3 });
-  const [paddle1Y, setPaddle1Y] = useState(40);
-  const [paddle2Y, setPaddle2Y] = useState(40);
-  const gameLoopRef = useRef<number>(0);
-
   const menuItems = ["START GAME", "HIGH SCORES", "SETTINGS", "CREDITS"];
 
   // Typewriter effect
@@ -67,76 +59,12 @@ export default function RetroLanding() {
     };
   }, [showPressKey, started, selectedIndex]);
 
-  // Pong Animation Loop (Background)
-  useEffect(() => {
-    const updateGame = () => {
-      setBallPos((prev) => {
-        let newX = prev.x + ballVel.x;
-        let newY = prev.y + ballVel.y;
-        let newVelX = ballVel.x;
-        let newVelY = ballVel.y;
-
-        // Wall collisions (Top/Bottom)
-        if (newY <= 0 || newY >= 98) {
-          newVelY = -newVelY;
-        }
-
-        // Paddle collisions (Simple AI)
-        // Left Paddle
-        if (newX <= 5) {
-            newVelX = Math.abs(newVelX);
-        }
-        // Right Paddle
-        if (newX >= 95) {
-            newVelX = -Math.abs(newVelX);
-        }
-
-        setBallVel({ x: newVelX, y: newVelY });
-        
-        // Simple AI for paddles to follow ball with delay
-        setPaddle1Y(p => p + (newY - p - 5) * 0.05);
-        setPaddle2Y(p => p + (newY - p - 5) * 0.05);
-
-        return { x: newX, y: newY };
-      });
-      
-      gameLoopRef.current = requestAnimationFrame(updateGame);
-    };
-
-    gameLoopRef.current = requestAnimationFrame(updateGame);
-    return () => cancelAnimationFrame(gameLoopRef.current);
-  }, [ballVel]);
-
-
   return (
     <div className={`relative min-h-screen w-full bg-retro-bg text-retro-green font-vt323 overflow-hidden select-none ${!started ? 'cursor-none' : ''}`}>
       {/* CRT Effects */}
       <div className="crt-scanline" />
       <div className="crt-overlay" />
       
-      {/* Background Pong Game */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
-        <div className="absolute left-0 w-full top-1/2 h-0.5 bg-retro-green-dim border-t border-dashed border-retro-green opacity-30" />
-        
-        {/* Paddle 1 */}
-        <div 
-          className="absolute left-4 w-4 bg-retro-green shadow-[0_0_10px_var(--color-retro-green)]"
-          style={{ top: `${paddle1Y}%`, height: '10%' }}
-        />
-        
-        {/* Paddle 2 */}
-        <div 
-          className="absolute right-4 w-4 bg-retro-green shadow-[0_0_10px_var(--color-retro-green)]"
-          style={{ top: `${paddle2Y}%`, height: '10%' }}
-        />
-        
-        {/* Ball */}
-        <div 
-          className="absolute w-4 h-4 bg-retro-green shadow-[0_0_15px_var(--color-retro-green)]"
-          style={{ left: `${ballPos.x}%`, top: `${ballPos.y}%` }}
-        />
-      </div>
-
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 text-center">
         <AnimatePresence mode="wait">
@@ -149,7 +77,7 @@ export default function RetroLanding() {
               className="space-y-8"
             >
               <h1 className="text-4xl md:text-6xl font-press-start text-glow tracking-wider">
-                PONG_OS v1.0
+                CUCUMBER.TRADE v1.0
               </h1>
               
               <div className="h-8 text-2xl md:text-3xl text-retro-green-dim">
