@@ -8,6 +8,11 @@
   --color-retro-green: #33ff33;
   --color-retro-green-dim: #1a801a;
   
+  /* Map standard variables to retro theme to prevent errors */
+  --color-background: var(--color-retro-bg);
+  --color-foreground: var(--color-retro-green);
+  --color-border: var(--color-retro-green-dim);
+  
   --font-press-start: "Press Start 2P", cursive;
   --font-vt323: "VT323", monospace;
 
