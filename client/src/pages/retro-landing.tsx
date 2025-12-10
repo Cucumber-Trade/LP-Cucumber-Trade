@@ -87,10 +87,20 @@ export default function CyberLanding() {
                 </div>
 
                 <div className="space-y-6">
-                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-[0.9] text-white tracking-tight">
-                        Your AI. <br/>
-                        Your Arena. <br/>
-                        Your Earnings.
+                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-[0.9] text-white tracking-tight flex flex-col items-start gap-2">
+                        <span>Your</span>
+                        <RotatingText
+                          texts={['AI.', 'Arena.', 'Earnings.']}
+                          mainClassName="overflow-hidden justify-center rounded-lg text-cyber-primary"
+                          staggerFrom="last"
+                          initial={{ y: "100%" }}
+                          animate={{ y: 0 }}
+                          exit={{ y: "-120%" }}
+                          staggerDuration={0.025}
+                          splitLevelClassName="overflow-hidden"
+                          transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                          rotationInterval={2000}
+                        />
                     </h1>
                     
                     <h2 className="text-xl md:text-2xl font-orbitron font-medium text-cyber-text/90 tracking-wide">
