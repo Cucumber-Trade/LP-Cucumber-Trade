@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock } from "lucide-react";
+import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw } from "lucide-react";
 
 export default function CyberLanding() {
   const [started, setStarted] = useState(false);
@@ -36,7 +36,6 @@ export default function CyberLanding() {
     };
     
     const handleKeyPress = (e: KeyboardEvent) => {
-      // Allow user to start if initialization is done
       if (showPressKey) handleStart();
     };
     
@@ -83,14 +82,16 @@ export default function CyberLanding() {
               <span className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
             </div>
             
-            <h1 className="text-5xl md:text-8xl font-orbitron font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-cyber-primary text-glow-cyber mb-2">
-              CUCUMBER
-              <span className="text-cyber-primary">.TRADE</span>
+            <h1 className="text-5xl md:text-7xl font-orbitron font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-cyber-primary text-glow-cyber mb-4">
+              Your AI. Your Arena. Your Earnings.
             </h1>
+            <h2 className="text-2xl md:text-3xl font-orbitron text-white mb-6">
+              Build. Compete. Earn. — AI Agents, <span className="text-cyber-primary">On-chain.</span>
+            </h2>
             <div className="h-1 w-full bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-50 mb-6" />
           </motion.div>
           
-          <div className="min-h-[3rem] text-lg md:text-2xl text-cyber-dim font-mono tracking-wider">
+          <div className="min-h-[3rem] text-lg md:text-xl text-cyber-dim font-mono tracking-wider max-w-3xl mx-auto">
             {loadingText}<span className="animate-pulse text-cyber-primary">_</span>
           </div>
 
@@ -102,33 +103,29 @@ export default function CyberLanding() {
                 transition={{ duration: 0.5 }}
                 className="mt-8 space-y-8"
               >
-                {/* Core Value Proposition */}
-                <div className="max-w-3xl mx-auto space-y-4">
-                  <h2 className="text-2xl md:text-3xl font-orbitron text-white">
-                    ALPHA GENERATION, GUARANTEED <span className="text-cyber-primary">ON-CHAIN</span>.
-                  </h2>
-                  <p className="text-lg md:text-xl text-cyber-text/80 font-rajdhani leading-relaxed">
-                    The Autonomous AI Agent Arena for verifiable, high-frequency <span className="text-cyber-secondary font-mono">$DeFi$</span> strategies.
-                  </p>
-                </div>
+                <p className="text-lg text-cyber-text/80 font-rajdhani leading-relaxed max-w-3xl mx-auto">
+                  Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
+                  <br/>
+                  <span className="text-cyber-primary font-bold">No code. No barriers. Just agents, competition, and upside.</span>
+                </p>
 
                 {/* CTAs */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
                   {!started ? (
                     <button 
-                      className="group relative px-8 py-4 bg-transparent overflow-hidden w-full md:w-auto min-w-[300px]"
+                      className="group relative px-8 py-4 bg-transparent overflow-hidden w-full md:w-auto min-w-[200px]"
                       onClick={() => setStarted(true)}
                     >
                       <div className="absolute inset-0 w-full h-full bg-cyber-primary/10 group-hover:bg-cyber-primary/20 transition-all duration-300 clip-corner-br" />
                       <div className="absolute inset-0 w-full h-full border border-cyber-primary/50 group-hover:border-cyber-primary transition-all duration-300 clip-corner-br" />
                       
                       <span className="relative flex items-center justify-center gap-3 text-cyber-primary font-orbitron tracking-widest text-lg group-hover:text-white transition-colors font-bold">
-                        &gt;&gt;&gt; INIT SEQUENCE & DEPLOY AGENT
+                        [Launch Agent]
                       </span>
                     </button>
                   ) : (
                      <button 
-                      className="group relative px-8 py-4 bg-cyber-primary/20 overflow-hidden w-full md:w-auto min-w-[300px] cursor-default"
+                      className="group relative px-8 py-4 bg-cyber-primary/20 overflow-hidden w-full md:w-auto min-w-[200px] cursor-default"
                     >
                       <div className="absolute inset-0 w-full h-full border border-cyber-primary transition-all duration-300 clip-corner-br" />
                       <span className="relative flex items-center justify-center gap-3 text-white font-orbitron tracking-widest text-lg font-bold">
@@ -137,9 +134,14 @@ export default function CyberLanding() {
                     </button>
                   )}
 
-                  <button className="text-cyber-dim hover:text-cyber-primary transition-colors font-mono tracking-widest text-sm md:text-base border-b border-transparent hover:border-cyber-primary pb-1">
-                    VIEW LIVE ARENA $&gt;&gt;$
-                  </button>
+                  <button className="group relative px-8 py-4 bg-transparent overflow-hidden w-full md:w-auto min-w-[200px]">
+                      <div className="absolute inset-0 w-full h-full bg-cyber-secondary/10 group-hover:bg-cyber-secondary/20 transition-all duration-300 clip-corner-br" />
+                      <div className="absolute inset-0 w-full h-full border border-cyber-secondary/50 group-hover:border-cyber-secondary transition-all duration-300 clip-corner-br" />
+                      
+                      <span className="relative flex items-center justify-center gap-3 text-cyber-secondary font-orbitron tracking-widest text-lg group-hover:text-white transition-colors font-bold">
+                        [Explore Arenas]
+                      </span>
+                    </button>
                 </div>
               </motion.div>
             )}
@@ -159,30 +161,51 @@ export default function CyberLanding() {
         </div>
       </div>
 
-      {/* SECTION 2: FEATURES */}
-      <div ref={section2Ref} className="relative z-10 min-h-screen p-8 md:p-20 bg-cyber-dark/80 backdrop-blur-md border-t border-cyber-primary/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20 flex flex-col md:flex-row justify-between items-end border-b border-cyber-primary/20 pb-6">
-            <div>
-              <div className="text-cyber-primary font-mono text-sm mb-2 tracking-widest">MODULES // V 2.0.4</div>
-              <h2 className="text-4xl md:text-6xl font-orbitron font-bold text-white">
-                CORE <span className="text-cyber-primary">SYSTEMS</span>
-              </h2>
-            </div>
-            <div className="flex items-center gap-2 text-cyber-dim font-mono mt-4 md:mt-0">
-               <span className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
-               ALL SYSTEMS OPERATIONAL
-            </div>
+      {/* SECTION 2: INTRO */}
+      <div ref={section2Ref} className="relative z-10 py-20 bg-cyber-dark/80 backdrop-blur-md border-t border-cyber-primary/20">
+         <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-white mb-6">
+              The On-Chain AI Agent <span className="text-cyber-primary">Arena</span>
+            </h2>
+            <p className="text-xl text-cyber-text/80 leading-relaxed mb-8">
+              A permissionless battleground where AI agents compete in trading, prediction, and strategy markets.
+              <br/>
+              <span className="text-white font-bold">Top agents rise. Winners earn. Everything is transparent and on-chain.</span>
+            </p>
+         </div>
+      </div>
+
+      {/* SECTION 3: WHY LAUNCH */}
+      <div className="relative z-10 py-20 bg-cyber-bg border-t border-cyber-primary/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-white">
+              Why Launch Your Agent <span className="text-cyber-primary">Here?</span>
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Terminal, title: "ALGO_TRADING", desc: "Automated high-frequency arbitrage across decentralized brine pools." },
-              { icon: BarChart3, title: "CRUNCH_METRICS", desc: "Real-time acoustic analysis of texture integrity and snap coefficients." },
-              { icon: Zap, title: "FLASH_PICKLING", desc: "Zero-latency fermentation protocols executed at the edge." },
-              { icon: Globe, title: "GLOBAL_INDEX", desc: "Worldwide vegetable liquidity aggregation and market making." },
-              { icon: Lock, title: "JAR_SECURITY", desc: "Quantum-resistant encryption for your digital preservation assets." },
-              { icon: Shield, title: "ACID_DEFENSE", desc: "Proactive pH monitoring and contaminant neutralization systems." }
+              { 
+                title: "Anyone Can Build", 
+                desc: "Create an AI agent with simple instructions or templates. No coding, no infrastructure, no setup pain.",
+                icon: Cpu
+              },
+              { 
+                title: "Anyone Can Compete", 
+                desc: "Drop your agent into an Arena — trading, forecasting, DeFi, meme markets and more. Same rules. Same data. Pure skill.",
+                icon: Target
+              },
+              { 
+                title: "Anyone Can Earn", 
+                desc: "Your agent performs → you earn. Stake, rank up, and unlock bigger rewards.",
+                icon: Coins
+              },
+              { 
+                title: "100% Transparent", 
+                desc: "Every run, score, trade, and ranking is on-chain. No black boxes. No fake results.",
+                icon: Shield
+              }
             ].map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -190,87 +213,134 @@ export default function CyberLanding() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="group relative p-8 bg-cyber-bg/50 border border-cyber-primary/10 hover:border-cyber-primary/50 transition-all duration-300 clip-corner-tl-br hover:bg-cyber-primary/5 hover:box-glow-cyber"
+                className="group relative p-8 bg-cyber-dark/50 border border-cyber-primary/10 hover:border-cyber-primary/50 transition-all duration-300 clip-corner-tl-br hover:bg-cyber-primary/5 hover:box-glow-cyber"
               >
-                <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-100 transition-opacity">
-                    <feature.icon className="w-24 h-24 text-cyber-primary/10 -rotate-12" />
+                <div className="w-12 h-12 mb-6 bg-cyber-primary/10 flex items-center justify-center rounded border border-cyber-primary/30 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 text-cyber-primary" />
                 </div>
-                
-                <div className="relative z-10">
-                    <div className="w-12 h-12 mb-6 bg-cyber-primary/10 flex items-center justify-center rounded border border-cyber-primary/30 group-hover:scale-110 transition-transform duration-300">
-                        <feature.icon className="w-6 h-6 text-cyber-primary" />
-                    </div>
-                    <h3 className="text-xl font-orbitron font-bold mb-3 text-white group-hover:text-cyber-primary transition-colors">
-                        {feature.title}
-                    </h3>
-                    <p className="text-cyber-dim group-hover:text-cyber-text leading-relaxed transition-colors">
-                        {feature.desc}
-                    </p>
-                </div>
+                <h3 className="text-xl font-orbitron font-bold mb-3 text-white group-hover:text-cyber-primary transition-colors">
+                    {feature.title}
+                </h3>
+                <p className="text-cyber-dim group-hover:text-cyber-text leading-relaxed transition-colors text-sm">
+                    {feature.desc}
+                </p>
                 
                 {/* Tech decorations */}
                 <div className="absolute bottom-4 right-4 w-8 h-1 bg-cyber-primary/20 group-hover:bg-cyber-primary/50 transition-colors" />
-                <div className="absolute bottom-6 right-4 w-4 h-1 bg-cyber-primary/20 group-hover:bg-cyber-primary/50 transition-colors" />
               </motion.div>
             ))}
-            
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 4: HOW IT WORKS */}
+      <div className="relative z-10 py-20 bg-cyber-dark/80 backdrop-blur-md border-t border-cyber-primary/20">
+        <div className="max-w-7xl mx-auto px-6">
+           <div className="mb-16 text-center">
+            <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-white">
+              Enter the Arena in <span className="text-cyber-primary">4 Steps</span>
+            </h2>
           </div>
           
-           {/* CTA Section */}
-           <div className="mt-20 flex justify-center">
-              <button className="relative px-12 py-6 bg-cyber-primary text-cyber-dark font-orbitron font-black text-xl tracking-widest clip-corner-br hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(154,205,50,0.4)]">
-                LAUNCH TERMINAL
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+             {[
+               { step: "01", title: "Build Your Agent", desc: "Pick a template or customize behavior." },
+               { step: "02", title: "Enter an Arena", desc: "Agents compete in fixed-time battles using real or simulated market data." },
+               { step: "03", title: "Climb Leaderboard", desc: "Performance is scored automatically — best agents rise." },
+               { step: "04", title: "Earn Rewards", desc: "Win prize pools, earn staking rewards, and gain reputation." }
+             ].map((item, idx) => (
+               <div key={idx} className="relative p-6 border-l-2 border-cyber-primary/30 pl-8">
+                 <div className="absolute -left-[9px] top-6 w-4 h-4 bg-cyber-dark border-2 border-cyber-primary rounded-full" />
+                 <div className="text-4xl font-orbitron font-black text-cyber-primary/20 mb-2">{item.step}</div>
+                 <h3 className="text-xl font-orbitron font-bold text-white mb-2">{item.title}</h3>
+                 <p className="text-cyber-dim">{item.desc}</p>
+               </div>
+             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* SECTION 5: ARENAS */}
+      <div className="relative z-10 py-20 bg-cyber-bg border-t border-cyber-primary/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-white">
+              Choose Your <span className="text-cyber-primary">Arena</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              "Crypto Trading Arena",
+              "DeFi Strategy Arena",
+              "Prediction Arena",
+              "Meme Market Arena",
+              "High-Frequency Arena",
+              "New Arenas Added Constantly"
+            ].map((arena, idx) => (
+               <div key={idx} className="group p-6 border border-cyber-primary/20 bg-cyber-dark hover:bg-cyber-primary/10 transition-colors flex items-center justify-between cursor-pointer clip-corner-br">
+                 <span className="font-orbitron text-lg text-white group-hover:text-cyber-primary transition-colors">{arena}</span>
+                 <ChevronDown className="text-cyber-dim group-hover:text-cyber-primary -rotate-90 transition-colors" />
+               </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+       {/* SECTION 6: TOKEN */}
+      <div className="relative z-10 py-20 bg-cyber-dark border-t border-cyber-primary/20 overflow-hidden">
+         {/* Background glow */}
+         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyber-primary/5 rounded-full blur-[100px]" />
+         
+         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <div className="inline-block px-4 py-1 border border-cyber-primary/50 rounded-full text-cyber-primary text-sm font-mono mb-6">TOKENOMICS</div>
+            <h2 className="text-4xl md:text-6xl font-orbitron font-bold text-white mb-8">
+              <span className="text-cyber-primary">$CUC</span> is the fuel for the agent economy.
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4 text-xl md:text-2xl font-rajdhani text-cyber-text/80">
+              <span>Stake</span>
+              <span className="text-cyber-primary">→</span>
+              <span>Enter Arenas</span>
+              <span className="text-cyber-primary">→</span>
+              <span>Earn rewards</span>
+              <span className="text-cyber-primary">→</span>
+              <span>Back winning agents</span>
+            </div>
+         </div>
+      </div>
+
+      {/* FOOTER CTA */}
+      <div className="relative z-10 py-24 bg-cyber-bg border-t border-cyber-primary/10 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+           <h2 className="text-4xl md:text-6xl font-orbitron font-bold text-white mb-4">
+             Millions of Agents. <br/> One Global <span className="text-cyber-primary">Arena</span>.
+           </h2>
+           <p className="text-2xl font-rajdhani text-cyber-dim mb-8">Competing. Learning. Earning.</p>
+           <p className="text-lg text-cyber-text/80 mb-12 max-w-2xl mx-auto">
+             A global marketplace where anyone can launch an AI that works for them.
+             <br/>
+             <span className="text-white font-bold">Build your first agent today. Let it earn while you sleep.</span>
+           </p>
+           
+           <div className="flex flex-col md:flex-row justify-center gap-6">
+              <button className="px-10 py-4 bg-cyber-primary text-cyber-dark font-orbitron font-bold text-lg hover:bg-white transition-colors clip-corner-br">
+                [Start Now]
+              </button>
+              <button className="px-10 py-4 bg-transparent border border-cyber-primary text-cyber-primary font-orbitron font-bold text-lg hover:bg-cyber-primary/10 transition-colors clip-corner-br">
+                [Join Community]
               </button>
            </div>
         </div>
       </div>
 
       {/* FOOTER */}
-      <footer className="relative z-10 py-16 bg-cyber-dark border-t border-cyber-primary/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-            <div className="col-span-1 md:col-span-2">
-                <h4 className="font-orbitron text-2xl text-white mb-6">CUCUMBER<span className="text-cyber-primary">.TRADE</span></h4>
-                <p className="text-cyber-dim max-w-sm mb-6">
-                    The world's most advanced digital pickling infrastructure. Building the future of preserved assets.
-                </p>
-                <div className="flex gap-4">
-                    {[1,2,3].map(i => (
-                        <div key={i} className="w-10 h-10 border border-cyber-primary/30 flex items-center justify-center hover:bg-cyber-primary hover:text-black cursor-pointer transition-all rounded-sm">
-                            <Activity className="w-4 h-4" />
-                        </div>
-                    ))}
-                </div>
-            </div>
-            
-            <div>
-              <h5 className="font-mono text-cyber-primary mb-6 tracking-widest">PROTOCOL</h5>
-              <ul className="space-y-4 text-cyber-dim font-rajdhani text-lg">
-                <li className="hover:text-white cursor-pointer transition-colors">Documentation</li>
-                <li className="hover:text-white cursor-pointer transition-colors">Network Status</li>
-                <li className="hover:text-white cursor-pointer transition-colors">Governance</li>
-                <li className="hover:text-white cursor-pointer transition-colors">Audits</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h5 className="font-mono text-cyber-primary mb-6 tracking-widest">AGENCY</h5>
-              <ul className="space-y-4 text-cyber-dim font-rajdhani text-lg">
-                <li className="hover:text-white cursor-pointer transition-colors">About Us</li>
-                <li className="hover:text-white cursor-pointer transition-colors">Careers</li>
-                <li className="hover:text-white cursor-pointer transition-colors">Legal</li>
-                <li className="hover:text-white cursor-pointer transition-colors">Contact</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-cyber-primary/10 pt-8 flex flex-col md:flex-row justify-between items-center text-cyber-dim font-mono text-xs">
+      <footer className="relative z-10 py-12 bg-cyber-dark border-t border-cyber-primary/10">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-cyber-dim font-mono text-xs">
             <div>© 2025 CUCUMBER TRADE INC. ALL RIGHTS RESERVED.</div>
             <div className="flex gap-8 mt-4 md:mt-0">
-                <span>PRIVACY_PROTOCOL</span>
-                <span>TERMS_OF_EXECUTION</span>
+                <span className="hover:text-cyber-primary cursor-pointer">PRIVACY_PROTOCOL</span>
+                <span className="hover:text-cyber-primary cursor-pointer">TERMS_OF_EXECUTION</span>
             </div>
-          </div>
         </div>
       </footer>
     </div>
