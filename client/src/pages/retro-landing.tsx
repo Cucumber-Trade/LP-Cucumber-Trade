@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw, Menu } from "lucide-react";
 import MagicBento from "../components/MagicBento";
+import RotatingText from "../components/RotatingText";
 
 export default function CyberLanding() {
   const [started, setStarted] = useState(false);
