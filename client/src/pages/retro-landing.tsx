@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw, Menu } from "lucide-react";
-import heroImage from '@assets/generated_images/abstract_3d_bio-digital_swirl_in_neon_green.png';
 
 export default function CyberLanding() {
   const [started, setStarted] = useState(false);
@@ -119,14 +118,6 @@ export default function CyberLanding() {
             {/* Right Visual */}
             <div className="relative h-[600px] w-full flex items-center justify-center lg:justify-end">
                 <div className="absolute inset-0 bg-cyber-primary/20 blur-[100px] rounded-full opacity-20" />
-                <motion.img 
-                    src={heroImage} 
-                    alt="Abstract Bio-Digital Form"
-                    className="relative z-10 w-full max-w-[800px] object-contain drop-shadow-[0_0_50px_rgba(154,205,50,0.3)]"
-                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
-                />
             </div>
         </div>
       </div>
