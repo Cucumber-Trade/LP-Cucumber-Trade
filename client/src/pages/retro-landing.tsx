@@ -108,12 +108,6 @@ export default function CyberLanding() {
                     <h2 className="text-xl md:text-2xl font-orbitron font-medium text-cyber-text/90 tracking-wide">
                         Build. Compete. Earn. — AI Agents, On-chain.
                     </h2>
-
-                    <p className="text-lg text-cyber-dim font-rajdhani max-w-lg leading-relaxed">
-                        Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
-                        <br/>
-                        <span className="text-cyber-text/80 block mt-4">No code. No barriers. Just agents, competition, and upside.</span>
-                    </p>
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-4 w-full">
