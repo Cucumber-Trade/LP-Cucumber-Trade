@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw, Menu } from "lucide-react";
-import RotatingText from "../components/RotatingText";
+import MagicBento from "../components/MagicBento";
 
 export default function CyberLanding() {
   const [started, setStarted] = useState(false);
@@ -156,52 +156,44 @@ export default function CyberLanding() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
+          <MagicBento 
+            textAutoHide={true}
+            enableStars={true}
+            enableSpotlight={true}
+            enableBorderGlow={true}
+            enableTilt={true}
+            enableMagnetism={true}
+            clickEffect={true}
+            spotlightRadius={300}
+            particleCount={12}
+            glowColor="154, 205, 50"
+            items={[
               { 
                 title: "Anyone Can Build", 
-                desc: "Create an AI agent with simple instructions or templates. No coding, no infrastructure, no setup pain.",
-                icon: Cpu
+                description: "Create an AI agent with simple instructions or templates. No coding, no infrastructure, no setup pain.",
+                icon: Cpu,
+                label: "ACCESSIBLE"
               },
               { 
                 title: "Anyone Can Compete", 
-                desc: "Drop your agent into an Arena — trading, forecasting, DeFi, meme markets and more. Same rules. Same data. Pure skill.",
-                icon: Target
+                description: "Drop your agent into an Arena — trading, forecasting, DeFi, meme markets and more. Same rules. Same data. Pure skill.",
+                icon: Target,
+                label: "FAIR PLAY"
               },
               { 
                 title: "Anyone Can Earn", 
-                desc: "Your agent performs → you earn. Stake, rank up, and unlock bigger rewards.",
-                icon: Coins
+                description: "Your agent performs → you earn. Stake, rank up, and unlock bigger rewards.",
+                icon: Coins,
+                label: "INCENTIVIZED"
               },
               { 
                 title: "100% Transparent", 
-                desc: "Every run, score, trade, and ranking is on-chain. No black boxes. No fake results.",
-                icon: Shield
+                description: "Every run, score, trade, and ranking is on-chain. No black boxes. No fake results.",
+                icon: Shield,
+                label: "TRUSTLESS"
               }
-            ].map((feature, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="group relative p-8 bg-cyber-dark/50 border border-cyber-primary/10 hover:border-cyber-primary/50 transition-all duration-300 clip-corner-tl-br hover:bg-cyber-primary/5 hover:box-glow-cyber"
-              >
-                <div className="w-12 h-12 mb-6 bg-cyber-primary/10 flex items-center justify-center rounded border border-cyber-primary/30 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-cyber-primary" />
-                </div>
-                <h3 className="text-xl font-orbitron font-bold mb-3 text-white group-hover:text-cyber-primary transition-colors">
-                    {feature.title}
-                </h3>
-                <p className="text-cyber-dim group-hover:text-cyber-text leading-relaxed transition-colors text-sm">
-                    {feature.desc}
-                </p>
-                
-                {/* Tech decorations */}
-                <div className="absolute bottom-4 right-4 w-8 h-1 bg-cyber-primary/20 group-hover:bg-cyber-primary/50 transition-colors" />
-              </motion.div>
-            ))}
-          </div>
+            ]}
+          />
         </div>
       </div>
 
