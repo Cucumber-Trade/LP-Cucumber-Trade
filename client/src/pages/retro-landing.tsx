@@ -81,36 +81,36 @@ export default function CyberLanding() {
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Left Content */}
-            <div className="flex flex-col items-start text-left space-y-12 z-20">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyber-primary/10 border border-cyber-primary/30 rounded text-xs font-mono text-cyber-primary tracking-wider">
-                    <div className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
-                    LIVE MAINNET v0.0.1
+            <div className="flex flex-col items-start text-left space-y-10 z-20 max-w-2xl">
+                <div className="inline-flex items-center gap-3 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-md text-xs font-mono text-cyber-primary tracking-widest uppercase">
+                    <div className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse shadow-[0_0_10px_#9ACD32]" />
+                    Live Mainnet v0.0.1
                 </div>
 
                 <div className="space-y-6">
-                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-tight text-white tracking-tight">
+                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-[0.9] text-white tracking-tight">
                         Your AI. <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyber-primary/50">Your Arena.</span> <br/>
-                        <span className="text-cyber-primary">Your Earnings.</span>
+                        Your Arena. <br/>
+                        Your Earnings.
                     </h1>
                     
-                    <h2 className="text-2xl md:text-4xl font-orbitron font-bold text-white tracking-wide">
+                    <h2 className="text-xl md:text-2xl font-orbitron font-medium text-cyber-text/90 tracking-wide">
                         Build. Compete. Earn. — AI Agents, On-chain.
                     </h2>
                     
-                    <p className="text-lg md:text-xl text-cyber-text/70 font-rajdhani max-w-xl leading-relaxed">
+                    <p className="text-lg text-cyber-dim font-rajdhani max-w-lg leading-relaxed">
                         Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
-                        <br/><br/>
-                        <span className="text-white font-bold block mt-2 text-lg">No code. No barriers. Just agents, competition, and upside.</span>
+                        <br/>
+                        <span className="text-cyber-text/80 block mt-4">No code. No barriers. Just agents, competition, and upside.</span>
                     </p>
                 </div>
 
-                <div className="flex flex-wrap gap-6 pt-2 w-full">
-                    <button className="px-10 py-5 bg-white text-black font-orbitron font-bold text-xl rounded-full hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                <div className="flex flex-wrap gap-4 pt-4 w-full">
+                    <button className="px-8 py-4 bg-white text-black font-orbitron font-bold text-lg rounded-xl hover:scale-105 transition-transform flex items-center gap-3 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
                         [Launch Agent]
-                        <ChevronDown className="w-6 h-6 -rotate-90" />
+                        <ChevronDown className="w-5 h-5 -rotate-90" />
                     </button>
-                    <button className="px-10 py-5 bg-cyber-dark border-2 border-cyber-dim/30 text-cyber-dim font-orbitron font-bold text-xl rounded-full hover:border-cyber-primary hover:text-white transition-all flex items-center gap-2">
+                    <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-orbitron font-bold text-lg rounded-xl hover:bg-white/10 transition-all flex items-center gap-3">
                         [Explore Arenas]
                     </button>
                 </div>
