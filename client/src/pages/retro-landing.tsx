@@ -89,7 +89,7 @@ export default function CyberLanding() {
                 </div>
 
                 <div className="space-y-6">
-                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-[0.9] text-white tracking-tight flex items-center gap-4 flex-wrap">
+                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-[0.9] text-white tracking-tight flex items-center gap-4 whitespace-nowrap">
                         <span>Your</span>
                         <RotatingText
                           texts={['AI.', 'Arena.', 'Earnings.']}
