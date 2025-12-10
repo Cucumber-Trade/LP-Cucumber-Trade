@@ -1,6 +1,7 @@
 .text-rotate {
   display: flex;
   flex-wrap: wrap;
+  white-space: pre-wrap;
   position: relative;
 }
 
@@ -13,15 +14,17 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border-width: 0;
-}
-
-.text-rotate-lines {
-  display: block;
+  border: 0;
 }
 
 .text-rotate-word {
   display: inline-flex;
+}
+
+.text-rotate-lines {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .text-rotate-element {
