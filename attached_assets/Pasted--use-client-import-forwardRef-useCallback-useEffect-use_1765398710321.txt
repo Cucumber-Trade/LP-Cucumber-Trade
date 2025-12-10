@@ -1,41 +1,15 @@
+'use client';
+
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 
 import './RotatingText.css';
 
-function cn(...classes: (string | undefined | null | false)[]) {
+function cn(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-export interface RotatingTextProps {
-  texts: string[];
-  transition?: any;
-  initial?: any;
-  animate?: any;
-  exit?: any;
-  animatePresenceMode?: "sync" | "wait" | "popLayout";
-  animatePresenceInitial?: boolean;
-  rotationInterval?: number;
-  staggerDuration?: number;
-  staggerFrom?: "first" | "last" | "center" | "random" | number;
-  loop?: boolean;
-  auto?: boolean;
-  splitBy?: "characters" | "words" | "lines" | string;
-  onNext?: (index: number) => void;
-  mainClassName?: string;
-  splitLevelClassName?: string;
-  elementLevelClassName?: string;
-  [key: string]: any;
-}
-
-export interface RotatingTextHandle {
-  next: () => void;
-  previous: () => void;
-  jumpTo: (index: number) => void;
-  reset: () => void;
-}
-
-const RotatingText = forwardRef<RotatingTextHandle, RotatingTextProps>((props, ref) => {
+const RotatingText = forwardRef((props, ref) => {
   const {
     texts,
     transition = { type: 'spring', damping: 25, stiffness: 300 },
@@ -59,7 +33,7 @@ const RotatingText = forwardRef<RotatingTextHandle, RotatingTextProps>((props, r
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
-  const splitIntoCharacters = (text: string) => {
+  const splitIntoCharacters = text => {
     if (typeof Intl !== 'undefined' && Intl.Segmenter) {
       const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
       return Array.from(segmenter.segment(text), segment => segment.segment);
@@ -96,7 +70,7 @@ const RotatingText = forwardRef<RotatingTextHandle, RotatingTextProps>((props, r
   }, [texts, currentTextIndex, splitBy]);
 
   const getStaggerDelay = useCallback(
-    (index: number, totalChars: number) => {
+    (index, totalChars) => {
       const total = totalChars;
       if (staggerFrom === 'first') return index * staggerDuration;
       if (staggerFrom === 'last') return (total - 1 - index) * staggerDuration;
@@ -108,16 +82,13 @@ const RotatingText = forwardRef<RotatingTextHandle, RotatingTextProps>((props, r
         const randomIndex = Math.floor(Math.random() * total);
         return Math.abs(randomIndex - index) * staggerDuration;
       }
-      if (typeof staggerFrom === 'number') {
-          return Math.abs(staggerFrom - index) * staggerDuration;
-      }
-      return 0;
+      return Math.abs(staggerFrom - index) * staggerDuration;
     },
     [staggerFrom, staggerDuration]
   );
 
   const handleIndexChange = useCallback(
-    (newIndex: number) => {
+    newIndex => {
       setCurrentTextIndex(newIndex);
       if (onNext) onNext(newIndex);
     },
@@ -139,7 +110,7 @@ const RotatingText = forwardRef<RotatingTextHandle, RotatingTextProps>((props, r
   }, [currentTextIndex, texts.length, loop, handleIndexChange]);
 
   const jumpTo = useCallback(
-    (index: number) => {
+    index => {
       const validIndex = Math.max(0, Math.min(index, texts.length - 1));
       if (validIndex !== currentTextIndex) {
         handleIndexChange(validIndex);
