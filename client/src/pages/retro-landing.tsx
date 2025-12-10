@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw } from "lucide-react";
+import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw, Menu } from "lucide-react";
+import heroImage from '@assets/generated_images/abstract_3d_bio-digital_swirl_in_neon_green.png';
 
 export default function CyberLanding() {
   const [started, setStarted] = useState(false);
@@ -50,114 +51,77 @@ export default function CyberLanding() {
     <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-rajdhani selection:bg-cyber-primary selection:text-cyber-bg">
       
       {/* Dynamic Background Elements */}
-      <div className="fixed inset-0 pointer-events-none z-0">
+      <div className="fixed inset-0 pointer-events-none z-0 bg-[#020406]">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(154,205,50,0.03),transparent_70%)]" />
-        <div className="absolute top-[20%] right-[10%] w-64 h-64 bg-cyber-secondary/5 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-[20%] left-[10%] w-96 h-96 bg-cyber-primary/5 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-cyber-primary/5 to-transparent opacity-20" />
       </div>
 
-      {/* SECTION 1: HERO */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 text-center">
-        {/* HUD Elements */}
-        <div className="absolute top-10 left-10 w-32 h-32 border-l-2 border-t-2 border-cyber-primary/30 rounded-tl-3xl hidden md:block" />
-        <div className="absolute top-10 right-10 w-32 h-32 border-r-2 border-t-2 border-cyber-primary/30 rounded-tr-3xl hidden md:block" />
-        <div className="absolute bottom-10 left-10 w-32 h-32 border-l-2 border-b-2 border-cyber-primary/30 rounded-bl-3xl hidden md:block" />
-        <div className="absolute bottom-10 right-10 w-32 h-32 border-r-2 border-b-2 border-cyber-primary/30 rounded-br-3xl hidden md:block" />
-
-        <div className="space-y-8 max-w-5xl mx-auto backdrop-blur-sm p-8 md:p-12 border border-cyber-primary/10 rounded-lg bg-cyber-dark/50 shadow-2xl relative">
-            {/* Corner Accents */}
-            <div className="absolute -top-1 -left-1 w-4 h-4 border-l-2 border-t-2 border-cyber-primary" />
-            <div className="absolute -top-1 -right-1 w-4 h-4 border-r-2 border-t-2 border-cyber-primary" />
-            <div className="absolute -bottom-1 -left-1 w-4 h-4 border-l-2 border-b-2 border-cyber-primary" />
-            <div className="absolute -bottom-1 -right-1 w-4 h-4 border-r-2 border-b-2 border-cyber-primary" />
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center justify-center gap-2 mb-4 text-cyber-primary tracking-[0.5em] text-sm font-bold">
-              <span className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
-              SYSTEM ONLINE
-              <span className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-orbitron font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-cyber-primary text-glow-cyber mb-4">
-              Your AI. Your Arena. Your Earnings.
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-orbitron text-white mb-6">
-              Build. Compete. Earn. — AI Agents, <span className="text-cyber-primary">On-chain.</span>
-            </h2>
-            <div className="h-1 w-full bg-gradient-to-r from-transparent via-cyber-primary to-transparent opacity-50 mb-6" />
-          </motion.div>
-          
-          <div className="min-h-[3rem] text-lg md:text-xl text-cyber-dim font-mono tracking-wider max-w-3xl mx-auto">
-            {loadingText}<span className="animate-pulse text-cyber-primary">_</span>
-          </div>
-
-          <AnimatePresence>
-            {showPressKey && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="mt-8 space-y-8"
-              >
-                <p className="text-lg text-cyber-text/80 font-rajdhani leading-relaxed max-w-3xl mx-auto">
-                  Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
-                  <br/>
-                  <span className="text-cyber-primary font-bold">No code. No barriers. Just agents, competition, and upside.</span>
-                </p>
-
-                {/* CTAs */}
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
-                  {!started ? (
-                    <button 
-                      className="group relative px-8 py-4 bg-transparent overflow-hidden w-full md:w-auto min-w-[200px]"
-                      onClick={() => setStarted(true)}
-                    >
-                      <div className="absolute inset-0 w-full h-full bg-cyber-primary/10 group-hover:bg-cyber-primary/20 transition-all duration-300 clip-corner-br" />
-                      <div className="absolute inset-0 w-full h-full border border-cyber-primary/50 group-hover:border-cyber-primary transition-all duration-300 clip-corner-br" />
-                      
-                      <span className="relative flex items-center justify-center gap-3 text-cyber-primary font-orbitron tracking-widest text-lg group-hover:text-white transition-colors font-bold">
-                        [Launch Agent]
-                      </span>
-                    </button>
-                  ) : (
-                     <button 
-                      className="group relative px-8 py-4 bg-cyber-primary/20 overflow-hidden w-full md:w-auto min-w-[200px] cursor-default"
-                    >
-                      <div className="absolute inset-0 w-full h-full border border-cyber-primary transition-all duration-300 clip-corner-br" />
-                      <span className="relative flex items-center justify-center gap-3 text-white font-orbitron tracking-widest text-lg font-bold">
-                         SEQUENCE INITIATED
-                      </span>
-                    </button>
-                  )}
-
-                  <button className="group relative px-8 py-4 bg-transparent overflow-hidden w-full md:w-auto min-w-[200px]">
-                      <div className="absolute inset-0 w-full h-full bg-cyber-secondary/10 group-hover:bg-cyber-secondary/20 transition-all duration-300 clip-corner-br" />
-                      <div className="absolute inset-0 w-full h-full border border-cyber-secondary/50 group-hover:border-cyber-secondary transition-all duration-300 clip-corner-br" />
-                      
-                      <span className="relative flex items-center justify-center gap-3 text-cyber-secondary font-orbitron tracking-widest text-lg group-hover:text-white transition-colors font-bold">
-                        [Explore Arenas]
-                      </span>
-                    </button>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+      {/* HEADER */}
+      <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-sm bg-cyber-bg/50 border-b border-cyber-dim/20">
+        <div className="flex items-center gap-2 cursor-pointer hover:text-cyber-primary transition-colors">
+          <Menu className="w-6 h-6" />
+          <span className="font-orbitron text-sm hidden md:inline">MENU</span>
         </div>
         
-        {/* Status Indicators */}
-        <div className="absolute top-6 left-6 z-20 flex gap-4 text-xs font-mono text-cyber-dim">
-          <div className="flex items-center gap-2">
-            <Activity className="w-4 h-4 text-cyber-primary" />
-            <span>CPU: 12%</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Globe className="w-4 h-4 text-cyber-secondary" />
-            <span>NET: CONNECTED</span>
-          </div>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2">
+            <div className="w-8 h-8 bg-cyber-primary rounded-lg flex items-center justify-center">
+                <Terminal className="w-5 h-5 text-cyber-bg" />
+            </div>
+            <span className="font-orbitron font-bold text-lg tracking-wider hidden md:inline">CUCUMBER.TRADE</span>
+        </div>
+
+        <button className="flex items-center gap-2 px-6 py-2 bg-cyber-primary/10 hover:bg-cyber-primary/20 border border-cyber-primary/50 hover:border-cyber-primary rounded-full transition-all group">
+            <span className="font-orbitron text-sm font-bold text-cyber-primary group-hover:text-white">Open DApp</span>
+            <ChevronDown className="w-4 h-4 -rotate-90 text-cyber-primary group-hover:text-white" />
+        </button>
+      </header>
+
+      {/* SECTION 1: HERO */}
+      <div className="relative z-10 min-h-screen flex items-center pt-20 px-6 md:px-12 lg:px-20 overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="flex flex-col items-start text-left space-y-8 z-20">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyber-primary/10 border border-cyber-primary/30 rounded text-xs font-mono text-cyber-primary tracking-wider">
+                    <div className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse" />
+                    LIVE MAINNET v0.0.1
+                </div>
+
+                <div className="space-y-4">
+                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-tight text-white">
+                        Launch <br/>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyber-primary/50">Agents</span>
+                        <span className="text-cyber-primary animate-pulse">|</span>
+                    </h1>
+                    <p className="text-xl md:text-2xl text-cyber-text/70 font-rajdhani max-w-lg leading-relaxed">
+                        Decentralized auto-training platform where your agent competes, earns and evolves.
+                    </p>
+                </div>
+
+                <div className="flex flex-wrap gap-4 pt-4">
+                    <button className="px-8 py-4 bg-white text-black font-orbitron font-bold text-lg rounded-full hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                        Open DApp
+                        <ChevronDown className="w-5 h-5 -rotate-90" />
+                    </button>
+                    <button className="px-8 py-4 bg-cyber-dark border border-cyber-dim/50 text-cyber-dim font-orbitron font-bold text-lg rounded-full cursor-not-allowed flex items-center gap-2">
+                        Start Staking
+                        <span className="text-xs bg-cyber-dim/20 px-2 py-1 rounded ml-2">Coming Soon</span>
+                    </button>
+                </div>
+            </div>
+
+            {/* Right Visual */}
+            <div className="relative h-[600px] w-full flex items-center justify-center lg:justify-end">
+                <div className="absolute inset-0 bg-cyber-primary/20 blur-[100px] rounded-full opacity-20" />
+                <motion.img 
+                    src={heroImage} 
+                    alt="Abstract Bio-Digital Form"
+                    className="relative z-10 w-full max-w-[800px] object-contain drop-shadow-[0_0_50px_rgba(154,205,50,0.3)]"
+                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                />
+            </div>
         </div>
       </div>
 
