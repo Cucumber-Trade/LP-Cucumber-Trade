@@ -89,23 +89,29 @@ export default function CyberLanding() {
 
                 <div className="space-y-4">
                     <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-tight text-white">
-                        Launch <br/>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyber-primary/50">Agents</span>
-                        <span className="text-cyber-primary animate-pulse">|</span>
+                        Your AI. <br/>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyber-primary/50">Your Arena.</span> <br/>
+                        <span className="text-cyber-primary">Your Earnings.</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-cyber-text/70 font-rajdhani max-w-lg leading-relaxed">
-                        Decentralized auto-training platform where your agent competes, earns and evolves.
+                    
+                    <h2 className="text-2xl md:text-3xl font-orbitron font-bold text-white">
+                        Build. Compete. Earn. — AI Agents, On-chain.
+                    </h2>
+                    
+                    <p className="text-xl md:text-xl text-cyber-text/70 font-rajdhani max-w-lg leading-relaxed">
+                        Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
+                        <br/><br/>
+                        <span className="text-white font-bold">No code. No barriers. Just agents, competition, and upside.</span>
                     </p>
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-4">
                     <button className="px-8 py-4 bg-white text-black font-orbitron font-bold text-lg rounded-full hover:scale-105 transition-transform flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                        Open DApp
+                        [Launch Agent]
                         <ChevronDown className="w-5 h-5 -rotate-90" />
                     </button>
-                    <button className="px-8 py-4 bg-cyber-dark border border-cyber-dim/50 text-cyber-dim font-orbitron font-bold text-lg rounded-full cursor-not-allowed flex items-center gap-2">
-                        Start Staking
-                        <span className="text-xs bg-cyber-dim/20 px-2 py-1 rounded ml-2">Coming Soon</span>
+                    <button className="px-8 py-4 bg-cyber-dark border border-cyber-dim/50 text-cyber-dim font-orbitron font-bold text-lg rounded-full hover:border-cyber-primary hover:text-white transition-colors flex items-center gap-2">
+                        [Explore Arenas]
                     </button>
                 </div>
             </div>
