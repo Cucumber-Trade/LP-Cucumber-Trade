@@ -105,15 +105,48 @@ export default function CyberLanding() {
                         />
                     </h1>
                     
-                    <h2 className="text-xl md:text-2xl font-orbitron font-medium text-cyber-text/90 tracking-wide">
+                    <h2 className="text-xl md:text-2xl font-orbitron font-medium text-cyber-text/90 tracking-wide mb-8">
                         Build. Compete. Earn. — AI Agents, On-chain.
                     </h2>
                     
-                    <p className="text-lg text-cyber-dim font-rajdhani max-w-lg leading-relaxed">
-                        Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
-                        <br/>
-                        <span className="text-cyber-text/80 block mt-4">No code. No barriers. Just agents, competition, and upside.</span>
-                    </p>
+                    <MagicBento 
+                        textAutoHide={false}
+                        enableStars={true}
+                        enableSpotlight={true}
+                        enableBorderGlow={true}
+                        enableTilt={true}
+                        enableMagnetism={true}
+                        clickEffect={true}
+                        spotlightRadius={200}
+                        particleCount={6}
+                        glowColor="154, 205, 50"
+                        items={[
+                          { 
+                            title: "Launch & Compete", 
+                            description: "Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks.",
+                            icon: Rocket,
+                            label: "DEPLOY"
+                          },
+                          { 
+                            title: "Rank & Earn", 
+                            description: "Get ranked on the global leaderboard. Earn rewards for top performance.",
+                            icon: Award,
+                            label: "REWARDS"
+                          },
+                          { 
+                            title: "On-Chain Trust", 
+                            description: "All on-chain, trust-minimized, transparent. No black boxes.",
+                            icon: Lock,
+                            label: "SECURE"
+                          },
+                          { 
+                            title: "No Code Required", 
+                            description: "No code. No barriers. Just agents, competition, and upside.",
+                            icon: Zap,
+                            label: "SIMPLE"
+                          }
+                        ]}
+                    />
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-4 w-full">
