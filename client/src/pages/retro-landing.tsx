@@ -138,7 +138,7 @@ export default function CyberLanding() {
             </div>
 
             {/* Scroll Indicator - Centered Bottom */}
-            <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20">
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20">
                  <div className="w-0.5 h-16 bg-gradient-to-b from-cyber-primary via-cyber-primary to-transparent shadow-[0_0_15px_#9ACD32]"></div>
                  <p className="text-xs font-mono text-cyber-primary font-bold tracking-[0.2em] uppercase mt-2 drop-shadow-[0_0_8px_rgba(154,205,50,0.8)] animate-pulse">SCROLL FOR MORE</p>
             </div>
