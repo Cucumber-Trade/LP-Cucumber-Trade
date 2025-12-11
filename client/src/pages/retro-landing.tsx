@@ -92,10 +92,10 @@ export default function CyberLanding() {
       </div>
 
       {/* Global Vertical Lines - Spanning entire page height but scrolling with content */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 flex justify-between px-6 md:px-12 lg:px-20 max-w-7xl mx-auto opacity-20 left-0 right-0">
-          <div className="w-px h-full bg-cyber-dim/30"></div>
-          <div className="w-px h-full bg-cyber-dim/30 hidden md:block"></div>
-          <div className="w-px h-full bg-cyber-dim/30"></div>
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 flex justify-between px-6 md:px-12 lg:px-20 max-w-7xl mx-auto left-0 right-0">
+          <div className="w-px h-full bg-cyber-dim/60"></div>
+          <div className="w-px h-full bg-cyber-dim/60 hidden md:block"></div>
+          <div className="w-px h-full bg-cyber-dim/60"></div>
       </div>
       
       {/* HEADER */}
