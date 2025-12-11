@@ -102,7 +102,7 @@ export default function CyberLanding() {
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-cyber-bg/80 backdrop-blur-md border-b border-cyber-dim/10">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-[#4ade80] rounded-full animate-pulse shadow-[0_0_8px_#4ade80]" />
-          <span className="font-urbanist text-xs text-cyber-dim tracking-wide uppercase">Operational</span>
+          <span className="font-urbanist text-xs text-cyber-dim tracking-wide uppercase">LIVE</span>
         </div>
         
         {/* Centered Logo */}
@@ -116,9 +116,9 @@ export default function CyberLanding() {
         {/* Right Nav */}
         <div className="flex items-center gap-4">
             <div className="hidden lg:flex items-center gap-6 mr-4 text-sm font-medium text-cyber-dim">
-                <a href="#" className="hover:text-cyber-primary transition-colors">Solutions</a>
-                <a href="#" className="hover:text-cyber-primary transition-colors">Developers</a>
-                <a href="#" className="hover:text-cyber-primary transition-colors">Community</a>
+                <a href="#" className="hover:text-cyber-primary transition-colors">Builder</a>
+                <a href="#" className="hover:text-cyber-primary transition-colors">Leaderboard</a>
+                <a href="#" className="hover:text-cyber-primary transition-colors">Documentation</a>
             </div>
             <AnimatedThemeToggler />
             <button className="flex items-center gap-2 px-6 py-2 bg-cyber-primary/10 hover:bg-cyber-primary/20 border border-cyber-primary/50 hover:border-cyber-primary rounded-full transition-all group">
