@@ -9,6 +9,19 @@ import robotHead from '@assets/generated_images/3d_futuristic_robot_head_with_gl
 
 export default function CyberLanding() {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
+      setScrollProgress(Number(scroll));
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -564,11 +577,17 @@ export default function CyberLanding() {
 
       </main>
 
-      {/* Right Sidebar Indicators */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-4 z-50">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeSection === i ? 'bg-cyber-primary scale-125 shadow-[0_0_8px_#9ACD32]' : 'bg-cyber-dim/30'}`} />
-          ))}
+      {/* Right Sidebar Progress Line */}
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-4 z-50 h-64">
+          <div className="relative w-0.5 h-full bg-cyber-dim/20 rounded-full overflow-hidden">
+              <div 
+                  className="absolute top-0 left-0 w-full bg-cyber-primary shadow-[0_0_10px_#9ACD32] transition-all duration-100 ease-out rounded-full"
+                  style={{ height: `${10 + (scrollProgress * 90)}%` }}
+              />
+          </div>
+          <span className="text-[10px] font-mono text-cyber-primary/70 -rotate-90 w-max absolute -bottom-8">
+              {Math.round(scrollProgress * 100)}%
+          </span>
       </div>
 
     </div>
