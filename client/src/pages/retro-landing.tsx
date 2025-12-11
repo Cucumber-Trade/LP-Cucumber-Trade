@@ -53,10 +53,7 @@ export default function CyberLanding() {
     <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-rajdhani selection:bg-cyber-primary selection:text-cyber-bg">
       
       {/* Dynamic Background Elements */}
-      <div className="fixed inset-0 pointer-events-none z-0 bg-[#020406]">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(154,205,50,0.03),transparent_70%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-cyber-primary/5 to-transparent opacity-20" />
-      </div>
+      <div className="fixed inset-0 pointer-events-none z-0 bg-[#020406]" />
 
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-sm bg-cyber-bg/50 border-b border-cyber-dim/20">
