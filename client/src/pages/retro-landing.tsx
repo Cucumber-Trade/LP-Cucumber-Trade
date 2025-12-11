@@ -1,6 +1,7 @@
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck } from "lucide-react";
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
+import DotGrid from "../components/DotGrid";
 import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
 import robotHead from '@assets/generated_images/3d_futuristic_robot_head_with_glowing_face.png';
 
@@ -51,6 +52,21 @@ export default function CyberLanding() {
         {/* SECTION 1: HERO */}
         <div className="min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
             
+             {/* Dot Grid Background for Hero Area */}
+            <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden opacity-30">
+                <DotGrid
+                    dotSize={4}
+                    gap={25}
+                    baseColor="#9ACD32"
+                    activeColor="#00FFFF"
+                    proximity={120}
+                    shockRadius={250}
+                    shockStrength={5}
+                    resistance={750}
+                    returnDuration={1.5}
+                />
+            </div>
+
             {/* Left Content */}
             <div className="flex flex-col items-start text-left space-y-10 z-20">
                 <div className="inline-flex items-center gap-3 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-md text-xs font-urbanist text-cyber-primary tracking-widest uppercase">
