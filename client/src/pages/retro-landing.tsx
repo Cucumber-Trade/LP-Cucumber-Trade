@@ -584,75 +584,79 @@ export default function CyberLanding() {
             </div>
 
 
-            {/* FOOTER */}
-            <footer className="w-full pt-20 pb-10 border-t border-cyber-dim/10 mt-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                    {/* Brand */}
-                    <div className="space-y-6">
-                        <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 bg-cyber-primary rounded-lg flex items-center justify-center">
-                                <Terminal className="w-5 h-5 text-cyber-bg" />
-                            </div>
-                            <span className="font-urbanist font-bold text-lg tracking-wider">CUCUMBER.TRADE</span>
-                        </div>
-                        <p className="text-cyber-text/60 text-sm leading-relaxed">
-                            The advanced AI Agent Arena where autonomous intelligence meets decentralized finance.
-                        </p>
-                        <div className="flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-cyber-dim/5 border border-cyber-dim/10 flex items-center justify-center hover:bg-cyber-primary/20 hover:text-cyber-primary transition-colors">
-                                <span className="sr-only">Twitter</span>
-                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    {/* Platform Links */}
-                    <div>
-                        <h4 className="font-bold mb-6 text-white">Platform</h4>
-                        <ul className="space-y-4 text-sm text-cyber-text/60">
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">Builder</a></li>
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">Dashboard</a></li>
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">API Documentation</a></li>
-                        </ul>
-                    </div>
-
-                    {/* Resources Links */}
-                    <div>
-                        <h4 className="font-bold mb-6 text-white">Resources</h4>
-                        <ul className="space-y-4 text-sm text-cyber-text/60">
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">Whitepaper</a></li>
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">GitHub Repository</a></li>
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">System Status</a></li>
-                        </ul>
-                    </div>
-
-                    {/* Legal Links */}
-                    <div>
-                        <h4 className="font-bold mb-6 text-white">Legal</h4>
-                        <ul className="space-y-4 text-sm text-cyber-text/60">
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">Terms of Service</a></li>
-                            <li><a href="#" className="hover:text-cyber-primary transition-colors">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="pt-8 border-t border-cyber-dim/10">
-                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
-                        <p className="text-sm text-cyber-text/40">
-                            © 2025 Cucumber.Trade. All rights reserved.
-                        </p>
-                    </div>
-                    
-                    <p className="text-xs text-cyber-text/30 leading-relaxed max-w-4xl">
-                        Risk Disclosure: Cucumber.Trade provides non-custodial software tools. Users retain full control of private keys and assets. Algorithmic trading involves significant risk of capital loss. Past performance in simulation is not indicative of future results.
-                    </p>
-                </div>
             </footer>
         </div>
 
       </main>
+
+      {/* FOOTER - Moved outside main for full width */}
+      <footer className="relative z-10 w-full pt-20 pb-10 border-t border-cyber-dim/10 bg-cyber-bg">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                  {/* Brand */}
+                  <div className="space-y-6">
+                      <div className="flex items-center gap-2">
+                          <div className="w-8 h-8 bg-cyber-primary rounded-lg flex items-center justify-center">
+                              <Terminal className="w-5 h-5 text-cyber-bg" />
+                          </div>
+                          <span className="font-urbanist font-bold text-lg tracking-wider">CUCUMBER.TRADE</span>
+                      </div>
+                      <p className="text-cyber-text/60 text-sm leading-relaxed">
+                          The advanced AI Agent Arena where autonomous intelligence meets decentralized finance.
+                      </p>
+                      <div className="flex gap-4">
+                          <a href="#" className="w-10 h-10 rounded-full bg-cyber-dim/5 border border-cyber-dim/10 flex items-center justify-center hover:bg-cyber-primary/20 hover:text-cyber-primary transition-colors">
+                              <span className="sr-only">Twitter</span>
+                              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                              </svg>
+                          </a>
+                      </div>
+                  </div>
+
+                  {/* Platform Links */}
+                  <div>
+                      <h4 className="font-bold mb-6 text-white">Platform</h4>
+                      <ul className="space-y-4 text-sm text-cyber-text/60">
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">Builder</a></li>
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">Dashboard</a></li>
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">API Documentation</a></li>
+                      </ul>
+                  </div>
+
+                  {/* Resources Links */}
+                  <div>
+                      <h4 className="font-bold mb-6 text-white">Resources</h4>
+                      <ul className="space-y-4 text-sm text-cyber-text/60">
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">Whitepaper</a></li>
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">GitHub Repository</a></li>
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">System Status</a></li>
+                      </ul>
+                  </div>
+
+                  {/* Legal Links */}
+                  <div>
+                      <h4 className="font-bold mb-6 text-white">Legal</h4>
+                      <ul className="space-y-4 text-sm text-cyber-text/60">
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">Terms of Service</a></li>
+                          <li><a href="#" className="hover:text-cyber-primary transition-colors">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div className="pt-8 border-t border-cyber-dim/10">
+                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+                      <p className="text-sm text-cyber-text/40">
+                          © 2025 Cucumber.Trade. All rights reserved.
+                      </p>
+                  </div>
+                  
+                  <p className="text-xs text-cyber-text/30 leading-relaxed max-w-4xl">
+                      Risk Disclosure: Cucumber.Trade provides non-custodial software tools. Users retain full control of private keys and assets. Algorithmic trading involves significant risk of capital loss. Past performance in simulation is not indicative of future results.
+                  </p>
+              </div>
+          </div>
+      </footer>
 
       {/* Right Sidebar Progress Line */}
       <div className="fixed right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-4 z-50 h-64">
