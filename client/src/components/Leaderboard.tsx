@@ -83,22 +83,23 @@ export default function Leaderboard() {
       </div>
 
       {/* Podium Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-end mb-16 relative z-10">
+      <div className="flex flex-col md:flex-row justify-center items-end gap-6 md:gap-8 lg:gap-12 mb-24 relative z-10 px-4 mt-12 md:mt-0">
+         
          {/* Rank 2 */}
-         <div className="order-2 md:order-1 relative group">
-             <div className="absolute inset-0 bg-green-500/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-             <div className="bg-cyber-dark/40 border border-cyber-dim/20 rounded-3xl p-6 relative overflow-hidden hover:-translate-y-2 transition-transform duration-300">
+         <div className="order-2 md:order-1 flex flex-col items-center w-full md:w-1/3 max-w-sm relative md:top-8">
+             {/* Card */}
+             <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-hidden hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                 <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-cyber-dim/20 flex items-center justify-center font-bold font-mono text-cyber-text/50">#2</div>
-                <div className="flex justify-center mb-6">
-                    <div className="w-40 h-40 relative">
+                <div className="flex justify-center mb-4 -mt-2">
+                    <div className="w-32 h-32 relative transform hover:scale-105 transition-transform duration-500">
                         <img src={leaderboardData[1].image} alt={leaderboardData[1].name} className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(74,222,128,0.3)]" />
                     </div>
                 </div>
                 <div className="text-center">
-                    <h3 className="text-2xl font-bold text-white mb-1">{leaderboardData[1].name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-1 truncate">{leaderboardData[1].name}</h3>
                     <p className="text-green-400 text-xs font-mono mb-4">{leaderboardData[1].title}</p>
                     
-                    <div className="grid grid-cols-2 gap-2 text-sm bg-cyber-bg/50 p-3 rounded-xl border border-cyber-dim/10">
+                    <div className="grid grid-cols-2 gap-2 text-xs bg-cyber-bg/50 p-2 rounded-xl border border-cyber-dim/10">
                         <div className="text-cyber-text/50">PnL</div>
                         <div className="text-green-400 font-bold text-right">{leaderboardData[1].pnl}</div>
                         <div className="text-cyber-text/50">MMR</div>
@@ -106,56 +107,65 @@ export default function Leaderboard() {
                     </div>
                 </div>
              </div>
+             {/* Base */}
+             <div className="w-[85%] h-24 md:h-32 bg-gradient-to-t from-cyber-dim/10 to-transparent border-x border-t border-cyber-dim/10 rounded-t-2xl mt-[-24px] pt-8 relative z-0"></div>
          </div>
 
          {/* Rank 1 */}
-         <div className="order-1 md:order-2 relative group -mt-12 md:-mt-20 z-20">
-             <div className="absolute inset-0 bg-yellow-500/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-             <div className="bg-cyber-dark/60 border border-yellow-500/30 rounded-3xl p-8 relative overflow-hidden shadow-[0_0_30px_rgba(234,179,8,0.1)] hover:shadow-[0_0_50px_rgba(234,179,8,0.2)] hover:-translate-y-2 transition-all duration-300">
+         <div className="order-1 md:order-2 flex flex-col items-center w-full md:w-1/3 max-w-sm relative md:-top-12 z-20 mb-8 md:mb-0">
+             {/* Glowing Effect */}
+             <div className="absolute inset-0 bg-yellow-500/20 blur-[80px] rounded-full -z-10 opacity-60 animate-pulse-slow"></div>
+             
+             {/* Card */}
+             <div className="bg-cyber-dark/90 border border-yellow-500/30 rounded-3xl p-8 w-full relative overflow-hidden shadow-[0_0_40px_rgba(234,179,8,0.15)] hover:shadow-[0_0_60px_rgba(234,179,8,0.25)] hover:-translate-y-2 transition-all duration-300 backdrop-blur-md">
                 <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
-                <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center font-bold font-mono text-black shadow-lg shadow-yellow-500/50">
+                <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center font-bold font-mono text-black shadow-lg shadow-yellow-500/50 z-20">
                     <Trophy size={18} />
                 </div>
                 
                 <div className="flex justify-center mb-6">
-                    <div className="w-56 h-56 relative">
-                        <img src={leaderboardData[0].image} alt={leaderboardData[0].name} className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(234,179,8,0.4)]" />
+                    <div className="w-48 h-48 relative transform hover:scale-110 transition-transform duration-500">
+                        <img src={leaderboardData[0].image} alt={leaderboardData[0].name} className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(234,179,8,0.5)]" />
                     </div>
                 </div>
                 
-                <div className="text-center">
-                    <h3 className="text-3xl font-black text-white mb-1">{leaderboardData[0].name}</h3>
+                <div className="text-center relative z-10">
+                    <h3 className="text-2xl font-black text-white mb-1 truncate">{leaderboardData[0].name}</h3>
                     <p className="text-yellow-400 text-sm font-mono mb-6">{leaderboardData[0].title}</p>
                     
-                    <div className="grid grid-cols-2 gap-4 text-base bg-cyber-bg/80 p-4 rounded-xl border border-yellow-500/20">
+                    <div className="grid grid-cols-2 gap-4 text-sm bg-cyber-bg/80 p-4 rounded-xl border border-yellow-500/20 shadow-inner">
                         <div className="text-left">
                             <div className="text-cyber-text/50 text-xs mb-1">Total PnL</div>
-                            <div className="text-green-400 font-bold text-xl">{leaderboardData[0].pnl}</div>
+                            <div className="text-green-400 font-bold text-lg">{leaderboardData[0].pnl}</div>
                         </div>
                         <div className="text-right">
                             <div className="text-cyber-text/50 text-xs mb-1">Skill Rating</div>
-                            <div className="text-yellow-400 font-bold text-xl">{leaderboardData[0].mmr}</div>
+                            <div className="text-yellow-400 font-bold text-lg">{leaderboardData[0].mmr}</div>
                         </div>
                     </div>
                 </div>
              </div>
+             {/* Base */}
+             <div className="w-[90%] h-32 md:h-48 bg-gradient-to-t from-yellow-500/10 to-transparent border-x border-t border-yellow-500/20 rounded-t-2xl mt-[-24px] pt-8 relative z-0">
+                 <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-yellow-500/5 to-transparent"></div>
+             </div>
          </div>
 
          {/* Rank 3 */}
-         <div className="order-3 md:order-3 relative group">
-             <div className="absolute inset-0 bg-blue-500/5 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-             <div className="bg-cyber-dark/40 border border-cyber-dim/20 rounded-3xl p-6 relative overflow-hidden hover:-translate-y-2 transition-transform duration-300">
+         <div className="order-3 md:order-3 flex flex-col items-center w-full md:w-1/3 max-w-sm relative md:top-16">
+             {/* Card */}
+             <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-hidden hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                 <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-cyber-dim/20 flex items-center justify-center font-bold font-mono text-cyber-text/50">#3</div>
-                <div className="flex justify-center mb-6">
-                    <div className="w-40 h-40 relative">
+                <div className="flex justify-center mb-4 -mt-2">
+                    <div className="w-32 h-32 relative transform hover:scale-105 transition-transform duration-500">
                         <img src={leaderboardData[2].image} alt={leaderboardData[2].name} className="w-full h-full object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]" />
                     </div>
                 </div>
                 <div className="text-center">
-                    <h3 className="text-2xl font-bold text-white mb-1">{leaderboardData[2].name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-1 truncate">{leaderboardData[2].name}</h3>
                     <p className="text-blue-400 text-xs font-mono mb-4">{leaderboardData[2].title}</p>
                     
-                    <div className="grid grid-cols-2 gap-2 text-sm bg-cyber-bg/50 p-3 rounded-xl border border-cyber-dim/10">
+                    <div className="grid grid-cols-2 gap-2 text-xs bg-cyber-bg/50 p-2 rounded-xl border border-cyber-dim/10">
                         <div className="text-cyber-text/50">PnL</div>
                         <div className="text-green-400 font-bold text-right">{leaderboardData[2].pnl}</div>
                         <div className="text-cyber-text/50">MMR</div>
@@ -163,6 +173,8 @@ export default function Leaderboard() {
                     </div>
                 </div>
              </div>
+             {/* Base */}
+             <div className="w-[85%] h-16 md:h-24 bg-gradient-to-t from-cyber-dim/10 to-transparent border-x border-t border-cyber-dim/10 rounded-t-2xl mt-[-24px] pt-8 relative z-0"></div>
          </div>
       </div>
 
