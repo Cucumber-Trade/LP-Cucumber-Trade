@@ -11,6 +11,7 @@ import robotHead from '@assets/generated_images/3d_futuristic_robot_head_with_gl
 export default function CyberLanding() {
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,8 +103,10 @@ export default function CyberLanding() {
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-cyber-bg/80 backdrop-blur-md border-b border-cyber-dim/10">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-[#4ade80] rounded-full animate-pulse shadow-[0_0_8px_#4ade80]" />
-          <span className="font-urbanist text-xs text-cyber-dim tracking-wide uppercase">LIVE</span>
+          <div className={`w-2 h-2 rounded-full animate-pulse shadow-[0_0_8px] ${isWalletConnected ? 'bg-[#4ade80] shadow-[#4ade80]' : 'bg-red-500 shadow-red-500'}`} />
+          <span className={`font-urbanist text-xs tracking-wide uppercase ${isWalletConnected ? 'text-[#4ade80]' : 'text-red-500'}`}>
+            {isWalletConnected ? 'Wallet Connected' : 'Wallet not Connected'}
+          </span>
         </div>
         
         {/* Centered Logo */}
@@ -126,9 +129,14 @@ export default function CyberLanding() {
                 <Zap className="w-4 h-4" />
                 <span className="font-urbanist text-sm">Launch DApp</span>
             </button>
-            <button className="flex items-center gap-2 px-6 py-2 bg-cyber-primary/10 hover:bg-cyber-primary/20 border border-cyber-primary/50 hover:border-cyber-primary rounded-full transition-all group">
-                <Wallet className="w-4 h-4 text-cyber-primary group-hover:text-white" />
-                <span className="font-urbanist text-sm font-bold text-cyber-primary group-hover:text-white">Connect Wallet</span>
+            <button 
+                onClick={() => setIsWalletConnected(!isWalletConnected)}
+                className={`flex items-center gap-2 px-6 py-2 border rounded-full transition-all group ${isWalletConnected ? 'bg-cyber-primary/20 border-cyber-primary text-cyber-primary' : 'bg-cyber-primary/10 hover:bg-cyber-primary/20 border-cyber-primary/50 hover:border-cyber-primary'}`}
+            >
+                <Wallet className={`w-4 h-4 ${isWalletConnected ? 'text-cyber-primary' : 'text-cyber-primary group-hover:text-white'}`} />
+                <span className={`font-urbanist text-sm font-bold ${isWalletConnected ? 'text-cyber-primary' : 'text-cyber-primary group-hover:text-white'}`}>
+                    {isWalletConnected ? '0x...8f4' : 'Connect Wallet'}
+                </span>
             </button>
         </div>
       </header>
