@@ -108,6 +108,12 @@ export default function CyberLanding() {
                         Documentation
                     </button>
                 </div>
+
+                {/* Scroll Indicator */}
+                <div className="flex items-center gap-4 pt-10 opacity-70">
+                     <p className="text-xs font-mono text-cyber-dim tracking-widest">SCROLL FOR MORE</p>
+                     <div className="h-px w-20 bg-gradient-to-r from-cyber-primary to-transparent"></div>
+                </div>
             </div>
 
             {/* Right Visual - Sticky / Fixed feel */}
@@ -433,11 +439,6 @@ export default function CyberLanding() {
                 </div>
             </div>
 
-            {/* Scroll Indicator at bottom */}
-            <div className="flex flex-col items-center justify-center pt-20 pb-10 opacity-50">
-                 <p className="text-sm font-mono mb-4 text-cyber-dim">SCROLL FOR MORE</p>
-                 <div className="w-px h-16 bg-gradient-to-b from-cyber-primary to-transparent"></div>
-            </div>
 
         </div>
 
