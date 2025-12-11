@@ -170,7 +170,7 @@ export default function CyberLanding() {
                         <span>Unleash the</span>
                         <span className="text-cyber-dim/50">Power of</span>
                         <RotatingText
-                          texts={['Blockchain AI', 'Automated Trade', 'Smart Yields']}
+                          texts={['Your AI', 'Your Arena', 'Your Earnings']}
                           mainClassName="px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-0.5 sm:py-1 md:py-2 justify-start rounded-lg"
                           staggerFrom="last"
                           initial={{ y: "100%" }}
