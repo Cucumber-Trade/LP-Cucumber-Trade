@@ -584,7 +584,6 @@ export default function CyberLanding() {
             </div>
 
 
-            </footer>
         </div>
 
       </main>
