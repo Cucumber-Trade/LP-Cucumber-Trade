@@ -61,14 +61,22 @@
 
 @layer base {
   * {
-    @apply border-border transition-colors duration-500;
+    @apply border-border transition-colors duration-500 box-border;
   }
   body {
     @apply font-urbanist antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
     background-image: 
-      linear-gradient(rgba(154, 205, 50, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(154, 205, 50, 0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(var(--color-cyber-dim) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, var(--color-cyber-dim) 0.5px, transparent 0.5px);
+    background-size: 50px 50px;
+    background-attachment: fixed;
+    opacity: 1;
+  }
+  
+  .dark body {
+    background-image: 
+      linear-gradient(rgba(154, 205, 50, 0.05) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(154, 205, 50, 0.05) 0.5px, transparent 0.5px);
   }
 }
 
