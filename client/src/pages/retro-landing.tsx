@@ -91,7 +91,12 @@ export default function CyberLanding() {
           />
       </div>
 
-      {/* Fixed Background Grid Lines Overlay - Removed to be replaced by section-specific lines */}
+      {/* Global Vertical Lines - Spanning entire page height but scrolling with content */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 flex justify-between px-6 md:px-12 lg:px-20 max-w-7xl mx-auto opacity-20 left-0 right-0">
+          <div className="w-px h-full bg-cyber-dim/30"></div>
+          <div className="w-px h-full bg-cyber-dim/30 hidden md:block"></div>
+          <div className="w-px h-full bg-cyber-dim/30"></div>
+      </div>
       
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-cyber-bg/80 backdrop-blur-md border-b border-cyber-dim/10">
