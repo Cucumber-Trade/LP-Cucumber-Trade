@@ -166,11 +166,11 @@ export default function CyberLanding() {
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-4 w-full">
-                    <button className="px-8 py-4 bg-cyber-text text-cyber-bg font-urbanist font-bold text-lg rounded-xl hover:scale-105 transition-transform flex items-center gap-3 shadow-[0_0_30px_rgba(154,205,50,0.2)]">
+                    <button className="px-8 py-4 bg-cyber-text text-cyber-bg font-urbanist font-bold text-lg rounded-xl hover:scale-105 hover:bg-cyber-primary hover:text-cyber-bg transition-all flex items-center gap-3 shadow-[0_0_30px_rgba(154,205,50,0.2)]">
                         Launch DApp
                         <ChevronDown className="w-5 h-5 -rotate-90" />
                     </button>
-                    <button className="px-8 py-4 bg-transparent border border-cyber-dim/30 text-cyber-text font-urbanist font-bold text-lg rounded-xl hover:bg-cyber-dim/5 transition-all flex items-center gap-3">
+                    <button className="px-8 py-4 bg-transparent border border-cyber-dim/30 text-cyber-text font-urbanist font-bold text-lg rounded-xl hover:bg-cyber-primary hover:text-cyber-bg hover:border-cyber-primary transition-all flex items-center gap-3">
                         Documentation
                     </button>
                 </div>
