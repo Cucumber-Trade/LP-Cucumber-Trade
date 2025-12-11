@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw, Menu } from "lucide-react";
+import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw, Menu, Wallet } from "lucide-react";
 import MagicBento from "../components/MagicBento";
 import RotatingText from "../components/RotatingText";
 
@@ -59,9 +59,9 @@ export default function CyberLanding() {
 
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-sm bg-cyber-bg/50 border-b border-cyber-dim/20">
-        <div className="flex items-center gap-2 cursor-pointer hover:text-cyber-primary transition-colors">
-          <Menu className="w-6 h-6" />
-          <span className="font-orbitron text-sm hidden md:inline">MENU</span>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 bg-[#4ade80] rounded-full animate-pulse shadow-[0_0_8px_#4ade80]" />
+          <span className="font-mono text-xs text-cyber-dim tracking-wide uppercase">Operational</span>
         </div>
         
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2">
@@ -71,10 +71,15 @@ export default function CyberLanding() {
             <span className="font-orbitron font-bold text-lg tracking-wider hidden md:inline">CUCUMBER.TRADE</span>
         </div>
 
-        <button className="flex items-center gap-2 px-6 py-2 bg-cyber-primary/10 hover:bg-cyber-primary/20 border border-cyber-primary/50 hover:border-cyber-primary rounded-full transition-all group">
-            <span className="font-orbitron text-sm font-bold text-cyber-primary group-hover:text-white">Open DApp</span>
-            <ChevronDown className="w-4 h-4 -rotate-90 text-cyber-primary group-hover:text-white" />
-        </button>
+        <div className="flex items-center gap-4">
+            <button className="hidden md:flex items-center gap-2 px-5 py-2 text-cyber-text hover:text-white font-orbitron text-sm font-bold transition-colors">
+                Open DApp
+            </button>
+            <button className="flex items-center gap-2 px-6 py-2 bg-cyber-primary/10 hover:bg-cyber-primary/20 border border-cyber-primary/50 hover:border-cyber-primary rounded-full transition-all group">
+                <Wallet className="w-4 h-4 text-cyber-primary group-hover:text-white" />
+                <span className="font-orbitron text-sm font-bold text-cyber-primary group-hover:text-white">Connect Wallet</span>
+            </button>
+        </div>
       </header>
 
       {/* SECTION 1: HERO */}
