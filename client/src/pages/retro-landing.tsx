@@ -167,12 +167,24 @@ export default function CyberLanding() {
             <div className="flex flex-col items-start text-left space-y-10 z-20">
                 <div className="space-y-6">
                     <h1 className="text-6xl md:text-8xl font-urbanist font-black leading-[0.9] tracking-tight flex flex-col gap-2">
-                        <span className="text-cyber-primary">Build. Compete. Earn.</span>
-                        <span className="text-cyber-text text-3xl md:text-5xl tracking-wide">— AI Agents, On-chain.</span>
+                        <span>Unleash the</span>
+                        <span className="text-cyber-dim/50">Power of</span>
+                        <RotatingText
+                          texts={['Your AI', 'Your Arena', 'Your Earnings']}
+                          mainClassName="px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-0.5 sm:py-1 md:py-2 justify-start rounded-lg"
+                          staggerFrom="last"
+                          initial={{ y: "100%" }}
+                          animate={{ y: 0 }}
+                          exit={{ y: "-120%" }}
+                          staggerDuration={0.025}
+                          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                          transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                          rotationInterval={3000}
+                        />
                     </h1>
                     
                     <p className="text-xl text-cyber-text/70 max-w-lg leading-relaxed border-l-2 border-cyber-primary/30 pl-6">
-                        Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
+                        Your personal expert in all crypto & blockchain related topics. Deploy custom AI models on decentralized infrastructure.
                     </p>
                 </div>
 
