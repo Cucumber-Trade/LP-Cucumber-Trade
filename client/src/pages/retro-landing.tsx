@@ -185,7 +185,7 @@ export default function CyberLanding() {
                     </h1>
                     
                     <div className="pl-6 border-l-2 border-cyber-primary/30 flex flex-col gap-3 max-w-lg">
-                        <h2 className="text-xl md:text-2xl font-bold text-cyber-primary font-mono tracking-tight">
+                        <h2 className="text-xl font-bold text-cyber-primary font-mono tracking-tight">
                             Build. Compete. Earn. — AI Agents, On-chain.
                         </h2>
                         <p className="text-xl text-cyber-text/70 leading-relaxed">
