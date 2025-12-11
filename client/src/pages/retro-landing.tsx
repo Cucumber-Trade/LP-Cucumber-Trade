@@ -1,6 +1,5 @@
 import { ChevronDown, Terminal, Wallet } from "lucide-react";
 import RotatingText from "../components/RotatingText";
-import LiquidEther from "../components/LiquidEther";
 import GradualBlur from "../components/GradualBlur";
 
 export default function CyberLanding() {
@@ -37,27 +36,7 @@ export default function CyberLanding() {
 
       {/* SECTION 1: HERO */}
       <div className="relative z-10 min-h-screen flex items-center pt-20 px-6 md:px-12 lg:px-20 overflow-hidden">
-        {/* Background Animation */}
-        <div className="absolute inset-0 z-0">
-            <LiquidEther
-                colors={[ '#9ACD32', '#4ADE80', '#22C55E' ]}
-                mouseForce={20}
-                cursorSize={100}
-                isViscous={false}
-                viscous={30}
-                iterationsViscous={32}
-                iterationsPoisson={32}
-                resolution={0.5}
-                isBounce={false}
-                autoDemo={true}
-                autoSpeed={0.5}
-                autoIntensity={2.2}
-                takeoverDuration={0.25}
-                autoResumeDelay={3000}
-                autoRampDuration={0.6}
-            />
-        </div>
-
+        
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
             
             {/* Left Content */}
