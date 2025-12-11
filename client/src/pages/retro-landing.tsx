@@ -90,11 +90,11 @@ export default function CyberLanding() {
 
                 <div className="flex flex-wrap gap-4 pt-4 w-full">
                     <button className="px-8 py-4 bg-white text-black font-orbitron font-bold text-lg rounded-xl hover:scale-105 transition-transform flex items-center gap-3 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
-                        [Launch Your Agent]
+                        Launch Your Agent
                         <ChevronDown className="w-5 h-5 -rotate-90" />
                     </button>
                     <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-orbitron font-bold text-lg rounded-xl hover:bg-white/10 transition-all flex items-center gap-3">
-                        [Explore Agents]
+                        Explore Agents
                     </button>
                 </div>
             </div>
