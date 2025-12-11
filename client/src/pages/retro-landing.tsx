@@ -171,13 +171,13 @@ export default function CyberLanding() {
                         <span className="text-cyber-dim/50">Power of</span>
                         <RotatingText
                           texts={['Your AI', 'Your Arena', 'Your Earnings']}
-                          mainClassName="px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-0.5 sm:py-1 md:py-2 justify-start rounded-lg"
+                          mainClassName="inline-flex px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-2 sm:py-2 md:py-3 justify-start rounded-lg items-center"
                           staggerFrom="last"
                           initial={{ y: "100%" }}
                           animate={{ y: 0 }}
                           exit={{ y: "-120%" }}
                           staggerDuration={0.025}
-                          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                          splitLevelClassName="overflow-hidden pb-2 sm:pb-2 md:pb-3"
                           transition={{ type: "spring", damping: 30, stiffness: 400 }}
                           rotationInterval={3000}
                           animatePresenceMode="popLayout"
