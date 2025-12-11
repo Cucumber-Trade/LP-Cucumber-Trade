@@ -9,6 +9,21 @@ export default function CyberLanding() {
   return (
     <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-urbanist selection:bg-cyber-primary selection:text-cyber-bg overflow-x-hidden">
       
+      {/* Dot Grid Background - Full Width */}
+      <div className="absolute top-0 left-0 w-full h-[100vh] overflow-hidden pointer-events-none z-0 opacity-30">
+          <DotGrid
+              dotSize={4}
+              gap={25}
+              baseColor="#9ACD32"
+              activeColor="#00FFFF"
+              proximity={120}
+              shockRadius={250}
+              shockStrength={5}
+              resistance={750}
+              returnDuration={1.5}
+          />
+      </div>
+
       {/* Fixed Background Grid Lines Overlay - Runs through entire page */}
       <div className="fixed inset-0 pointer-events-none z-0 flex justify-between px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full opacity-20">
           <div className="w-px h-full bg-cyber-dim/30"></div>
@@ -52,20 +67,6 @@ export default function CyberLanding() {
         {/* SECTION 1: HERO */}
         <div className="min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
             
-             {/* Dot Grid Background for Hero Area */}
-            <div className="absolute inset-0 -z-10 w-full h-full overflow-hidden opacity-30">
-                <DotGrid
-                    dotSize={4}
-                    gap={25}
-                    baseColor="#9ACD32"
-                    activeColor="#00FFFF"
-                    proximity={120}
-                    shockRadius={250}
-                    shockStrength={5}
-                    resistance={750}
-                    returnDuration={1.5}
-                />
-            </div>
 
             {/* Left Content */}
             <div className="flex flex-col items-start text-left space-y-10 z-20">
