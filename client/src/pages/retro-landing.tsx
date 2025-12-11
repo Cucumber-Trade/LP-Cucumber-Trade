@@ -146,8 +146,7 @@ export default function CyberLanding() {
             </div>
 
             {/* Right Visual */}
-            <div className="relative h-[600px] w-full flex items-center justify-center lg:justify-end">
-                <div className="absolute inset-0 bg-cyber-primary/20 blur-[100px] rounded-full opacity-20" />
+            <div className="relative h-[600px] w-full flex items-center justify-center lg:justify-end pointer-events-none">
             </div>
         </div>
       </div>
