@@ -211,15 +211,7 @@ export default function CyberLanding() {
                     /> */}
                     
                     {/* Floating Elements */}
-                    <div className="absolute -top-10 -right-10 bg-cyber-dark/80 backdrop-blur-md border border-cyber-dim/20 p-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-xs font-mono text-cyber-primary">ANALYZING CHAIN DATA...</span>
-                    </div>
                     
-                    <div className="absolute -bottom-5 -left-5 bg-cyber-dark/80 backdrop-blur-md border border-cyber-dim/20 p-4 rounded-xl shadow-xl flex items-center gap-3 animate-pulse">
-                        <Cpu className="w-4 h-4 text-cyber-secondary" />
-                        <span className="text-xs font-mono text-cyber-text">AI MODEL: ACTIVE</span>
-                    </div>
                 </div>
             </div>
 
