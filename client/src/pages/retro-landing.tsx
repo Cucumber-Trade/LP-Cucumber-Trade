@@ -104,7 +104,7 @@ export default function CyberLanding() {
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-cyber-bg/80 backdrop-blur-md border-b border-cyber-dim/10">
         <div className="flex items-center gap-2">
           <div className={`w-2 h-2 rounded-full animate-pulse shadow-[0_0_8px] ${isWalletConnected ? 'bg-[#4ade80] shadow-[#4ade80]' : 'bg-red-500 shadow-red-500'}`} />
-          <span className={`font-urbanist text-xs tracking-wide uppercase ${isWalletConnected ? 'text-[#4ade80]' : 'text-red-500'}`}>
+          <span className="font-urbanist text-xs text-cyber-dim tracking-wide">
             {isWalletConnected ? 'Wallet Connected' : 'Wallet not Connected'}
           </span>
         </div>
