@@ -168,7 +168,6 @@ export default function CyberLanding() {
                 <div className="space-y-6">
                     <h1 className="text-6xl md:text-8xl font-urbanist font-black leading-[0.9] tracking-tight flex flex-col gap-2 items-start">
                         <span>Unleash the</span>
-                        <span className="text-cyber-dim/50">Power of</span>
                         <RotatingText
                           texts={['AI', 'Arena', 'Earnings']}
                           mainClassName="inline-flex px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-2 sm:py-2 md:py-3 justify-start rounded-lg items-center text-5xl md:text-7xl font-urbanist font-black"
