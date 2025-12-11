@@ -61,10 +61,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-500;
   }
   body {
-    @apply font-urbanist antialiased bg-cyber-bg text-cyber-text overflow-x-hidden transition-colors duration-300;
+    @apply font-urbanist antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
     background-image: 
       linear-gradient(rgba(154, 205, 50, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(154, 205, 50, 0.03) 1px, transparent 1px);
