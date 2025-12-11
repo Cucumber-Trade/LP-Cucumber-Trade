@@ -18,7 +18,8 @@ const leaderboardData = [
     drawdown: "-12.5%",
     color: "text-red-400",
     bgColor: "bg-red-500/10",
-    borderColor: "border-red-500/20"
+    borderColor: "border-red-500/20",
+    bonus: "+0.8 ETH"
   },
   {
     rank: 2,
@@ -31,7 +32,8 @@ const leaderboardData = [
     drawdown: "-5.2%",
     color: "text-green-400",
     bgColor: "bg-green-500/10",
-    borderColor: "border-green-500/20"
+    borderColor: "border-green-500/20",
+    bonus: "+0.5 ETH"
   },
   {
     rank: 3,
@@ -44,7 +46,8 @@ const leaderboardData = [
     drawdown: "-15.8%",
     color: "text-yellow-400",
     bgColor: "bg-yellow-500/10",
-    borderColor: "border-yellow-500/20"
+    borderColor: "border-yellow-500/20",
+    bonus: "+0.3 ETH"
   },
   { rank: 4, name: "Neural_Net_V2", mmr: 2550, pnl: "+2,100%", sharpe: 2.5, drawdown: "-8.4%" },
   { rank: 5, name: "Alpha_Sniper", mmr: 2490, pnl: "+1,850%", sharpe: 2.1, drawdown: "-10.2%" },
@@ -88,7 +91,22 @@ export default function Leaderboard() {
          {/* Rank 2 */}
          <div className="order-2 md:order-1 flex flex-col items-center w-full md:w-1/3 max-w-sm relative">
              {/* Card */}
-             <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-hidden hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+             <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-visible hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                {/* Bonus Overlay */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="absolute -top-6 -right-4 bg-white rounded-xl p-2 shadow-xl border border-gray-100 z-50 flex flex-col items-center min-w-[80px]"
+                >
+                    <div className="flex items-center gap-1 text-xs font-bold text-gray-800 mb-1">
+                        Bonus <span>🎉</span>
+                    </div>
+                    <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-md w-full text-center">
+                        {leaderboardData[1].bonus}
+                    </div>
+                </motion.div>
+
                 <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-cyber-dim/20 flex items-center justify-center font-bold font-mono text-cyber-text/50">#2</div>
                 <div className="flex justify-center mb-4 -mt-2">
                     <div className="w-32 h-32 relative transform hover:scale-105 transition-transform duration-500">
@@ -117,8 +135,23 @@ export default function Leaderboard() {
              <div className="absolute inset-0 bg-yellow-500/20 blur-[80px] rounded-full -z-10 opacity-60 animate-pulse-slow"></div>
              
              {/* Card */}
-             <div className="bg-cyber-dark/90 border border-yellow-500/30 rounded-3xl p-8 w-full relative overflow-hidden shadow-[0_0_40px_rgba(234,179,8,0.15)] hover:shadow-[0_0_60px_rgba(234,179,8,0.25)] hover:-translate-y-2 transition-all duration-300 backdrop-blur-md z-20">
-                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
+             <div className="bg-cyber-dark/90 border border-yellow-500/30 rounded-3xl p-8 w-full relative overflow-visible shadow-[0_0_40px_rgba(234,179,8,0.15)] hover:shadow-[0_0_60px_rgba(234,179,8,0.25)] hover:-translate-y-2 transition-all duration-300 backdrop-blur-md z-20">
+                {/* Bonus Overlay */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className="absolute -top-8 -right-6 bg-white rounded-xl p-3 shadow-xl border border-gray-100 z-50 flex flex-col items-center min-w-[100px]"
+                >
+                    <div className="flex items-center gap-1 text-sm font-bold text-gray-800 mb-1">
+                        Bonus <span>🐝</span>
+                    </div>
+                    <div className="bg-green-100 text-green-700 text-sm font-bold px-3 py-1 rounded-md w-full text-center">
+                        {leaderboardData[0].bonus}
+                    </div>
+                </motion.div>
+
+                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50 rounded-t-3xl"></div>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center font-bold font-mono text-black shadow-lg shadow-yellow-500/50 z-20">
                     <Trophy size={18} />
                 </div>
@@ -154,7 +187,22 @@ export default function Leaderboard() {
          {/* Rank 3 */}
          <div className="order-3 md:order-3 flex flex-col items-center w-full md:w-1/3 max-w-sm relative">
              {/* Card */}
-             <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-hidden hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+             <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-visible hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                {/* Bonus Overlay */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="absolute -top-6 -right-4 bg-white rounded-xl p-2 shadow-xl border border-gray-100 z-50 flex flex-col items-center min-w-[80px]"
+                >
+                    <div className="flex items-center gap-1 text-xs font-bold text-gray-800 mb-1">
+                        Bonus <span>🚀</span>
+                    </div>
+                    <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-md w-full text-center">
+                        {leaderboardData[2].bonus}
+                    </div>
+                </motion.div>
+
                 <div className="absolute top-4 left-4 w-8 h-8 rounded-full bg-cyber-dim/20 flex items-center justify-center font-bold font-mono text-cyber-text/50">#3</div>
                 <div className="flex justify-center mb-4 -mt-2">
                     <div className="w-32 h-32 relative transform hover:scale-105 transition-transform duration-500">
