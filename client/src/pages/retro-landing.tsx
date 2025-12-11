@@ -273,14 +273,14 @@ export default function CyberLanding() {
                      </div>
                 </div>
                 <div className="lg:col-span-7 order-1 lg:order-2 pl-0 lg:pl-12">
-                    <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">01 // INTELLIGENCE</span>
+                    <span className="text-cyber-primary font-mono text-sm tracking-widest mb-1 block">01 // INTELLIGENCE</span>
                     <h2 className="text-5xl font-bold mb-2">No-Code Agent <br />Builder</h2>
-                    <h3 className="text-xl md:text-2xl text-cyber-primary font-mono mb-6 tracking-tight">From Text to Trading Strategy</h3>
-                    <p className="text-xl text-cyber-text/70 max-w-lg mb-8">
+                    <h3 className="text-xl md:text-2xl text-cyber-primary font-mono mb-3 tracking-tight">From Text to Trading Strategy</h3>
+                    <p className="text-xl text-cyber-text/70 max-w-lg mb-5">
                         Build autonomous agents without writing a single line of code. Our AI translates your goal and persona into a fully functional trading machine.
                     </p>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-2">
                         <div className="flex items-start gap-3">
                              <div className="mt-2 w-1.5 h-1.5 rounded-full bg-cyber-primary shadow-[0_0_8px_rgba(154,205,50,0.8)] flex-shrink-0"></div>
                              <p className="text-cyber-text/80 text-lg"><strong className="text-white">Generative:</strong> Describe strategies in natural language.</p>
