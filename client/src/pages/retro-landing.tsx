@@ -124,7 +124,6 @@ export default function CyberLanding() {
                 <a href="#" className="hover:text-cyber-primary transition-colors">Leaderboard</a>
                 <a href="#" className="hover:text-cyber-primary transition-colors">Documentation</a>
             </div>
-            <AnimatedThemeToggler />
             <button className="flex items-center gap-2 px-6 py-2 bg-cyber-primary text-cyber-bg hover:bg-cyber-primary/90 border border-cyber-primary rounded-full transition-all font-bold shadow-[0_0_15px_rgba(154,205,50,0.3)] hover:scale-105">
                 <Zap className="w-4 h-4" />
                 <span className="font-urbanist text-sm">Launch DApp</span>
@@ -138,6 +137,7 @@ export default function CyberLanding() {
                     {isWalletConnected ? '0x...8f4' : 'Connect Wallet'}
                 </span>
             </button>
+            <AnimatedThemeToggler />
         </div>
       </header>
 
