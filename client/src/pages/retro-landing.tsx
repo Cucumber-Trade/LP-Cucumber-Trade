@@ -550,29 +550,72 @@ export default function CyberLanding() {
                      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blue-400"></div>
                 </div>
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
-                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors">
+                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors h-full flex flex-col justify-between">
                         <div className="absolute top-1/2 left-1/2 w-full h-full bg-blue-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-                        <Network className="w-16 h-16 text-blue-400 mb-6" />
-                        <h3 className="text-2xl font-bold mb-4">AIVM Infrastructure</h3>
-                        <p className="text-cyber-text/60 leading-relaxed mb-6">
-                            Scalable, secure, and optimized for AI workloads. Our Virtual Machine ensures low-latency execution for complex models.
-                        </p>
-                        <div className="relative h-24 w-full bg-cyber-dim/5 rounded-xl border border-cyber-dim/10 overflow-hidden flex items-center justify-center">
+                        <div>
+                            <Zap className="w-16 h-16 text-blue-400 mb-6" />
+                            <h3 className="text-2xl font-bold mb-4">x402 Protocol</h3>
+                            
+                            <div className="flex flex-col gap-3 mb-4">
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400"><Bot size={16} /></div>
+                                        <div className="flex flex-col">
+                                            <span className="text-xs font-bold text-cyber-text">Data Purchase</span>
+                                            <span className="text-[10px] text-cyber-text/50">High-Fidelity Feed</span>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-blue-400 font-mono font-bold text-sm">-0.004 ETH</div>
+                                        <div className="text-[10px] text-green-400">Confirmed</div>
+                                    </div>
+                                </div>
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400"><Cpu size={16} /></div>
+                                        <div className="flex flex-col">
+                                            <span className="text-xs font-bold text-cyber-text">Compute Power</span>
+                                            <span className="text-[10px] text-cyber-text/50">Priority Execution</span>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-blue-400 font-mono font-bold text-sm">-0.012 ETH</div>
+                                        <div className="text-[10px] text-green-400">Confirmed</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="relative h-16 w-full bg-cyber-dim/5 rounded-xl border border-cyber-dim/10 overflow-hidden flex items-center justify-center">
                             <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,138,255,0.05)_50%,transparent_75%)] bg-[length:250%_250%] animate-scan-vertical opacity-50"></div>
-                            <span className="font-mono text-xs text-blue-400/80">
-                                /// SYSTEM OPTIMIZED <br/>
-                                /// LATENCY: 12ms <br/>
-                                /// NODES: ACTIVE
+                            <span className="font-mono text-xs text-blue-400/80 text-center">
+                                /// M2M CHANNEL OPEN <br/>
+                                /// SIGNATURE VERIFIED
                             </span>
                         </div>
                     </div>
                 </div>
                 <div className="lg:col-span-7 order-1 lg:order-2 pl-0 lg:pl-12">
-                    <span className="text-blue-400 font-mono text-sm tracking-widest mb-2 block">05 // INFRASTRUCTURE</span>
-                    <h2 className="text-5xl font-bold mb-6">AIVM Blockchain <br />Layer</h2>
-                    <p className="text-xl text-cyber-text/70 max-w-lg">
-                         The backbone of AI on-chain. Dedicated infrastructure designed to handle the computational demands of next-gen artificial intelligence.
+                    <span className="text-blue-400 font-mono text-sm tracking-widest mb-1 block">05 // INFRASTRUCTURE</span>
+                    <h2 className="text-5xl font-bold mb-2">x402 Economic <br />Rail</h2>
+                    <h3 className="text-xl md:text-2xl text-blue-400 font-mono mb-3 tracking-tight">Frictionless M2M Payments</h3>
+                    <p className="text-xl text-cyber-text/70 max-w-lg mb-5">
+                         We use the x402 Protocol to enable instant machine-to-machine payments. Agents can autonomously pay for high-fidelity data, execution priority, or premium tools using "Nano-payments" without user intervention.
                     </p>
+                    <div className="space-y-2">
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Autonomy:</strong> Agents pay for their own resources.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Speed:</strong> Instant signature-based settlement.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Efficiency:</strong> Pay-per-request pricing.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             </ScrollStackItem>
