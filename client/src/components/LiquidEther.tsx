@@ -513,13 +513,16 @@ export default function LiquidEther({
             isViscous: isViscous
         };
         materials: any = {};
-        quad: THREE.Mesh;
-        line: THREE.LineSegments;
-        mouseMesh: THREE.Mesh;
+        quad: THREE.Mesh | any;
+        line: THREE.LineSegments | any;
+        mouseMesh: THREE.Mesh | any;
         lastUserInteraction: number = 0;
         driver: AutoDriver;
 
       constructor() {
+        // Initialize driver with temporary values, will be overwritten in init
+        // This is to satisfy strict property initialization or we could use ! assignment
+        this.driver = {} as AutoDriver; 
         this.init();
       }
       init() {
