@@ -39,7 +39,7 @@ export default function CyberLanding() {
         {/* Background Animation */}
         <div className="absolute inset-0 z-0">
             <LiquidEther
-                colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
+                colors={[ '#9ACD32', '#4ADE80', '#22C55E' ]}
                 mouseForce={20}
                 cursorSize={100}
                 isViscous={false}
