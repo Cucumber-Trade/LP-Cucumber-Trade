@@ -13,7 +13,7 @@
 }
 
 .scroll-stack-inner {
-  padding: 10vh 0 20vh; /* Adjusted padding for better fit */
+  padding: 10vh 0 10vh; /* Adjusted padding for better fit */
   /* min-height: 100vh; */
   position: relative;
 }

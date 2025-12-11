@@ -321,7 +321,7 @@ const ScrollStack = ({
       <div className="scroll-stack-inner">
         {children}
         {/* Spacer so the last pin can release cleanly */}
-        <div className="scroll-stack-end" style={{ height: '50vh' }} /> 
+        <div className="scroll-stack-end" style={{ height: '10vh' }} /> 
       </div>
     </div>
   );
