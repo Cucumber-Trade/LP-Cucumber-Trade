@@ -265,10 +265,10 @@ export default function CyberLanding() {
                         <div className="space-y-2 font-mono text-xs text-cyber-primary/80 bg-black/20 p-4 rounded-lg border border-cyber-dim/5">
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                <span>> Parsing strategy...</span>
+                                <span>&gt; Parsing strategy...</span>
                             </div>
-                            <div>> Generating logic...</div>
-                            <div className="text-white">> Agent deployed successfully.</div>
+                            <div>&gt; Generating logic...</div>
+                            <div className="text-white">&gt; Agent deployed successfully.</div>
                         </div>
                      </div>
                 </div>
