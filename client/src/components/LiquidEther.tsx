@@ -377,6 +377,7 @@ export default function LiquidEther({
     varying vec2 vUv;
     uniform vec2 force;
     uniform vec2 scale;
+    uniform vec2 center;
     void main(){
         if(length(vUv - vec2(0.5)) > 0.5) discard;
         gl_FragColor = vec4(force * scale.x, 0.0, 1.0);
