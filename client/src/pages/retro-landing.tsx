@@ -91,24 +91,8 @@ export default function CyberLanding() {
           />
       </div>
 
-      {/* Fixed Background Grid Lines Overlay - Runs through entire page */}
-      <div className="fixed inset-0 pointer-events-none z-0 flex justify-between px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full opacity-20">
-          <div className="w-px h-full bg-cyber-dim/30 relative">
-            <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-            <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-            <div className="absolute top-[80%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-          </div>
-          <div className="w-px h-full bg-cyber-dim/30 hidden md:block relative">
-             <div className="absolute top-[35%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-             <div className="absolute top-[65%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-          </div>
-          <div className="w-px h-full bg-cyber-dim/30 relative">
-            <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-            <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-            <div className="absolute top-[80%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
-          </div>
-      </div>
-
+      {/* Fixed Background Grid Lines Overlay - Removed to be replaced by section-specific lines */}
+      
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-6 flex justify-between items-center bg-cyber-bg/80 backdrop-blur-md border-b border-cyber-dim/10">
         <div className="flex items-center gap-2">
@@ -148,6 +132,21 @@ export default function CyberLanding() {
         
         {/* SECTION 1: HERO */}
         <div id="section-hero" className="min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+            {/* Hero Tech Grid Overlay */}
+            <div className="absolute inset-0 pointer-events-none z-0 opacity-20">
+                <div className="absolute left-0 top-0 h-full w-px bg-cyber-dim/50"></div>
+                <div className="absolute right-0 top-0 h-full w-px bg-cyber-dim/50"></div>
+                <div className="absolute top-20 left-0 w-full h-px bg-cyber-dim/50"></div>
+                <div className="absolute bottom-20 left-0 w-full h-px bg-cyber-dim/50"></div>
+                {/* Crosshairs */}
+                <div className="absolute top-20 left-0 w-6 h-6 border-t border-l border-cyber-primary"></div>
+                <div className="absolute top-20 right-0 w-6 h-6 border-t border-r border-cyber-primary"></div>
+                <div className="absolute bottom-20 left-0 w-6 h-6 border-b border-l border-cyber-primary"></div>
+                <div className="absolute bottom-20 right-0 w-6 h-6 border-b border-r border-cyber-primary"></div>
+                
+                {/* Center vertical line */}
+                <div className="absolute left-1/2 top-0 h-full w-px bg-cyber-dim/30 hidden lg:block"></div>
+            </div>
             
 
             {/* Left Content */}
@@ -227,30 +226,23 @@ export default function CyberLanding() {
 
         {/* CONTINUOUS SCROLL CONTENT - NO HARD BREAKS */}
         <div className="space-y-40 mt-20 relative">
-            {/* Dynamic Horizontal Grid Lines for Content Area */}
-            <div className="absolute inset-0 pointer-events-none z-0 opacity-20">
-                {/* Generate horizontal lines spaced out */}
-                <div className="w-full h-px bg-cyber-dim/50 absolute top-0"></div>
-                <div className="w-full h-px bg-cyber-dim/50 absolute top-[15%]"></div>
-                <div className="w-full h-px bg-cyber-dim/50 absolute top-[30%]"></div>
-                <div className="w-full h-px bg-cyber-dim/50 absolute top-[45%]"></div>
-                <div className="w-full h-px bg-cyber-dim/50 absolute top-[60%]"></div>
-                <div className="w-full h-px bg-cyber-dim/50 absolute top-[75%]"></div>
-                <div className="w-full h-px bg-cyber-dim/50 absolute bottom-0"></div>
-                
-                {/* Crosshairs at intersections with vertical alignment */}
-                <div className="absolute left-0 top-[15%] w-4 h-4 border-t border-l border-cyber-primary/50 -translate-x-2 -translate-y-2"></div>
-                <div className="absolute right-0 top-[15%] w-4 h-4 border-t border-r border-cyber-primary/50 translate-x-2 -translate-y-2"></div>
-                
-                <div className="absolute left-0 top-[45%] w-4 h-4 border-b border-l border-cyber-primary/50 -translate-x-2 translate-y-2"></div>
-                <div className="absolute right-0 top-[45%] w-4 h-4 border-b border-r border-cyber-primary/50 translate-x-2 translate-y-2"></div>
-            </div>
-
             <ScrollStack useWindowScroll={true} itemDistance={50} stackPosition="15%" itemStackDistance={30}>
             
             {/* Feature 1 */}
             <ScrollStackItem>
-            <div id="section-intelligence" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-intelligence" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl relative overflow-hidden">
+                {/* Tech Grid Overlay */}
+                <div className="absolute inset-0 pointer-events-none opacity-20">
+                    <div className="absolute left-8 top-0 bottom-0 w-px bg-cyber-dim/50"></div>
+                    <div className="absolute right-8 top-0 bottom-0 w-px bg-cyber-dim/50"></div>
+                    <div className="absolute top-8 left-0 right-0 h-px bg-cyber-dim/50"></div>
+                    <div className="absolute bottom-8 left-0 right-0 h-px bg-cyber-dim/50"></div>
+                    {/* Corners */}
+                    <div className="absolute top-8 left-8 w-4 h-4 border-t border-l border-cyber-primary"></div>
+                    <div className="absolute top-8 right-8 w-4 h-4 border-t border-r border-cyber-primary"></div>
+                    <div className="absolute bottom-8 left-8 w-4 h-4 border-b border-l border-cyber-primary"></div>
+                    <div className="absolute bottom-8 right-8 w-4 h-4 border-b border-r border-cyber-primary"></div>
+                </div>
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                      <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-cyber-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -278,7 +270,18 @@ export default function CyberLanding() {
 
              {/* Feature 2 */}
              <ScrollStackItem>
-             <div id="section-security" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+             <div id="section-security" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl relative overflow-hidden">
+                {/* Tech Grid Overlay */}
+                <div className="absolute inset-0 pointer-events-none opacity-20">
+                    <div className="absolute left-1/3 top-0 bottom-0 w-px bg-cyber-dim/50"></div>
+                    <div className="absolute right-1/3 top-0 bottom-0 w-px bg-cyber-dim/50"></div>
+                    <div className="absolute top-1/2 left-0 right-0 h-px bg-cyber-dim/50"></div>
+                    {/* Corners */}
+                    <div className="absolute top-4 left-4 w-2 h-2 bg-cyber-secondary"></div>
+                    <div className="absolute top-4 right-4 w-2 h-2 bg-cyber-secondary"></div>
+                    <div className="absolute bottom-4 left-4 w-2 h-2 bg-cyber-secondary"></div>
+                    <div className="absolute bottom-4 right-4 w-2 h-2 bg-cyber-secondary"></div>
+                </div>
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-cyber-secondary font-mono text-sm tracking-widest mb-2 block">02 // SECURITY</span>
                     <h2 className="text-5xl font-bold mb-6">Smart-Contracts <br />Generator & Auditor</h2>
@@ -319,7 +322,19 @@ export default function CyberLanding() {
             
             {/* Feature 3: Ecosystem Application Layer */}
             <ScrollStackItem>
-            <div id="section-ecosystem" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-ecosystem" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl relative overflow-hidden">
+                {/* Tech Grid Overlay */}
+                <div className="absolute inset-0 pointer-events-none opacity-20">
+                    <div className="absolute left-8 top-0 bottom-0 w-px bg-cyber-dim/50 border-r border-dashed border-cyber-dim/50"></div>
+                    <div className="absolute right-8 top-0 bottom-0 w-px bg-cyber-dim/50 border-l border-dashed border-cyber-dim/50"></div>
+                    <div className="absolute top-0 left-0 w-full h-8 border-b border-cyber-dim/30"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-8 border-t border-cyber-dim/30"></div>
+                     {/* Plus marks */}
+                    <div className="absolute top-8 left-8 w-3 h-3 text-purple-400 font-mono text-xs flex items-center justify-center">+</div>
+                    <div className="absolute top-8 right-8 w-3 h-3 text-purple-400 font-mono text-xs flex items-center justify-center">+</div>
+                    <div className="absolute bottom-8 left-8 w-3 h-3 text-purple-400 font-mono text-xs flex items-center justify-center">+</div>
+                    <div className="absolute bottom-8 right-8 w-3 h-3 text-purple-400 font-mono text-xs flex items-center justify-center">+</div>
+                </div>
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -351,7 +366,15 @@ export default function CyberLanding() {
 
             {/* Feature 4: Token Layer */}
             <ScrollStackItem>
-            <div id="section-tokenomics" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-tokenomics" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl relative overflow-hidden">
+                {/* Tech Grid Overlay */}
+                <div className="absolute inset-0 pointer-events-none opacity-20">
+                    <div className="absolute inset-12 border border-cyber-dim/30 rounded-2xl"></div>
+                    <div className="absolute top-1/2 left-0 w-full h-px bg-cyber-dim/30"></div>
+                    <div className="absolute left-1/2 top-0 h-full w-px bg-cyber-dim/30"></div>
+                     {/* Center Marker */}
+                    <div className="absolute top-1/2 left-1/2 w-4 h-4 border border-yellow-400 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+                </div>
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-yellow-400 font-mono text-sm tracking-widest mb-2 block">04 // TOKENOMICS</span>
                     <h2 className="text-5xl font-bold mb-6">$CUMB Token <br />Utility Layer</h2>
@@ -398,7 +421,13 @@ export default function CyberLanding() {
 
             {/* Feature 5: AIVM Infrastructure */}
             <ScrollStackItem>
-            <div id="section-infrastructure" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-infrastructure" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl relative overflow-hidden">
+                {/* Tech Grid Overlay */}
+                <div className="absolute inset-0 pointer-events-none opacity-20">
+                     <div className="absolute top-0 left-0 right-0 h-full bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+                     <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-blue-400"></div>
+                     <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blue-400"></div>
+                </div>
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors">
                         <div className="absolute top-1/2 left-1/2 w-full h-full bg-blue-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -429,7 +458,16 @@ export default function CyberLanding() {
 
             {/* Feature 6: Labs & Launchpad */}
             <ScrollStackItem>
-            <div id="section-incubation" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-incubation" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl relative overflow-hidden">
+                {/* Tech Grid Overlay */}
+                <div className="absolute inset-0 pointer-events-none opacity-20">
+                    <div className="absolute left-0 top-1/3 w-full h-px bg-cyber-dim/30 border-t border-dashed border-cyber-dim/50"></div>
+                    <div className="absolute left-0 bottom-1/3 w-full h-px bg-cyber-dim/30 border-t border-dashed border-cyber-dim/50"></div>
+                    <div className="absolute top-0 left-12 h-full w-px bg-cyber-dim/30"></div>
+                    {/* Markers */}
+                    <div className="absolute top-1/3 left-12 w-2 h-2 bg-red-400 -translate-x-1/2 -translate-y-1/2"></div>
+                    <div className="absolute bottom-1/3 left-12 w-2 h-2 bg-red-400 -translate-x-1/2 translate-y-1/2"></div>
+                </div>
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-red-400 font-mono text-sm tracking-widest mb-2 block">06 // INCUBATION</span>
                     <h2 className="text-5xl font-bold mb-6">Labs & <br />Launchpads</h2>
