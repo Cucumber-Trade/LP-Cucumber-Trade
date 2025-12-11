@@ -1,4 +1,5 @@
 import Roadmap from "../components/Roadmap";
+import Leaderboard from "../components/Leaderboard";
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords } from "lucide-react";
 import { useState, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
@@ -758,6 +759,9 @@ export default function CyberLanding() {
                      </div>
                 </div>
             </div>
+
+            {/* Feature 9: Leaderboard */}
+            <Leaderboard />
 
 
         </div>
