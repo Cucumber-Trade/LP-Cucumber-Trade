@@ -171,7 +171,7 @@ export default function CyberLanding() {
                         <span className="text-cyber-dim/50">Power of</span>
                         <RotatingText
                           texts={['Your AI', 'Your Arena', 'Your Earnings']}
-                          mainClassName="inline-flex px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-2 sm:py-2 md:py-3 justify-start rounded-lg items-center"
+                          mainClassName="inline-flex px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-2 sm:py-2 md:py-3 justify-start rounded-lg items-center whitespace-nowrap text-5xl md:text-7xl"
                           staggerFrom="last"
                           initial={{ y: "100%" }}
                           animate={{ y: 0 }}
