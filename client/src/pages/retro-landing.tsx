@@ -1,6 +1,7 @@
 import { ChevronDown, Terminal, Wallet } from "lucide-react";
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
+import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
 
 export default function CyberLanding() {
   return (
@@ -24,6 +25,7 @@ export default function CyberLanding() {
         </div>
 
         <div className="flex items-center gap-4">
+            <AnimatedThemeToggler />
             <button className="hidden md:flex items-center gap-2 px-5 py-2 text-cyber-text hover:text-white font-urbanist text-sm font-bold transition-colors">
                 Open DApp
             </button>
