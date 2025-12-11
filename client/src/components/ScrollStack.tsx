@@ -248,7 +248,7 @@ const ScrollStack = ({
     }
   }, [updateCardTransforms, useWindowScroll]);
 
-  // Handle Resize
+  // Handle Resize and content changes
   useEffect(() => {
     const handleResize = () => {
       calculateMetrics();
@@ -261,7 +261,23 @@ const ScrollStack = ({
     };
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    
+    // Also use ResizeObserver to detect content changes that might push elements
+    const resizeObserver = new ResizeObserver(() => {
+      handleResize();
+    });
+    
+    if (scrollerRef.current) {
+      resizeObserver.observe(scrollerRef.current);
+    }
+    
+    // Observe body for general layout shifts
+    resizeObserver.observe(document.body);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      resizeObserver.disconnect();
+    };
   }, [calculateMetrics, updateCardTransforms]);
 
 
