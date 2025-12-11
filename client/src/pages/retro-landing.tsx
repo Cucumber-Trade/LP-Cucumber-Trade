@@ -166,7 +166,7 @@ export default function CyberLanding() {
             {/* Left Content */}
             <div className="flex flex-col items-start text-left space-y-10 z-20">
                 <div className="space-y-6">
-                    <h1 className="text-6xl md:text-8xl font-urbanist font-black leading-[0.9] tracking-tight flex flex-col gap-2 items-start">
+                    <h1 className="text-6xl md:text-8xl font-urbanist font-black leading-[0.9] tracking-tight flex gap-4 items-center flex-wrap">
                         <span>Your</span>
                         <RotatingText
                           texts={['AI', 'Arena', 'Earnings']}
