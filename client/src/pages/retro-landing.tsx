@@ -4,7 +4,7 @@ import GradualBlur from "../components/GradualBlur";
 
 export default function CyberLanding() {
   return (
-    <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-rajdhani selection:bg-cyber-primary selection:text-cyber-bg overflow-x-hidden">
+    <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-urbanist selection:bg-cyber-primary selection:text-cyber-bg overflow-x-hidden">
       
       {/* Dynamic Background Elements */}
       <div className="fixed inset-0 pointer-events-none z-0 bg-[#020406]" />

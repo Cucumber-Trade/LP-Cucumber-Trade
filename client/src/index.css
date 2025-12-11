@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -17,8 +19,9 @@
   --color-foreground: var(--color-cyber-text);
   --color-border: var(--color-cyber-dim);
   
-  --font-orbitron: "Orbitron", sans-serif;
-  --font-rajdhani: "Rajdhani", sans-serif;
+  --font-orbitron: "Urbanist", sans-serif;
+  --font-rajdhani: "Urbanist", sans-serif;
+  --font-urbanist: "Urbanist", sans-serif;
 
   --animate-scan-vertical: scan-vertical 3s linear infinite;
   --animate-glitch: glitch 1s linear infinite;
@@ -41,7 +44,7 @@
     @apply border-border;
   }
   body {
-    @apply font-rajdhani antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
+    @apply font-urbanist antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
     background-image: 
       linear-gradient(rgba(154, 205, 50, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(154, 205, 50, 0.03) 1px, transparent 1px);
