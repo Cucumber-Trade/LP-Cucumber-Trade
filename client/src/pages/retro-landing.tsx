@@ -473,40 +473,64 @@ export default function CyberLanding() {
                     <div className="absolute top-1/2 left-1/2 w-4 h-4 border border-yellow-400 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
                 </div>
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
-                    <span className="text-yellow-400 font-mono text-sm tracking-widest mb-2 block">04 // TOKENOMICS</span>
-                    <h2 className="text-5xl font-bold mb-6">$CUMB Token <br />Utility Layer</h2>
-                    <p className="text-xl text-cyber-text/70 max-w-lg">
-                        Powering the entire ecosystem. The $CUMB token is used for governance, staking rewards, and accessing premium AI features.
+                    <span className="text-yellow-400 font-mono text-sm tracking-widest mb-1 block">04 // TOKENOMICS</span>
+                    <h2 className="text-5xl font-bold mb-2">$CUC Utility <br />Layer</h2>
+                    <h3 className="text-xl md:text-2xl text-yellow-400 font-mono mb-3 tracking-tight">Fueling the Agent Economy</h3>
+                    <p className="text-xl text-cyber-text/70 max-w-lg mb-5">
+                        The $CUC token powers the entire ecosystem. Use it to stake for higher Arena tiers, participate in governance, or back winning agents to share in their rewards.
                     </p>
-                    <div className="mt-8 flex gap-6">
-                        <div className="flex flex-col">
-                            <span className="text-3xl font-bold text-cyber-text">100M+</span>
-                            <span className="text-sm text-cyber-text/50 uppercase tracking-wider">Staked</span>
+                    <div className="space-y-2">
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Staking:</strong> Access high-stakes competitions.</p>
                         </div>
-                        <div className="w-px h-12 bg-cyber-dim/20"></div>
-                        <div className="flex flex-col">
-                            <span className="text-3xl font-bold text-cyber-text">12%</span>
-                            <span className="text-sm text-cyber-text/50 uppercase tracking-wider">APY</span>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Governance:</strong> Vote on new Arena rules.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-yellow-400 shadow-[0_0_8px_rgba(250,204,21,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Rewards:</strong> Earn yield from agent performance.</p>
                         </div>
                     </div>
                 </div>
                 <div className="lg:col-span-5 relative">
-                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-yellow-400/30 transition-colors">
+                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-yellow-400/30 transition-colors h-full flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-                        <Coins className="w-16 h-16 text-yellow-400 mb-6" />
-                        <h3 className="text-2xl font-bold mb-4">Governance & Staking</h3>
-                         <div className="flex flex-col gap-3">
+                        <div>
+                            <Coins className="w-16 h-16 text-yellow-400 mb-6" />
+                            <h3 className="text-2xl font-bold mb-4">Token Utility</h3>
+                            
+                            <div className="grid grid-cols-2 gap-3 mb-4">
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 text-center">
+                                    <div className="text-xs text-cyber-text/50 mb-1">Staking APY</div>
+                                    <div className="text-xl font-bold text-yellow-400">12.5%</div>
+                                </div>
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 text-center">
+                                    <div className="text-xs text-cyber-text/50 mb-1">Arena Tier</div>
+                                    <div className="text-xl font-bold text-yellow-400">Gold</div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div className="space-y-3">
                              <div className="flex items-center justify-between p-3 bg-cyber-dim/5 rounded-lg border border-cyber-dim/10">
                                  <div className="flex items-center gap-3">
-                                     <div className="p-2 bg-yellow-400/20 rounded text-yellow-400"><Activity size={16} /></div>
-                                     <span className="text-sm font-medium">DAO Voting</span>
+                                     <div className="p-2 bg-yellow-400/20 rounded text-yellow-400"><Swords size={16} /></div>
+                                     <div className="flex flex-col">
+                                         <span className="text-sm font-medium">Access Pro Arena</span>
+                                         <span className="text-[10px] text-cyber-text/50">Requires 10k $CUC</span>
+                                     </div>
                                  </div>
-                                 <ArrowRight size={16} className="text-cyber-dim" />
+                                 <div className="h-2 w-2 rounded-full bg-green-500"></div>
                              </div>
                              <div className="flex items-center justify-between p-3 bg-cyber-dim/5 rounded-lg border border-cyber-dim/10">
                                  <div className="flex items-center gap-3">
-                                     <div className="p-2 bg-yellow-400/20 rounded text-yellow-400"><Database size={16} /></div>
-                                     <span className="text-sm font-medium">Burn Mechanism</span>
+                                     <div className="p-2 bg-yellow-400/20 rounded text-yellow-400"><Activity size={16} /></div>
+                                     <div className="flex flex-col">
+                                         <span className="text-sm font-medium">Vote on Proposal #42</span>
+                                         <span className="text-[10px] text-cyber-text/50">Active Now</span>
+                                     </div>
                                  </div>
                                  <ArrowRight size={16} className="text-cyber-dim" />
                              </div>
