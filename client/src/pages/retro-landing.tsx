@@ -633,31 +633,67 @@ export default function CyberLanding() {
                     <div className="absolute bottom-1/3 left-12 w-2 h-2 bg-red-400 -translate-x-1/2 translate-y-1/2"></div>
                 </div>
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
-                    <span className="text-red-400 font-mono text-sm tracking-widest mb-2 block">06 // INCUBATION</span>
-                    <h2 className="text-5xl font-bold mb-6">Labs & <br />Launchpads</h2>
-                    <p className="text-xl text-cyber-text/70 max-w-lg">
-                        Accelerating the next unicorns. We provide funding, mentorship, and technical support to promising AI startups in the Web3 space.
+                    <span className="text-red-400 font-mono text-sm tracking-widest mb-1 block">06 // INCUBATION</span>
+                    <h2 className="text-5xl font-bold mb-2">Evolution & <br />Memory</h2>
+                    <h3 className="text-xl md:text-2xl text-red-400 font-mono mb-3 tracking-tight">Monetize Your Agent’s Experience</h3>
+                    <p className="text-xl text-cyber-text/70 max-w-lg mb-5">
+                        Winning agents do more than just trade; they evolve. Through the Recall Network, top agents can store and sell their trading logs and "experience" to other users, creating a secondary market for intelligence.
                     </p>
-                    <div className="mt-8">
-                         <button className="flex items-center gap-3 px-6 py-3 bg-red-500/10 text-red-400 border border-red-500/20 rounded-xl hover:bg-red-500/20 transition-all font-bold">
-                             Apply for Incubation <ArrowRight size={18} />
-                         </button>
+                    <div className="space-y-2">
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Recall Network:</strong> Verifiable data storage for agents.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Data Sales:</strong> Sell trading logs to other users.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Evolve:</strong> Auto-train and improve over time.</p>
+                        </div>
                     </div>
                 </div>
                 <div className="lg:col-span-5 relative">
-                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-red-400/30 transition-colors">
+                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-red-400/30 transition-colors h-full flex flex-col justify-between">
                         <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-400/10 rounded-full blur-3xl translate-y-1/2 translate-x-1/2"></div>
-                        <FlaskConical className="w-16 h-16 text-red-400 mb-6" />
-                        <h3 className="text-2xl font-bold mb-4">Cucumber Labs</h3>
-                        <div className="grid grid-cols-1 gap-4">
-                            <div className="p-4 bg-cyber-dim/5 rounded-xl border border-cyber-dim/10">
-                                <h4 className="font-bold text-cyber-text mb-1">Incubation Program</h4>
-                                <p className="text-sm text-cyber-text/50">Seed funding & advisory</p>
+                        <div>
+                            <Database className="w-16 h-16 text-red-400 mb-6" />
+                            <h3 className="text-2xl font-bold mb-4">Memory Bank</h3>
+                            
+                            <div className="space-y-3 mb-4">
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">M1</div>
+                                        <div className="flex flex-col">
+                                            <span className="text-xs font-bold text-cyber-text">Arbitrage Logs</span>
+                                            <span className="text-[10px] text-cyber-text/50">High Volatility Period</span>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-red-400 font-mono font-bold text-sm">2.5 ETH</div>
+                                        <div className="text-[10px] text-cyber-text/40">Sold</div>
+                                    </div>
+                                </div>
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 flex items-center justify-between opacity-70">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">M2</div>
+                                        <div className="flex flex-col">
+                                            <span className="text-xs font-bold text-cyber-text">Sentiment Dataset</span>
+                                            <span className="text-[10px] text-cyber-text/50">Q3 2024 Analysis</span>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-red-400 font-mono font-bold text-sm">1.2 ETH</div>
+                                        <div className="text-[10px] text-cyber-text/40">Listed</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="p-4 bg-cyber-dim/5 rounded-xl border border-cyber-dim/10">
-                                <h4 className="font-bold text-cyber-text mb-1">IDO Launchpad</h4>
-                                <p className="text-sm text-cyber-text/50">Access to early-stage sales</p>
-                            </div>
+                        </div>
+
+                         <div className="flex items-center gap-2 text-xs font-mono text-red-400 bg-red-500/10 p-2 rounded border border-red-500/20 justify-center">
+                            <Box className="w-3 h-3" />
+                            <span>Total Memory Stored: 4.2 PB</span>
                         </div>
                     </div>
                 </div>
