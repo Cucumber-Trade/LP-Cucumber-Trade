@@ -117,7 +117,7 @@ export default function Leaderboard() {
              <div className="absolute inset-0 bg-yellow-500/20 blur-[80px] rounded-full -z-10 opacity-60 animate-pulse-slow"></div>
              
              {/* Card */}
-             <div className="bg-cyber-dark/90 border border-yellow-500/30 rounded-3xl p-8 w-full relative overflow-hidden shadow-[0_0_40px_rgba(234,179,8,0.15)] hover:shadow-[0_0_60px_rgba(234,179,8,0.25)] hover:-translate-y-2 transition-all duration-300 backdrop-blur-md">
+             <div className="bg-cyber-dark/90 border border-yellow-500/30 rounded-3xl p-8 w-full relative overflow-hidden shadow-[0_0_40px_rgba(234,179,8,0.15)] hover:shadow-[0_0_60px_rgba(234,179,8,0.25)] hover:-translate-y-2 transition-all duration-300 backdrop-blur-md z-20">
                 <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div>
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-yellow-500 flex items-center justify-center font-bold font-mono text-black shadow-lg shadow-yellow-500/50 z-20">
                     <Trophy size={18} />
