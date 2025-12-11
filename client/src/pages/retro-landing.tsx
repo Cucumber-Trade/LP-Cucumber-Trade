@@ -1,10 +1,11 @@
 import { ChevronDown, Terminal, Wallet } from "lucide-react";
 import RotatingText from "../components/RotatingText";
 import LiquidEther from "../components/LiquidEther";
+import GradualBlur from "../components/GradualBlur";
 
 export default function CyberLanding() {
   return (
-    <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-rajdhani selection:bg-cyber-primary selection:text-cyber-bg overflow-hidden">
+    <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-rajdhani selection:bg-cyber-primary selection:text-cyber-bg overflow-x-hidden">
       
       {/* Dynamic Background Elements */}
       <div className="fixed inset-0 pointer-events-none z-0 bg-[#020406]" />
@@ -104,6 +105,32 @@ export default function CyberLanding() {
             </div>
         </div>
       </div>
+
+      {/* SECTION 2: SCROLL ANIMATION */}
+      <section style={{position: 'relative', height: 500, overflow: 'hidden'}} className="bg-cyber-dark border-t border-cyber-primary/20">
+        <div className="h-full overflow-y-auto px-8 py-24 flex flex-col items-center justify-center text-center">
+             <h2 className="text-4xl md:text-6xl font-orbitron font-bold text-white mb-6">
+                Scroll Into The <span className="text-cyber-primary">Future</span>
+             </h2>
+             <p className="text-xl text-cyber-text/70 max-w-2xl">
+                Experience the next generation of AI agent interaction. Smooth, fast, and completely decentralized.
+             </p>
+             <div className="mt-12 animate-bounce">
+                <ChevronDown className="w-8 h-8 text-cyber-primary" />
+             </div>
+        </div>
+
+        <GradualBlur
+            target="parent"
+            position="bottom"
+            height="6rem"
+            strength={2}
+            divCount={5}
+            curve="bezier"
+            exponential={true}
+            opacity={1}
+        />
+      </section>
     </div>
   );
 }
