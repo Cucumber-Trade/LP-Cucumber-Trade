@@ -251,26 +251,49 @@ export default function CyberLanding() {
                     <div className="absolute bottom-8 right-8 w-4 h-4 border-b border-r border-cyber-primary"></div>
                 </div>
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
-                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
+                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors h-full flex flex-col justify-between">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-cyber-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                        <Bot className="w-16 h-16 text-cyber-primary mb-6" />
-                        <h3 className="text-2xl font-bold mb-4">Cucumber Chatbot</h3>
-                        <p className="text-cyber-text/60 leading-relaxed">
-                            Reliable & Fast Source of Information. Ask Cucumber AI any question related to Blockchain and Crypto. The AI can answer general and technical questions.
-                        </p>
-                        <div className="mt-8 flex gap-2">
-                             <div className="h-1 w-full bg-cyber-dim/10 rounded-full overflow-hidden">
-                                <div className="h-full w-2/3 bg-cyber-primary/50"></div>
-                             </div>
+                        <div>
+                            <Bot className="w-16 h-16 text-cyber-primary mb-6" />
+                            <h3 className="text-2xl font-bold mb-4">Agent Builder</h3>
+                            <div className="p-4 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-4">
+                                <p className="text-cyber-text/80 italic text-sm">
+                                    "Create a market making agent that trades ETH/USDC on Uniswap with 0.5% spread"
+                                </p>
+                            </div>
+                        </div>
+                        <div className="space-y-2 font-mono text-xs text-cyber-primary/80 bg-black/20 p-4 rounded-lg border border-cyber-dim/5">
+                            <div className="flex items-center gap-2">
+                                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span>> Parsing strategy...</span>
+                            </div>
+                            <div>> Generating logic...</div>
+                            <div className="text-white">> Agent deployed successfully.</div>
                         </div>
                      </div>
                 </div>
                 <div className="lg:col-span-7 order-1 lg:order-2 pl-0 lg:pl-12">
                     <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">01 // INTELLIGENCE</span>
-                    <h2 className="text-5xl font-bold mb-6">AI News & <br />Auto-Model</h2>
-                    <p className="text-xl text-cyber-text/70 max-w-lg">
-                        The future of Web3 news is here. Our advanced AI model scans the web and curates short articles on trending topics every 60 minutes.
+                    <h2 className="text-5xl font-bold mb-2">No-Code Agent <br />Builder</h2>
+                    <h3 className="text-xl md:text-2xl text-cyber-primary font-mono mb-6 tracking-tight">From Text to Trading Strategy</h3>
+                    <p className="text-xl text-cyber-text/70 max-w-lg mb-8">
+                        Build autonomous agents without writing a single line of code. Our AI translates your goal and persona into a fully functional trading machine.
                     </p>
+                    
+                    <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-cyber-primary shadow-[0_0_8px_rgba(154,205,50,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Generative:</strong> Describe strategies in natural language.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-cyber-primary shadow-[0_0_8px_rgba(154,205,50,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Autonomous:</strong> Agents execute logic 24/7.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-cyber-primary shadow-[0_0_8px_rgba(154,205,50,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Accessible:</strong> No coding or infrastructure setup required.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             </ScrollStackItem>
