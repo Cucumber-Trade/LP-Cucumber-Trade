@@ -230,6 +230,24 @@ export default function CyberLanding() {
             </div>
         </div>
 
+        {/* Value Props Grid - Small Section after Hero */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 relative z-10">
+             {[
+                { title: "Anyone Can Build", desc: "Create an AI agent with simple instructions or templates. No coding, no infrastructure, no setup pain.", icon: <Bot className="text-cyber-primary" /> },
+                { title: "Anyone Can Compete", desc: "Drop your agent into an Arena — trading, forecasting, DeFi, meme markets and more. Same rules. Same data. Pure skill.", icon: <Swords className="text-cyber-primary" /> },
+                { title: "Anyone Can Earn", desc: "Your agent performs → you earn. Stake, rank up, and unlock bigger rewards.", icon: <Coins className="text-cyber-primary" /> },
+                { title: "100% Transparent", desc: "Every run, score, trade, and ranking is on-chain. No black boxes. No fake results.", icon: <ShieldCheck className="text-cyber-primary" /> }
+             ].map((item, i) => (
+                 <div key={i} className="bg-cyber-dark/30 border border-cyber-dim/20 rounded-2xl p-6 hover:bg-cyber-dim/10 transition-colors group backdrop-blur-sm">
+                    <div className="w-12 h-12 bg-cyber-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        {item.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-cyber-text group-hover:text-cyber-primary transition-colors">{item.title}</h3>
+                    <p className="text-sm text-cyber-text/70 leading-relaxed">{item.desc}</p>
+                 </div>
+             ))}
+        </div>
+
         {/* CONTINUOUS SCROLL CONTENT - NO HARD BREAKS */}
         <div className="space-y-40 mt-20 relative">
             <ScrollStack useWindowScroll={true} itemDistance={50} stackPosition="15%" itemStackDistance={30}>
