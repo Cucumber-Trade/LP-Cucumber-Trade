@@ -83,7 +83,7 @@ export default function Roadmap() {
 
       <div className="relative z-10 mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
         <div>
-          <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">07.5 // ROADMAP</span>
+          <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">07 // ROADMAP</span>
           <h2 className="text-4xl md:text-5xl font-bold">Future <br />Trajectories</h2>
         </div>
         <div className="flex gap-2 p-1 bg-cyber-dim/10 rounded-full border border-cyber-dim/20 backdrop-blur-sm">

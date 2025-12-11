@@ -701,46 +701,7 @@ export default function CyberLanding() {
             </ScrollStackItem>
             </ScrollStack>
 
-            {/* Feature 7: Case Studies (Horizontal Scroll) */}
-            <div id="section-cases" className="w-full py-10">
-                 <div className="flex justify-between items-end mb-12">
-                    <div>
-                        <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">07 // CASE STUDIES</span>
-                        <h2 className="text-4xl md:text-5xl font-bold">Explore Our <br />Success Stories</h2>
-                    </div>
-                    <div className="hidden md:flex gap-4">
-                        <button className="p-3 rounded-full border border-cyber-dim/20 hover:bg-cyber-dim/10 transition-colors"><ChevronDown className="rotate-90" /></button>
-                        <button className="p-3 rounded-full border border-cyber-dim/20 hover:bg-cyber-dim/10 transition-colors"><ChevronDown className="-rotate-90" /></button>
-                    </div>
-                 </div>
-                 
-                 <div className="flex gap-6 overflow-x-auto pb-8 snap-x">
-                     {[
-                         { title: "GemHUB", desc: "Boosting Web3 Engagement with AI Chatbots", tag: "Engagement" },
-                         { title: "BeanBee AI", desc: "Transformed DeFi Safety & Trust in 1 Week", tag: "DeFi Security" },
-                         { title: "QuantEdge", desc: "Automated Trading Strategies for Retail", tag: "Trading" },
-                         { title: "NeuralNet", desc: "Decentralized Compute Sharing Protocol", tag: "Infrastructure" }
-                     ].map((study, i) => (
-                         <div key={i} className="min-w-[300px] md:min-w-[400px] bg-cyber-dark/40 border border-cyber-dim/10 rounded-3xl p-8 hover:border-cyber-primary/30 transition-all snap-center group cursor-pointer relative overflow-hidden">
-                             <div className="absolute inset-0 bg-gradient-to-br from-cyber-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                             <div className="relative z-10 h-40 bg-cyber-dim/10 rounded-xl mb-6 flex items-center justify-center overflow-hidden">
-                                  {/* Placeholder for case study image */}
-                                  <div className="w-full h-full bg-gradient-to-tr from-cyber-bg to-cyber-dim/20 group-hover:scale-105 transition-transform duration-500"></div>
-                                  <div className="absolute bottom-3 left-3 px-3 py-1 bg-black/50 backdrop-blur-sm rounded text-xs font-mono text-white border border-white/10">
-                                      {study.tag}
-                                  </div>
-                             </div>
-                             <h3 className="text-2xl font-bold mb-2 group-hover:text-cyber-primary transition-colors">{study.title}</h3>
-                             <p className="text-cyber-text/60 mb-6">{study.desc}</p>
-                             <div className="flex items-center gap-2 text-sm font-bold text-cyber-text group-hover:translate-x-2 transition-transform">
-                                 Read Case Study <ArrowRight size={16} />
-                             </div>
-                         </div>
-                     ))}
-                 </div>
-            </div>
-
-            {/* Feature 7.5: Roadmap */}
+            {/* Feature 7: Roadmap (Moved from 7.5) */}
             <Roadmap />
 
             {/* Feature 8: Partners & CTA (Footer-ish) */}
