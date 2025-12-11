@@ -313,36 +313,62 @@ export default function CyberLanding() {
                     <div className="absolute bottom-4 right-4 w-2 h-2 bg-cyber-secondary"></div>
                 </div>
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
-                    <span className="text-cyber-secondary font-mono text-sm tracking-widest mb-2 block">02 // SECURITY</span>
-                    <h2 className="text-5xl font-bold mb-6">Smart-Contracts <br />Generator & Auditor</h2>
-                    <p className="text-xl text-cyber-text/70 max-w-lg">
-                        Generate or audit a Solidity smart contract. Describe the contract you want to create or paste the code to be audited, and our AI will handle the rest.
+                    <span className="text-cyber-secondary font-mono text-sm tracking-widest mb-1 block">02 // SECURITY</span>
+                    <h2 className="text-5xl font-bold mb-2">Risk <br />Guardrails</h2>
+                    <h3 className="text-xl md:text-2xl text-cyber-secondary font-mono mb-3 tracking-tight">Verifiable Agent Safety</h3>
+                    <p className="text-xl text-cyber-text/70 max-w-lg mb-5">
+                        Every agent operates within a strict security boundary. Our "Risk Engine" ensures agents adhere to pre-defined budget caps and logic constraints, preventing reckless behavior before it hits the market.
                     </p>
-                     <div className="mt-8 flex flex-wrap gap-3">
-                        {['Solidity', 'Rust', 'Vyper', 'Move'].map(lang => (
-                            <span key={lang} className="px-3 py-1 bg-cyber-dim/10 rounded text-sm text-cyber-text/60 border border-cyber-dim/10">
-                                {lang}
-                            </span>
-                        ))}
+                     <div className="space-y-2">
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-cyber-secondary shadow-[0_0_8px_rgba(154,205,50,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Rate Limiting:</strong> Prevents wallet draining loops.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-cyber-secondary shadow-[0_0_8px_rgba(154,205,50,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Budget Caps:</strong> Strict spending limits per agent.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-cyber-secondary shadow-[0_0_8px_rgba(154,205,50,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Sandboxed:</strong> Secure execution environments.</p>
+                        </div>
                     </div>
                 </div>
                 <div className="lg:col-span-5 relative">
-                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-secondary/30 transition-colors">
+                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-secondary/30 transition-colors h-full flex flex-col justify-between">
                         <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyber-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-                        <ShieldCheck className="w-16 h-16 text-cyber-secondary mb-6" />
-                        <h3 className="text-2xl font-bold mb-4">Audit Reports</h3>
+                        <div>
+                            <ShieldCheck className="w-16 h-16 text-cyber-secondary mb-6" />
+                            <h3 className="text-2xl font-bold mb-4">Risk Engine</h3>
+                            <div className="p-4 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-4">
+                                 <div className="flex justify-between items-center mb-2">
+                                    <span className="text-cyber-text/60 text-sm">Status</span>
+                                    <span className="text-cyber-secondary text-sm font-bold flex items-center gap-1">
+                                        <div className="w-2 h-2 rounded-full bg-cyber-secondary animate-pulse"></div>
+                                        ACTIVE
+                                    </span>
+                                 </div>
+                                 <div className="w-full bg-cyber-dim/20 rounded-full h-1.5 mb-1">
+                                    <div className="bg-cyber-secondary h-1.5 rounded-full" style={{ width: '15%' }}></div>
+                                 </div>
+                                 <div className="flex justify-between text-xs text-cyber-text/40">
+                                    <span>Budget Used</span>
+                                    <span>15%</span>
+                                 </div>
+                            </div>
+                        </div>
                         <div className="space-y-3 font-mono text-sm text-cyber-text/60">
                             <div className="flex justify-between border-b border-cyber-dim/10 pb-2">
-                                <span>Vulnerabilities</span>
-                                <span className="text-red-400">0 Found</span>
+                                <span>Max Drawdown</span>
+                                <span className="text-cyber-text">5.0%</span>
                             </div>
                             <div className="flex justify-between border-b border-cyber-dim/10 pb-2">
-                                <span>Optimization</span>
-                                <span className="text-cyber-primary">98% Score</span>
+                                <span>Slippage Limit</span>
+                                <span className="text-cyber-text">0.5%</span>
                             </div>
                             <div className="flex justify-between">
-                                <span>Gas Efficiency</span>
-                                <span className="text-cyber-secondary">High</span>
+                                <span>Permitted Tokens</span>
+                                <span className="text-cyber-text">USDC, ETH</span>
                             </div>
                         </div>
                      </div>
