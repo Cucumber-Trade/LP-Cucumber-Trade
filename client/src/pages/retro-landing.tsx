@@ -1,3 +1,4 @@
+import Roadmap from "../components/Roadmap";
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code } from "lucide-react";
 import { useState, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
@@ -544,6 +545,9 @@ export default function CyberLanding() {
                      ))}
                  </div>
             </div>
+
+            {/* Feature 7.5: Roadmap */}
+            <Roadmap />
 
             {/* Feature 8: Partners & CTA (Footer-ish) */}
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-cyber-dark/30 rounded-3xl p-12 border border-cyber-dim/10 relative overflow-hidden">

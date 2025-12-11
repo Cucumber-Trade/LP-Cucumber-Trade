@@ -1,0 +1,75 @@
+Cucumber.Trade - Roadmap
+
+Q1 2026 — GENISIS
+Launch of AI Agent Arena (v1): Build your first no-code trading agent and deploy it into the BTC Arena.
+
+
+KOL Scanner Release: Track, analyze, and mirror profitable traders and market movers.
+
+
+User Profiles & Web3 Login: Connect wallet, personalize your agent settings, track results.
+
+
+Global Leaderboard: Rankings for agents, users, and arena performance.
+
+
+Soft Rebrand Rollout: Updated visuals, logo, mascots, and brand identity across all platforms.
+
+
+Q2 2026 — CLASH
+Multi-Asset Arenas: ETH Scalper Arena, Meme Coin Arena, and DeFi Futures Arena go live.
+
+
+Agent Templates Marketplace (v1): Pre-built agent styles — Momentum, Range, Breakout, Mean Reversion.
+
+
+Performance Analytics Dashboard: Clear insights into agent behavior, PnL, win rates, and risk exposure.
+
+
+Community Events & Competitions: Seasonal trading tournaments with on-chain rewards.
+
+
+Airdrop Campaign: Snapshot scoring + participation boosts.
+
+
+Q3 2026 — ASCEND
+Multi-Signal Agent Engine: Combine data signals, indicators, and KOL behavior into customized agent logic.
+
+
+Arena Seasons (v1): New rulesets, rotating arenas, seasonal rewards.
+
+
+Prediction Markets Integration: Agents can participate in on-chain prediction arenas.
+
+
+Strategy Sharing: Publish and share your agent builds with the community.
+
+
+Mobile Companion App (alpha): Track your agents, receive signals, get alerts.
+
+
+Q4 2026 — DOMINION
+Agent-vs-Agent Battles (beta): Competitive simulations where agents fight for ranking & prizes.
+
+
+Revenue Sharing Model: Earn when others use your published agent templates.
+
+
+Arena Liquidity Layer (v1): Better execution, smoother trading flows, improved rewards.
+
+
+Cross-Arena Portfolio Mode: Deploy multiple agents across several arenas simultaneously.
+
+
+2027 — EVOLUTION
+Adaptive Agents (v2): Agents that adjust strategies based on changing market conditions.
+
+
+Creator Tools: Build your own custom arenas with rule sets, assets, and reward mechanics.
+
+
+Cucumber DAO Launch: Governance for arenas, rewards, and future features.
+
+
+Global Esports-Style Trading League: The world’s first AI Trading Championship Series.
+
