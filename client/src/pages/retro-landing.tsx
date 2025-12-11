@@ -139,9 +139,11 @@ export default function CyberLanding() {
 
         {/* CONTINUOUS SCROLL CONTENT - NO HARD BREAKS */}
         <div className="space-y-40 mt-20 relative">
+            <ScrollStack useWindowScroll={true} itemDistance={50} stackPosition="15%" itemStackDistance={30}>
             
             {/* Feature 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <ScrollStackItem>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                      <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-cyber-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -165,9 +167,11 @@ export default function CyberLanding() {
                     </p>
                 </div>
             </div>
+            </ScrollStackItem>
 
              {/* Feature 2 */}
-             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+             <ScrollStackItem>
+             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-cyber-secondary font-mono text-sm tracking-widest mb-2 block">02 // SECURITY</span>
                     <h2 className="text-5xl font-bold mb-6">Smart-Contracts <br />Generator & Auditor</h2>
@@ -204,9 +208,11 @@ export default function CyberLanding() {
                      </div>
                 </div>
             </div>
+            </ScrollStackItem>
             
             {/* Feature 3: Ecosystem Application Layer */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <ScrollStackItem>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -234,9 +240,11 @@ export default function CyberLanding() {
                     </p>
                 </div>
             </div>
+            </ScrollStackItem>
 
             {/* Feature 4: Token Layer */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <ScrollStackItem>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-yellow-400 font-mono text-sm tracking-widest mb-2 block">04 // TOKENOMICS</span>
                     <h2 className="text-5xl font-bold mb-6">$CUMB Token <br />Utility Layer</h2>
@@ -279,10 +287,8 @@ export default function CyberLanding() {
                     </div>
                 </div>
             </div>
+            </ScrollStackItem>
 
-            {/* Scroll Stack for Feature 5 & 6 */}
-            <ScrollStack useWindowScroll={true} itemDistance={50} stackPosition="15%" itemStackDistance={30}>
-            
             {/* Feature 5: AIVM Infrastructure */}
             <ScrollStackItem>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
