@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Terminal, Cpu, Zap, Globe, Shield, Activity, BarChart3, Lock, Award, Coins, Users, Rocket, Target, BarChart, RefreshCw, Menu, Wallet } from "lucide-react";
 import MagicBento from "../components/MagicBento";
 import RotatingText from "../components/RotatingText";
+import LiquidEther from "../components/LiquidEther";
 
 export default function CyberLanding() {
   const [started, setStarted] = useState(false);
@@ -84,7 +85,28 @@ export default function CyberLanding() {
 
       {/* SECTION 1: HERO */}
       <div className="relative z-10 min-h-screen flex items-center pt-20 px-6 md:px-12 lg:px-20 overflow-hidden">
-        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Background Animation */}
+        <div className="absolute inset-0 z-0 opacity-40">
+            <LiquidEther
+                colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
+                mouseForce={20}
+                cursorSize={100}
+                isViscous={false}
+                viscous={30}
+                iterationsViscous={32}
+                iterationsPoisson={32}
+                resolution={0.5}
+                isBounce={false}
+                autoDemo={true}
+                autoSpeed={0.5}
+                autoIntensity={2.2}
+                takeoverDuration={0.25}
+                autoResumeDelay={3000}
+                autoRampDuration={0.6}
+            />
+        </div>
+
+        <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
             
             {/* Left Content */}
             <div className="flex flex-col items-start text-left space-y-10 z-20 max-w-2xl">
