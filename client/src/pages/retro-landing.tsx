@@ -13,23 +13,23 @@ export default function CyberLanding() {
       <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-sm bg-cyber-bg/50 border-b border-cyber-dim/20">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-[#4ade80] rounded-full animate-pulse shadow-[0_0_8px_#4ade80]" />
-          <span className="font-mono text-xs text-cyber-dim tracking-wide uppercase">Operational</span>
+          <span className="font-urbanist text-xs text-cyber-dim tracking-wide uppercase">Operational</span>
         </div>
         
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2">
             <div className="w-8 h-8 bg-cyber-primary rounded-lg flex items-center justify-center">
                 <Terminal className="w-5 h-5 text-cyber-bg" />
             </div>
-            <span className="font-orbitron font-bold text-lg tracking-wider hidden md:inline">CUCUMBER.TRADE</span>
+            <span className="font-urbanist font-bold text-lg tracking-wider hidden md:inline">CUCUMBER.TRADE</span>
         </div>
 
         <div className="flex items-center gap-4">
-            <button className="hidden md:flex items-center gap-2 px-5 py-2 text-cyber-text hover:text-white font-orbitron text-sm font-bold transition-colors">
+            <button className="hidden md:flex items-center gap-2 px-5 py-2 text-cyber-text hover:text-white font-urbanist text-sm font-bold transition-colors">
                 Open DApp
             </button>
             <button className="flex items-center gap-2 px-6 py-2 bg-cyber-primary/10 hover:bg-cyber-primary/20 border border-cyber-primary/50 hover:border-cyber-primary rounded-full transition-all group">
                 <Wallet className="w-4 h-4 text-cyber-primary group-hover:text-white" />
-                <span className="font-orbitron text-sm font-bold text-cyber-primary group-hover:text-white">Connect Wallet</span>
+                <span className="font-urbanist text-sm font-bold text-cyber-primary group-hover:text-white">Connect Wallet</span>
             </button>
         </div>
       </header>
@@ -41,13 +41,13 @@ export default function CyberLanding() {
             
             {/* Left Content */}
             <div className="flex flex-col items-start text-left space-y-10 z-20 max-w-2xl">
-                <div className="inline-flex items-center gap-3 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-md text-xs font-mono text-cyber-primary tracking-widest uppercase">
+                <div className="inline-flex items-center gap-3 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-md text-xs font-urbanist text-cyber-primary tracking-widest uppercase">
                     <div className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse shadow-[0_0_10px_#9ACD32]" />
                     Live Mainnet v0.0.1
                 </div>
 
                 <div className="space-y-6">
-                    <h1 className="text-6xl md:text-8xl font-orbitron font-black leading-[0.9] text-white tracking-tight flex items-center gap-4 whitespace-nowrap">
+                    <h1 className="text-6xl md:text-8xl font-urbanist font-black leading-[0.9] text-white tracking-tight flex items-center gap-4 whitespace-nowrap">
                         <span>Your</span>
                         <RotatingText
                           texts={['AI.', 'Arena.', 'Earnings.']}
@@ -63,17 +63,17 @@ export default function CyberLanding() {
                         />
                     </h1>
                     
-                    <h2 className="text-xl md:text-2xl font-orbitron font-medium text-cyber-text/90 tracking-wide">
+                    <h2 className="text-xl md:text-2xl font-urbanist font-medium text-cyber-text/90 tracking-wide">
                         Build. Compete. Earn. — AI Agents, On-chain.
                     </h2>
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-4 w-full">
-                    <button className="px-8 py-4 bg-white text-black font-orbitron font-bold text-lg rounded-xl hover:scale-105 transition-transform flex items-center gap-3 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+                    <button className="px-8 py-4 bg-white text-black font-urbanist font-bold text-lg rounded-xl hover:scale-105 transition-transform flex items-center gap-3 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
                         Launch Your Agent
                         <ChevronDown className="w-5 h-5 -rotate-90" />
                     </button>
-                    <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-orbitron font-bold text-lg rounded-xl hover:bg-white/10 transition-all flex items-center gap-3">
+                    <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-urbanist font-bold text-lg rounded-xl hover:bg-white/10 transition-all flex items-center gap-3">
                         Explore Agents
                     </button>
                 </div>
@@ -88,7 +88,7 @@ export default function CyberLanding() {
       {/* SECTION 2: SCROLL ANIMATION */}
       <section style={{position: 'relative', height: 500, overflow: 'hidden'}} className="bg-cyber-dark border-t border-cyber-primary/20">
         <div className="h-full overflow-y-auto px-8 py-24 flex flex-col items-center justify-center text-center">
-             <h2 className="text-4xl md:text-6xl font-orbitron font-bold text-white mb-6">
+             <h2 className="text-4xl md:text-6xl font-urbanist font-bold text-white mb-6">
                 Scroll Into The <span className="text-cyber-primary">Future</span>
              </h2>
              <p className="text-xl text-cyber-text/70 max-w-2xl">
