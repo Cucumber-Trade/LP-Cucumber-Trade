@@ -376,11 +376,10 @@ export default function LiquidEther({
     precision highp float;
     varying vec2 vUv;
     uniform vec2 force;
-    uniform float center;
-    uniform float scale;
+    uniform vec2 scale;
     void main(){
         if(length(vUv - vec2(0.5)) > 0.5) discard;
-        gl_FragColor = vec4(force * scale, 0.0, 1.0);
+        gl_FragColor = vec4(force * scale.x, 0.0, 1.0);
     }
 `;
     const copy_frag = `
