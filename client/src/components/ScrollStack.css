@@ -1,0 +1,47 @@
+.scroll-stack-scroller {
+  position: relative;
+  width: 100%;
+  /* height: 100%; Removed fixed height to allow fitting in content flow */
+  /* overflow-y: auto; Removed to allow window scroll control if needed, or let parent handle it */
+  overflow-x: visible;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: scroll-position;
+}
+
+.scroll-stack-inner {
+  padding: 10vh 0 20vh; /* Adjusted padding for better fit */
+  /* min-height: 100vh; */
+  position: relative;
+}
+
+.scroll-stack-card-wrapper {
+  position: relative;
+}
+
+.scroll-stack-card {
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); */
+  /* height: 20rem; Removed fixed height */
+  width: 100%;
+  margin: 0 auto 5rem; /* Adjusted margin */
+  /* padding: 3rem; Removed padding to let children handle it */
+  /* border-radius: 40px; */
+  box-sizing: border-box;
+  /* Improve mobile performance */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  position: relative;
+  background: transparent; /* Changed from default white/shadow */
+}
+
+.scroll-stack-end {
+  width: 100%;
+  height: 1px;
+}

@@ -1,6 +1,7 @@
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code } from "lucide-react";
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
+import ScrollStack, { ScrollStackItem } from "../components/ScrollStack";
 import DotGrid from "../components/DotGrid";
 import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
 import robotHead from '@assets/generated_images/3d_futuristic_robot_head_with_glowing_face.png';
@@ -279,8 +280,12 @@ export default function CyberLanding() {
                 </div>
             </div>
 
+            {/* Scroll Stack for Feature 5 & 6 */}
+            <ScrollStack useWindowScroll={true} itemDistance={50} stackPosition="15%" itemStackDistance={30}>
+            
             {/* Feature 5: AIVM Infrastructure */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <ScrollStackItem>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors">
                         <div className="absolute top-1/2 left-1/2 w-full h-full bg-blue-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -307,9 +312,11 @@ export default function CyberLanding() {
                     </p>
                 </div>
             </div>
+            </ScrollStackItem>
 
             {/* Feature 6: Labs & Launchpad */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <ScrollStackItem>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-red-400 font-mono text-sm tracking-widest mb-2 block">06 // INCUBATION</span>
                     <h2 className="text-5xl font-bold mb-6">Labs & <br />Launchpads</h2>
@@ -340,6 +347,8 @@ export default function CyberLanding() {
                     </div>
                 </div>
             </div>
+            </ScrollStackItem>
+            </ScrollStack>
 
             {/* Feature 7: Case Studies (Horizontal Scroll) */}
             <div className="w-full py-10">
