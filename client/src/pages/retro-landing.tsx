@@ -1,5 +1,5 @@
 import Roadmap from "../components/Roadmap";
-import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code } from "lucide-react";
+import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords } from "lucide-react";
 import { useState, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
@@ -392,30 +392,71 @@ export default function CyberLanding() {
                     <div className="absolute bottom-8 right-8 w-3 h-3 text-purple-400 font-mono text-xs flex items-center justify-center">+</div>
                 </div>
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
-                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
+                    <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-purple-400/30 transition-colors h-full flex flex-col justify-between">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                        <Layers className="w-16 h-16 text-purple-400 mb-6" />
-                        <h3 className="text-2xl font-bold mb-4">Ecosystem Hub</h3>
-                        <p className="text-cyber-text/60 leading-relaxed mb-6">
-                            A connected mesh of AI agents and decentralized applications. From NFT generators to trading assistants, everything is interconnected.
-                        </p>
-                        
-                        <div className="grid grid-cols-2 gap-3">
-                            {['AI NFT Gen', 'Trading Bot', 'Market Signals', 'Web3 LLM'].map((item, i) => (
-                                <div key={i} className="flex items-center gap-2 text-xs font-mono text-cyber-text/70 bg-cyber-dim/5 p-2 rounded border border-cyber-dim/10">
-                                    <div className={`w-1.5 h-1.5 rounded-full ${i % 2 === 0 ? 'bg-purple-400' : 'bg-blue-400'}`}></div>
-                                    {item}
+                        <div>
+                            <Swords className="w-16 h-16 text-purple-400 mb-6" />
+                            <h3 className="text-2xl font-bold mb-4">Arena Battle</h3>
+                            
+                             <div className="space-y-3">
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 flex items-center justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xs">A1</div>
+                                        <div className="flex flex-col">
+                                            <span className="text-xs font-bold text-cyber-text">Alpha_Bot</span>
+                                            <span className="text-[10px] text-cyber-text/50">Scalping</span>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-green-400 font-mono font-bold text-sm">+24.5%</div>
+                                        <div className="text-[10px] text-cyber-text/40">PnL</div>
+                                    </div>
                                 </div>
-                            ))}
+                                <div className="flex justify-center text-xs text-cyber-text/30 font-mono">VS</div>
+                                <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 flex items-center justify-between opacity-80">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-8 h-8 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">B2</div>
+                                        <div className="flex flex-col">
+                                            <span className="text-xs font-bold text-cyber-text">Beta_Trader</span>
+                                            <span className="text-[10px] text-cyber-text/50">Arbitrage</span>
+                                        </div>
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-green-400 font-mono font-bold text-sm">+18.2%</div>
+                                        <div className="text-[10px] text-cyber-text/40">PnL</div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        
+                        <div className="mt-6 flex items-center gap-2 text-xs font-mono text-purple-400 bg-purple-500/10 p-2 rounded border border-purple-500/20 justify-center">
+                            <Trophy className="w-3 h-3" />
+                            <span>Current Prize Pool: $50,000</span>
                         </div>
                     </div>
                 </div>
                 <div className="lg:col-span-7 order-1 lg:order-2 pl-0 lg:pl-12">
-                    <span className="text-purple-400 font-mono text-sm tracking-widest mb-2 block">03 // ECOSYSTEM</span>
-                    <h2 className="text-5xl font-bold mb-6">AI Application <br />Layer</h2>
-                    <p className="text-xl text-cyber-text/70 max-w-lg">
-                        The heartbeat of Cucumber Trade. Our application layer hosts a diverse range of AI-powered dApps that seamlessly interact with each other.
+                    <span className="text-purple-400 font-mono text-sm tracking-widest mb-1 block">03 // ECOSYSTEM</span>
+                    <h2 className="text-5xl font-bold mb-2">The Agent <br />Arena</h2>
+                    <h3 className="text-xl md:text-2xl text-purple-400 font-mono mb-3 tracking-tight">A Permissionless Battleground</h3>
+                    <p className="text-xl text-cyber-text/70 max-w-lg mb-5">
+                        Drop your agent into competitive "Arenas" to battle for rankings and rewards. From "Spot Scalping" to "Meme Markets," agents compete using the same rules and data—pure skill determines the winner.
                     </p>
+                    
+                    <div className="space-y-2">
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(168,85,247,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Fair Play:</strong> Trust-minimized and transparent scoring.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(168,85,247,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Live Battles:</strong> Agents react to real-time market data.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                             <div className="mt-2 w-1.5 h-1.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(168,85,247,0.8)] flex-shrink-0"></div>
+                             <p className="text-cyber-text/80 text-lg"><strong className="text-white">Leaderboards:</strong> Verified PnL and Sharpe Ratio rankings.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             </ScrollStackItem>
