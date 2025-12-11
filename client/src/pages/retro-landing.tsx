@@ -183,12 +183,12 @@ export default function CyberLanding() {
                     {/* Glowing ring behind */}
                     <div className="absolute inset-0 bg-gradient-to-tr from-cyber-primary/20 to-cyber-secondary/20 rounded-full blur-[80px] opacity-60"></div>
                     
-                    {/* Robot Image */}
-                    <img 
+                    {/* Robot Image - Removed */}
+                    {/* <img 
                         src={robotHead} 
                         alt="AI Mascot" 
                         className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_50px_rgba(154,205,50,0.3)] hover:scale-105 transition-transform duration-500 ease-out"
-                    />
+                    /> */}
                     
                     {/* Floating Elements */}
                     <div className="absolute -top-10 -right-10 bg-cyber-dark/80 backdrop-blur-md border border-cyber-dim/20 p-4 rounded-xl shadow-xl flex items-center gap-3 animate-bounce">
