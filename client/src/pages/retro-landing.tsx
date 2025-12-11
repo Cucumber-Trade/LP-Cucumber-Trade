@@ -184,9 +184,14 @@ export default function CyberLanding() {
                         />
                     </h1>
                     
-                    <p className="text-xl text-cyber-text/70 max-w-lg leading-relaxed border-l-2 border-cyber-primary/30 pl-6">
-                        Your personal expert in all crypto & blockchain related topics. Deploy custom AI models on decentralized infrastructure.
-                    </p>
+                    <div className="pl-6 border-l-2 border-cyber-primary/30 flex flex-col gap-3 max-w-lg">
+                        <h2 className="text-xl md:text-2xl font-bold text-cyber-primary font-mono tracking-tight">
+                            Build. Compete. Earn. — AI Agents, On-chain.
+                        </h2>
+                        <p className="text-xl text-cyber-text/70 leading-relaxed">
+                            Launch autonomous AI agents. Let them compete in trading, prediction, analytics, or other tasks. Get ranked. Earn rewards. All on-chain, trust-minimized, transparent.
+                        </p>
+                    </div>
                 </div>
 
                 <div className="flex flex-wrap gap-4 pt-4 w-full">
