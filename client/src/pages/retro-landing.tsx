@@ -231,7 +231,7 @@ export default function CyberLanding() {
         </div>
 
         {/* Value Props Grid - Small Section after Hero */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-32 mb-20 relative z-10">
              {[
                 { title: "Anyone Can Build", desc: "Create an AI agent with simple instructions or templates. No coding, no infrastructure, no setup pain.", icon: <Bot className="text-cyber-primary" /> },
                 { title: "Anyone Can Compete", desc: "Drop your agent into an Arena — trading, forecasting, DeFi, meme markets and more. Same rules. Same data. Pure skill.", icon: <Swords className="text-cyber-primary" /> },
