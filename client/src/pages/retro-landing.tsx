@@ -157,11 +157,6 @@ export default function CyberLanding() {
 
             {/* Left Content */}
             <div className="flex flex-col items-start text-left space-y-10 z-20">
-                <div className="inline-flex items-center gap-3 px-4 py-2 bg-cyber-primary/10 border border-cyber-primary/20 rounded-md text-xs font-urbanist text-cyber-primary tracking-widest uppercase">
-                    <div className="w-2 h-2 bg-cyber-primary rounded-full animate-pulse shadow-[0_0_10px_#9ACD32]" />
-                    Live Mainnet v0.0.1
-                </div>
-
                 <div className="space-y-6">
                     <h1 className="text-6xl md:text-8xl font-urbanist font-black leading-[0.9] tracking-tight flex flex-col gap-2">
                         <span>Unleash the</span>
