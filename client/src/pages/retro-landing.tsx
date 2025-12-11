@@ -1,4 +1,5 @@
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code } from "lucide-react";
+import { useState, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
 import ScrollStack, { ScrollStackItem } from "../components/ScrollStack";
@@ -7,6 +8,58 @@ import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
 import robotHead from '@assets/generated_images/3d_futuristic_robot_head_with_glowing_face.png';
 
 export default function CyberLanding() {
+  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        setVisibleSections(prev => {
+          const next = new Set(prev);
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              next.add(entry.target.id);
+            } else {
+              next.delete(entry.target.id);
+            }
+          });
+          return next;
+        });
+      },
+      { rootMargin: '-30% 0px -30% 0px' }
+    );
+
+    const sections = document.querySelectorAll('[id^="section-"]');
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
+  const activeSection = useMemo(() => {
+    const order = [
+      'section-hero',
+      'section-intelligence',
+      'section-security',
+      'section-ecosystem',
+      'section-tokenomics',
+      'section-infrastructure',
+      'section-incubation',
+      'section-cases'
+    ];
+    
+    // Find the last one in the list that is visible
+    for (let i = order.length - 1; i >= 0; i--) {
+      if (visibleSections.has(order[i])) {
+         return i + 1;
+      }
+    }
+    // If nothing visible but we have history, maybe keep it? 
+    // For now default to 1 (Hero) if nothing intersecting (top of page) 
+    // or maybe the logic handles it well enough.
+    return 1;
+  }, [visibleSections]);
+
   return (
     <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-urbanist selection:bg-cyber-primary selection:text-cyber-bg overflow-x-hidden">
       
@@ -66,7 +119,7 @@ export default function CyberLanding() {
       <main className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-32 pb-20">
         
         {/* SECTION 1: HERO */}
-        <div className="min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+        <div id="section-hero" className="min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
             
 
             {/* Left Content */}
@@ -150,7 +203,7 @@ export default function CyberLanding() {
             
             {/* Feature 1 */}
             <ScrollStackItem>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-intelligence" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                      <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-cyber-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -178,7 +231,7 @@ export default function CyberLanding() {
 
              {/* Feature 2 */}
              <ScrollStackItem>
-             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+             <div id="section-security" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-cyber-secondary font-mono text-sm tracking-widest mb-2 block">02 // SECURITY</span>
                     <h2 className="text-5xl font-bold mb-6">Smart-Contracts <br />Generator & Auditor</h2>
@@ -219,7 +272,7 @@ export default function CyberLanding() {
             
             {/* Feature 3: Ecosystem Application Layer */}
             <ScrollStackItem>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-ecosystem" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -251,7 +304,7 @@ export default function CyberLanding() {
 
             {/* Feature 4: Token Layer */}
             <ScrollStackItem>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-tokenomics" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-yellow-400 font-mono text-sm tracking-widest mb-2 block">04 // TOKENOMICS</span>
                     <h2 className="text-5xl font-bold mb-6">$CUMB Token <br />Utility Layer</h2>
@@ -298,7 +351,7 @@ export default function CyberLanding() {
 
             {/* Feature 5: AIVM Infrastructure */}
             <ScrollStackItem>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-infrastructure" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-5 order-2 lg:order-1 relative">
                     <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors">
                         <div className="absolute top-1/2 left-1/2 w-full h-full bg-blue-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -329,7 +382,7 @@ export default function CyberLanding() {
 
             {/* Feature 6: Labs & Launchpad */}
             <ScrollStackItem>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
+            <div id="section-incubation" className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cyber-bg/95 p-8 rounded-3xl border border-cyber-dim/10 backdrop-blur-xl">
                 <div className="lg:col-span-7 pr-0 lg:pr-12">
                     <span className="text-red-400 font-mono text-sm tracking-widest mb-2 block">06 // INCUBATION</span>
                     <h2 className="text-5xl font-bold mb-6">Labs & <br />Launchpads</h2>
@@ -364,7 +417,7 @@ export default function CyberLanding() {
             </ScrollStack>
 
             {/* Feature 7: Case Studies (Horizontal Scroll) */}
-            <div className="w-full py-10">
+            <div id="section-cases" className="w-full py-10">
                  <div className="flex justify-between items-end mb-12">
                     <div>
                         <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">07 // CASE STUDIES</span>
@@ -448,7 +501,7 @@ export default function CyberLanding() {
       {/* Right Sidebar Indicators */}
       <div className="fixed right-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-4 z-50">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === 1 ? 'bg-cyber-primary scale-125' : 'bg-cyber-dim/30'}`} />
+              <div key={i} className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${activeSection === i ? 'bg-cyber-primary scale-125 shadow-[0_0_8px_#9ACD32]' : 'bg-cyber-dim/30'}`} />
           ))}
       </div>
 
