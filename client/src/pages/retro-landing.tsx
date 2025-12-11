@@ -93,9 +93,20 @@ export default function CyberLanding() {
 
       {/* Fixed Background Grid Lines Overlay - Runs through entire page */}
       <div className="fixed inset-0 pointer-events-none z-0 flex justify-between px-6 md:px-12 lg:px-20 max-w-7xl mx-auto w-full opacity-20">
-          <div className="w-px h-full bg-cyber-dim/30"></div>
-          <div className="w-px h-full bg-cyber-dim/30 hidden md:block"></div>
-          <div className="w-px h-full bg-cyber-dim/30"></div>
+          <div className="w-px h-full bg-cyber-dim/30 relative">
+            <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+            <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+            <div className="absolute top-[80%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+          </div>
+          <div className="w-px h-full bg-cyber-dim/30 hidden md:block relative">
+             <div className="absolute top-[35%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+             <div className="absolute top-[65%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+          </div>
+          <div className="w-px h-full bg-cyber-dim/30 relative">
+            <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+            <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+            <div className="absolute top-[80%] left-1/2 -translate-x-1/2 w-3 h-px bg-cyber-primary"></div>
+          </div>
       </div>
 
       {/* HEADER */}
@@ -216,6 +227,25 @@ export default function CyberLanding() {
 
         {/* CONTINUOUS SCROLL CONTENT - NO HARD BREAKS */}
         <div className="space-y-40 mt-20 relative">
+            {/* Dynamic Horizontal Grid Lines for Content Area */}
+            <div className="absolute inset-0 pointer-events-none z-0 opacity-20">
+                {/* Generate horizontal lines spaced out */}
+                <div className="w-full h-px bg-cyber-dim/50 absolute top-0"></div>
+                <div className="w-full h-px bg-cyber-dim/50 absolute top-[15%]"></div>
+                <div className="w-full h-px bg-cyber-dim/50 absolute top-[30%]"></div>
+                <div className="w-full h-px bg-cyber-dim/50 absolute top-[45%]"></div>
+                <div className="w-full h-px bg-cyber-dim/50 absolute top-[60%]"></div>
+                <div className="w-full h-px bg-cyber-dim/50 absolute top-[75%]"></div>
+                <div className="w-full h-px bg-cyber-dim/50 absolute bottom-0"></div>
+                
+                {/* Crosshairs at intersections with vertical alignment */}
+                <div className="absolute left-0 top-[15%] w-4 h-4 border-t border-l border-cyber-primary/50 -translate-x-2 -translate-y-2"></div>
+                <div className="absolute right-0 top-[15%] w-4 h-4 border-t border-r border-cyber-primary/50 translate-x-2 -translate-y-2"></div>
+                
+                <div className="absolute left-0 top-[45%] w-4 h-4 border-b border-l border-cyber-primary/50 -translate-x-2 translate-y-2"></div>
+                <div className="absolute right-0 top-[45%] w-4 h-4 border-b border-r border-cyber-primary/50 translate-x-2 translate-y-2"></div>
+            </div>
+
             <ScrollStack useWindowScroll={true} itemDistance={50} stackPosition="15%" itemStackDistance={30}>
             
             {/* Feature 1 */}
