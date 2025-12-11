@@ -384,12 +384,12 @@ export default function CyberLanding() {
                     </p>
                     <div className="mt-8 flex gap-6">
                         <div className="flex flex-col">
-                            <span className="text-3xl font-bold text-white">100M+</span>
+                            <span className="text-3xl font-bold text-cyber-text">100M+</span>
                             <span className="text-sm text-cyber-text/50 uppercase tracking-wider">Staked</span>
                         </div>
                         <div className="w-px h-12 bg-cyber-dim/20"></div>
                         <div className="flex flex-col">
-                            <span className="text-3xl font-bold text-white">12%</span>
+                            <span className="text-3xl font-bold text-cyber-text">12%</span>
                             <span className="text-sm text-cyber-text/50 uppercase tracking-wider">APY</span>
                         </div>
                     </div>
@@ -488,11 +488,11 @@ export default function CyberLanding() {
                         <h3 className="text-2xl font-bold mb-4">Cucumber Labs</h3>
                         <div className="grid grid-cols-1 gap-4">
                             <div className="p-4 bg-cyber-dim/5 rounded-xl border border-cyber-dim/10">
-                                <h4 className="font-bold text-white mb-1">Incubation Program</h4>
+                                <h4 className="font-bold text-cyber-text mb-1">Incubation Program</h4>
                                 <p className="text-sm text-cyber-text/50">Seed funding & advisory</p>
                             </div>
                             <div className="p-4 bg-cyber-dim/5 rounded-xl border border-cyber-dim/10">
-                                <h4 className="font-bold text-white mb-1">IDO Launchpad</h4>
+                                <h4 className="font-bold text-cyber-text mb-1">IDO Launchpad</h4>
                                 <p className="text-sm text-cyber-text/50">Access to early-stage sales</p>
                             </div>
                         </div>
@@ -564,19 +564,19 @@ export default function CyberLanding() {
                 </div>
                 <div className="relative z-10 grid grid-cols-2 gap-4">
                      <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                         <div className="text-3xl font-bold text-white mb-1">50k+</div>
+                         <div className="text-3xl font-bold text-cyber-text mb-1">50k+</div>
                          <div className="text-sm text-cyber-text/50">Active Users</div>
                      </div>
                      <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                         <div className="text-3xl font-bold text-white mb-1">$2B+</div>
+                         <div className="text-3xl font-bold text-cyber-text mb-1">$2B+</div>
                          <div className="text-sm text-cyber-text/50">Volume Traded</div>
                      </div>
                      <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                         <div className="text-3xl font-bold text-white mb-1">150+</div>
+                         <div className="text-3xl font-bold text-cyber-text mb-1">150+</div>
                          <div className="text-sm text-cyber-text/50">AI Models</div>
                      </div>
                      <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                         <div className="text-3xl font-bold text-white mb-1">24/7</div>
+                         <div className="text-3xl font-bold text-cyber-text mb-1">24/7</div>
                          <div className="text-sm text-cyber-text/50">Uptime</div>
                      </div>
                 </div>

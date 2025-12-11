@@ -133,7 +133,7 @@ export default function Roadmap() {
                     <div className={`text-xs font-mono mb-1 transition-colors ${activePhase === idx ? 'text-cyber-primary' : 'text-cyber-text/50'}`}>
                       {data.period}
                     </div>
-                    <div className={`font-bold text-lg transition-colors ${activePhase === idx ? 'text-white' : 'text-cyber-text/70'}`}>
+                    <div className={`font-bold text-lg transition-colors ${activePhase === idx ? 'text-cyber-text' : 'text-cyber-text/70'}`}>
                       {data.phase}
                     </div>
                   </div>
@@ -183,7 +183,7 @@ export default function Roadmap() {
                       >
                          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyber-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                          
-                         <h4 className="font-bold text-white mb-2 group-hover:text-cyber-primary transition-colors flex items-center gap-2">
+                         <h4 className="font-bold text-cyber-text mb-2 group-hover:text-cyber-primary transition-colors flex items-center gap-2">
                             {item.title}
                          </h4>
                          <p className="text-sm text-cyber-text/60 leading-relaxed">
