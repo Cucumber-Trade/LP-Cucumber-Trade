@@ -19,7 +19,7 @@ const leaderboardData = [
     color: "text-red-400",
     bgColor: "bg-red-500/10",
     borderColor: "border-red-500/20",
-    bonus: "+0.8 ETH"
+    bonus: "+5,000 CUC"
   },
   {
     rank: 2,
@@ -33,7 +33,7 @@ const leaderboardData = [
     color: "text-green-400",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/20",
-    bonus: "+0.5 ETH"
+    bonus: "+2,500 CUC"
   },
   {
     rank: 3,
@@ -47,7 +47,7 @@ const leaderboardData = [
     color: "text-yellow-400",
     bgColor: "bg-yellow-500/10",
     borderColor: "border-yellow-500/20",
-    bonus: "+0.3 ETH"
+    bonus: "+1,000 CUC"
   },
   { rank: 4, name: "Neural_Net_V2", mmr: 2550, pnl: "+2,100%", sharpe: 2.5, drawdown: "-8.4%" },
   { rank: 5, name: "Alpha_Sniper", mmr: 2490, pnl: "+1,850%", sharpe: 2.1, drawdown: "-10.2%" },
@@ -97,12 +97,12 @@ export default function Leaderboard() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="absolute -top-6 -right-4 bg-white rounded-xl p-2 shadow-xl border border-gray-100 z-50 flex flex-col items-center min-w-[80px]"
+                    className="absolute -top-6 -right-4 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_20px_rgba(154,205,50,0.15)] rounded-xl p-2 z-50 flex flex-col items-center min-w-[80px]"
                 >
-                    <div className="flex items-center gap-1 text-xs font-bold text-gray-800 mb-1">
+                    <div className="flex items-center gap-1 text-xs font-bold text-cyber-text mb-1">
                         Bonus <span>🎉</span>
                     </div>
-                    <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-md w-full text-center">
+                    <div className="bg-cyber-primary/10 text-cyber-primary text-xs font-bold px-2 py-1 rounded-md w-full text-center border border-cyber-primary/20 shadow-[0_0_10px_rgba(154,205,50,0.1)]">
                         {leaderboardData[1].bonus}
                     </div>
                 </motion.div>
@@ -141,12 +141,12 @@ export default function Leaderboard() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="absolute -top-8 -right-6 bg-white rounded-xl p-3 shadow-xl border border-gray-100 z-50 flex flex-col items-center min-w-[100px]"
+                    className="absolute -top-8 -right-6 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_25px_rgba(154,205,50,0.2)] rounded-xl p-3 z-50 flex flex-col items-center min-w-[100px]"
                 >
-                    <div className="flex items-center gap-1 text-sm font-bold text-gray-800 mb-1">
+                    <div className="flex items-center gap-1 text-sm font-bold text-cyber-text mb-1">
                         Bonus <span>🐝</span>
                     </div>
-                    <div className="bg-green-100 text-green-700 text-sm font-bold px-3 py-1 rounded-md w-full text-center">
+                    <div className="bg-cyber-primary/10 text-cyber-primary text-sm font-bold px-3 py-1.5 rounded-md w-full text-center border border-cyber-primary/20 shadow-[0_0_15px_rgba(154,205,50,0.15)]">
                         {leaderboardData[0].bonus}
                     </div>
                 </motion.div>
@@ -193,12 +193,12 @@ export default function Leaderboard() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="absolute -top-6 -right-4 bg-white rounded-xl p-2 shadow-xl border border-gray-100 z-50 flex flex-col items-center min-w-[80px]"
+                    className="absolute -top-6 -right-4 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_20px_rgba(154,205,50,0.15)] rounded-xl p-2 z-50 flex flex-col items-center min-w-[80px]"
                 >
-                    <div className="flex items-center gap-1 text-xs font-bold text-gray-800 mb-1">
+                    <div className="flex items-center gap-1 text-xs font-bold text-cyber-text mb-1">
                         Bonus <span>🚀</span>
                     </div>
-                    <div className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-md w-full text-center">
+                    <div className="bg-cyber-primary/10 text-cyber-primary text-xs font-bold px-2 py-1 rounded-md w-full text-center border border-cyber-primary/20 shadow-[0_0_10px_rgba(154,205,50,0.1)]">
                         {leaderboardData[2].bonus}
                     </div>
                 </motion.div>
