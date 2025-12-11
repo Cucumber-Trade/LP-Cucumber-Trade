@@ -5,7 +5,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+:root {
+  --color-cyber-bg: #ffffff;
+  --color-cyber-dark: #f0f4f8;
+  --color-cyber-primary: #9ACD32;
+  --color-cyber-secondary: #008080;
+  --color-cyber-tertiary: #006400;
+  --color-cyber-text: #030508;
+  --color-cyber-dim: #94a3b8;
+}
+
+.dark {
   --color-cyber-bg: #030508;
   --color-cyber-dark: #0a0f16;
   --color-cyber-primary: #9ACD32;
@@ -13,6 +23,16 @@
   --color-cyber-tertiary: #008000;
   --color-cyber-text: #e0f0ff;
   --color-cyber-dim: #4a5a6a;
+}
+
+@theme inline {
+  --color-cyber-bg: var(--color-cyber-bg);
+  --color-cyber-dark: var(--color-cyber-dark);
+  --color-cyber-primary: var(--color-cyber-primary);
+  --color-cyber-secondary: var(--color-cyber-secondary);
+  --color-cyber-tertiary: var(--color-cyber-tertiary);
+  --color-cyber-text: var(--color-cyber-text);
+  --color-cyber-dim: var(--color-cyber-dim);
   
   /* Map standard variables to cyber theme */
   --color-background: var(--color-cyber-bg);
@@ -44,7 +64,7 @@
     @apply border-border;
   }
   body {
-    @apply font-urbanist antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
+    @apply font-urbanist antialiased bg-cyber-bg text-cyber-text overflow-x-hidden transition-colors duration-300;
     background-image: 
       linear-gradient(rgba(154, 205, 50, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(154, 205, 50, 0.03) 1px, transparent 1px);
