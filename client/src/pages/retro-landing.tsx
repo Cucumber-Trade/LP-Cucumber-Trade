@@ -146,7 +146,7 @@ export default function CyberLanding() {
       <main className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-32 pb-20">
         
         {/* SECTION 1: HERO */}
-        <div id="section-hero" className="min-h-[90vh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+        <div id="section-hero" className="min-h-[90svh] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative py-12 lg:py-0">
             {/* Hero Tech Grid Overlay */}
             <div className="absolute inset-0 pointer-events-none z-0 opacity-20">
                 <div className="absolute left-0 top-0 h-full w-px bg-cyber-dim/50"></div>
@@ -165,13 +165,13 @@ export default function CyberLanding() {
             
 
             {/* Left Content */}
-            <div className="flex flex-col items-start text-left space-y-10 z-20">
+            <div className="flex flex-col items-start text-left space-y-8 md:space-y-10 z-20 pt-10 md:pt-0">
                 <div className="space-y-6">
-                    <h1 className="text-6xl md:text-8xl font-urbanist font-black leading-[0.9] tracking-tight flex gap-4 items-center flex-wrap">
-                        <span>Your</span>
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-urbanist font-black leading-[1.1] md:leading-[0.9] tracking-tight flex flex-col sm:block gap-2 md:gap-4 items-start sm:items-center flex-wrap">
+                        <span className="mr-3">Your</span>
                         <RotatingText
                           texts={['AI', 'Arena', 'Earnings']}
-                          mainClassName="inline-flex px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-2 sm:py-2 md:py-3 justify-start rounded-lg items-center text-5xl md:text-7xl font-urbanist font-black"
+                          mainClassName="inline-flex px-2 sm:px-2 md:px-3 bg-cyber-primary text-cyber-bg overflow-hidden py-1 sm:py-2 md:py-3 justify-start rounded-lg items-center text-4xl sm:text-5xl md:text-7xl font-urbanist font-black mt-2 sm:mt-0"
                           staggerFrom="last"
                           initial={{ y: "100%" }}
                           animate={{ y: 0 }}

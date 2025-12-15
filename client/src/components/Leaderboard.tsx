@@ -97,7 +97,7 @@ export default function Leaderboard() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="absolute -top-6 -right-4 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_20px_rgba(154,205,50,0.15)] rounded-xl p-2 z-50 flex flex-col items-center min-w-[80px]"
+                    className="absolute -top-4 right-0 md:-top-6 md:-right-4 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_20px_rgba(154,205,50,0.15)] rounded-xl p-2 z-50 flex flex-col items-center min-w-[80px]"
                 >
                     <div className="flex items-center gap-1 text-xs font-bold text-cyber-text mb-1">
                         Bonus <span>🎉</span>
@@ -141,7 +141,7 @@ export default function Leaderboard() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="absolute -top-8 -right-6 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_25px_rgba(154,205,50,0.2)] rounded-xl p-3 z-50 flex flex-col items-center min-w-[100px]"
+                    className="absolute -top-6 right-0 md:-top-8 md:-right-6 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_25px_rgba(154,205,50,0.2)] rounded-xl p-3 z-50 flex flex-col items-center min-w-[100px]"
                 >
                     <div className="flex items-center gap-1 text-sm font-bold text-cyber-text mb-1">
                         Bonus <span>🐝</span>
@@ -193,7 +193,7 @@ export default function Leaderboard() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="absolute -top-6 -right-4 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_20px_rgba(154,205,50,0.15)] rounded-xl p-2 z-50 flex flex-col items-center min-w-[80px]"
+                    className="absolute -top-4 right-0 md:-top-6 md:-right-4 bg-cyber-dark border border-cyber-primary/30 shadow-[0_0_20px_rgba(154,205,50,0.15)] rounded-xl p-2 z-50 flex flex-col items-center min-w-[80px]"
                 >
                     <div className="flex items-center gap-1 text-xs font-bold text-cyber-text mb-1">
                         Bonus <span>🚀</span>
