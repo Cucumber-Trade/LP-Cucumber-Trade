@@ -86,10 +86,10 @@ export default function Leaderboard() {
       </div>
 
       {/* Podium Section */}
-      <div className="flex flex-col md:flex-row justify-center items-end gap-6 md:gap-8 lg:gap-12 mb-24 relative z-10 px-4 mt-12 md:mt-0">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-end gap-8 md:gap-4 lg:gap-8 mb-24 relative z-10 px-4 mt-12 md:mt-0">
          
          {/* Rank 2 */}
-         <div className="order-2 md:order-1 flex flex-col items-center w-full md:w-1/3 max-w-sm relative">
+         <div className="order-2 md:order-1 flex flex-col items-center w-full md:w-1/3 max-w-[320px] md:max-w-sm relative">
              {/* Card */}
              <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-visible hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                 {/* Bonus Overlay */}
@@ -130,7 +130,7 @@ export default function Leaderboard() {
          </div>
 
          {/* Rank 1 */}
-         <div className="order-1 md:order-2 flex flex-col items-center w-full md:w-1/3 max-w-sm relative z-20 mb-8 md:mb-0">
+         <div className="order-1 md:order-2 flex flex-col items-center w-full md:w-1/3 max-w-[320px] md:max-w-sm relative z-20 mb-12 md:mb-0">
              {/* Glowing Effect */}
              <div className="absolute inset-0 bg-yellow-500/20 blur-[80px] rounded-full -z-10 opacity-60 animate-pulse-slow"></div>
              
@@ -185,7 +185,7 @@ export default function Leaderboard() {
          </div>
 
          {/* Rank 3 */}
-         <div className="order-3 md:order-3 flex flex-col items-center w-full md:w-1/3 max-w-sm relative">
+         <div className="order-3 md:order-3 flex flex-col items-center w-full md:w-1/3 max-w-[320px] md:max-w-sm relative">
              {/* Card */}
              <div className="bg-cyber-dark/80 border border-cyber-dim/20 rounded-3xl p-6 w-full relative overflow-visible hover:-translate-y-2 transition-transform duration-300 z-10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                 {/* Bonus Overlay */}
