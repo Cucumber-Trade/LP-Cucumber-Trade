@@ -464,7 +464,7 @@ export default function CyberLanding() {
 
             {/* HEADER - Refactored for aegis.im style */}
             <header className="fixed top-0 left-0 w-full z-50 px-6 py-8">
-                <div className="max-w-7xl mx-auto flex justify-between items-center glass-strong rounded-2xl px-6 py-3 shadow-2xl border border-white/5 relative">
+                <div className="max-w-6xl mx-auto flex justify-between items-center glass-liquid rounded-2xl px-6 py-3 shadow-2xl border border-white/5 relative">
 
                     {/* Left: Logo */}
                     <div className="flex items-center gap-2 group cursor-pointer">
@@ -496,9 +496,6 @@ export default function CyberLanding() {
                             <GlassButton variant="primary" size="sm" className="!px-8">
                                 Launch
                             </GlassButton>
-
-                            <div className="w-px h-6 bg-white/10 hidden sm:block" />
-                            <AnimatedThemeToggler />
                         </div>
                     </div>
                 </div>
@@ -513,14 +510,14 @@ export default function CyberLanding() {
                     <div className="absolute inset-0 pointer-events-none overflow-hidden">
                         <div className="absolute inset-0 bg-[#020406]" />
 
+                        <div className="absolute inset-0 bg-gradient-hero opacity-40" />
+
                         {/* Animated Mesh Gradient Layer */}
                         <div className="absolute inset-0 mesh-container">
                             <div className="mesh-blob mesh-blob-1" />
                             <div className="mesh-blob mesh-blob-2" />
                             <div className="mesh-blob mesh-blob-3" />
                         </div>
-
-                        <div className="absolute inset-0 bg-gradient-hero opacity-30" />
 
                         {/* Smooth Animated Neural Mesh - Simplified for performance */}
                         <svg className="absolute inset-0 w-full h-full opacity-5" viewBox="0 0 100 100" preserveAspectRatio="none">
