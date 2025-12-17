@@ -278,8 +278,8 @@ function FeatureShowcase() {
                         key={section.id}
                         onClick={() => setActiveTab(idx)}
                         className={`group px-6 py-3 rounded-full flex items-center gap-3 transition-all duration-300 relative overflow-hidden ${activeTab === idx
-                                ? 'bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)] text-white'
-                                : 'text-white/40 hover:text-white/70 hover:bg-white/[0.02]'
+                            ? 'bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)] text-white'
+                            : 'text-white/40 hover:text-white/70 hover:bg-white/[0.02]'
                             }`}
                     >
                         {activeTab === idx && (
@@ -509,10 +509,18 @@ export default function CyberLanding() {
 
                 {/* HERO SECTION - Immersive Cinematic Experience */}
                 <section id="section-hero" className="relative min-h-[90vh] flex items-center justify-center pt-48 pb-20">
-                    {/* Futuristic Background Animation */}
+                    {/* Futuristic Background Animation - Updated with Mesh Gradient */}
                     <div className="absolute inset-0 pointer-events-none overflow-hidden">
                         <div className="absolute inset-0 bg-[#020406]" />
-                        <div className="absolute inset-0 bg-gradient-hero opacity-40" />
+
+                        {/* Animated Mesh Gradient Layer */}
+                        <div className="absolute inset-0 mesh-container">
+                            <div className="mesh-blob mesh-blob-1" />
+                            <div className="mesh-blob mesh-blob-2" />
+                            <div className="mesh-blob mesh-blob-3" />
+                        </div>
+
+                        <div className="absolute inset-0 bg-gradient-hero opacity-30" />
 
                         {/* Smooth Animated Neural Mesh - Simplified for performance */}
                         <svg className="absolute inset-0 w-full h-full opacity-5" viewBox="0 0 100 100" preserveAspectRatio="none">
