@@ -506,54 +506,23 @@ export default function CyberLanding() {
 
                 {/* HERO SECTION - Immersive Cinematic Experience */}
                 <section id="section-hero" className="relative min-h-[90vh] flex items-center justify-center pt-48 pb-20">
-                    {/* Futuristic Background Animation - Updated with Mesh Gradient */}
+                    {/* Futuristic Background - Spline 3D Scene */}
                     <div className="absolute inset-0 pointer-events-none overflow-hidden">
                         <div className="absolute inset-0 bg-[#020406]" />
 
-                        <div className="absolute inset-0 bg-gradient-hero opacity-40" />
-
-                        {/* Animated Mesh Gradient Layer */}
-                        <div className="absolute inset-0 mesh-container">
-                            <div className="mesh-blob mesh-blob-1" />
-                            <div className="mesh-blob mesh-blob-2" />
-                            <div className="mesh-blob mesh-blob-3" />
+                        {/* Spline 3D Embed */}
+                        <div className="absolute inset-0 w-full h-full opacity-60">
+                            <iframe
+                                src='https://my.spline.design/claritystream-fisrocOLnXjgOxnQNDPtl1nS/'
+                                frameBorder='0'
+                                width='100%'
+                                height='100%'
+                                title="Spline 3D Scene"
+                            />
                         </div>
 
-                        {/* Smooth Animated Neural Mesh - Simplified for performance */}
-                        <svg className="absolute inset-0 w-full h-full opacity-5" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            <motion.path
-                                d="M0,50 C25,20 75,80 100,50"
-                                fill="none"
-                                stroke="#65E461"
-                                strokeWidth="0.1"
-                                animate={{ opacity: [0, 0.2, 0] }}
-                                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                            />
-                        </svg>
-
-                        {/* Softened Floating Cinematic "Glass Shards" - Reduced for performance */}
-                        {[...Array(2)].map((_, i) => (
-                            <motion.div
-                                key={i}
-                                className="absolute bg-white/[0.02] border border-white/5 backdrop-blur-3xl rounded-3xl"
-                                style={{
-                                    width: Math.random() * 150 + 100,
-                                    height: Math.random() * 150 + 100,
-                                    left: `${Math.random() * 80 + 10}%`,
-                                    top: `${Math.random() * 80 + 10}%`,
-                                }}
-                                animate={{
-                                    y: [0, -20, 0],
-                                    rotate: [0, 2, -2, 0],
-                                    opacity: [0.05, 0.1, 0.05],
-                                }}
-                                transition={{
-                                    duration: 15 + i * 2,
-                                    repeat: Infinity,
-                                    ease: "easeInOut",
-                                }}
-                            />
-                        ))}
+                        {/* Bottom fade for better readability */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#020406] z-10" />
                     </div>
 
                     {/* Content wrapper */}
@@ -959,6 +928,6 @@ export default function CyberLanding() {
                 </span>
             </div>
 
-        </div>
+        </div >
     );
 }
