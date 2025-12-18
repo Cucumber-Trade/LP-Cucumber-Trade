@@ -28,9 +28,9 @@ const FEATURE_SECTIONS = [
         ],
         color: '#65E461',
         visual: (
-            <div className="bg-[#000000] border border-cyber-primary/30 rounded-3xl p-6 backdrop-blur-sm relative overflow-hidden group transition-colors flex flex-col justify-between max-w-md mx-auto aspect-square">
+            <div className="bg-black/50 border border-cyber-primary/30 rounded-3xl p-6 backdrop-blur-sm relative overflow-hidden group transition-colors flex flex-col justify-between max-w-md h-full">
                 <div className="flex flex-col items-center">
-                    <img src={graphicaPng} alt="Cool Pickle" className="w-3/4 h-auto object-contain mb-4" />
+                    <img src={graphicaPng} alt="Cool Pickle" className="w-3/4 h-auto object-contain mb-4 mix-blend-screen" />
                     <h3 className="text-xl font-bold mb-3 text-center">Agent Builder</h3>
                     <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-3 w-full">
                         <p className="text-cyber-text/80 italic text-xs text-center">
@@ -297,7 +297,7 @@ function FeatureShowcase() {
                         animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
                         exit={{ opacity: 0, x: -50, filter: 'blur(10px)' }}
                         transition={{ duration: 0.5, ease: "anticipate" }}
-                        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white/[0.03] p-10 md:p-16 rounded-[4rem] border border-white/5 backdrop-blur-2xl relative overflow-hidden shadow-2xl"
+                        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch bg-white/[0.03] p-10 md:p-16 rounded-[4rem] border border-white/5 backdrop-blur-2xl relative overflow-hidden shadow-2xl"
                     >
                         {/* Dynamic Background Glow */}
                         <div className="absolute -top-20 -right-20 w-96 h-96 opacity-[0.05] pointer-events-none blur-[120px] rounded-full"
@@ -341,7 +341,7 @@ function FeatureShowcase() {
                             </div>
                         </div>
 
-                        <div className="relative h-full min-h-[400px] flex items-center justify-center">
+                        <div className="relative h-full min-h-[400px] flex items-stretch justify-center">
                             <motion.div
                                 initial={{ scale: 0.9, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
