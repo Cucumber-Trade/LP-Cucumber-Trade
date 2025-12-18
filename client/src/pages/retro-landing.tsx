@@ -282,7 +282,7 @@ function FeatureShowcase() {
                             : 'text-white/40 hover:text-white/70 hover:bg-white/[0.02]'
                             }`}
                     >
-                        <div className={`transition-transform duration-300 ${activeTab === idx ? 'scale-110' : 'group-hover:scale-110'}`}>
+                        <div className={`transition-transform duration-300 ${activeTab === idx ? 'scale-110 text-cyber-primary' : 'group-hover:scale-110'}`}>
                             {section.icon}
                         </div>
                         <span className="font-bold text-sm tracking-tight whitespace-nowrap">
