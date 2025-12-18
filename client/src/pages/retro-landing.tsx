@@ -517,6 +517,13 @@ export default function CyberLanding() {
                         />
                     </div>
 
+                    {/* Gradient transition overlay at bottom of hero */}
+                    <div className="absolute bottom-0 left-0 right-0 h-96 pointer-events-none z-10"
+                        style={{
+                            background: 'linear-gradient(to bottom, transparent 0%, rgba(10, 15, 20, 0.3) 30%, rgba(10, 15, 20, 0.7) 60%, #0A0F14 100%)'
+                        }}
+                    ></div>
+
                     {/* Content wrapper */}
                     <div className="relative z-20 w-full max-w-4xl mx-auto px-6 text-center">
                         <motion.div
