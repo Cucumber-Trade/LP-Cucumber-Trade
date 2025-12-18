@@ -28,19 +28,19 @@ const FEATURE_SECTIONS = [
         ],
         color: '#65E461',
         visual: (
-            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors h-full flex flex-col justify-between">
-                <div>
-                    <img src={graphicaPng} alt="Cool Pickle" className="w-full h-auto object-contain mb-6" />
-                    <h3 className="text-2xl font-bold mb-4">Agent Builder</h3>
-                    <div className="p-4 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-4">
-                        <p className="text-cyber-text/80 italic text-sm">
+            <div className="bg-[#000000] border border-cyber-primary/30 rounded-3xl p-6 backdrop-blur-sm relative overflow-hidden group transition-colors flex flex-col justify-between max-w-md mx-auto aspect-square">
+                <div className="flex flex-col items-center">
+                    <img src={graphicaPng} alt="Cool Pickle" className="w-3/4 h-auto object-contain mb-4" />
+                    <h3 className="text-xl font-bold mb-3 text-center">Agent Builder</h3>
+                    <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-3 w-full">
+                        <p className="text-cyber-text/80 italic text-xs text-center">
                             "Create a market making agent that trades ETH/USDC on Uniswap..."
                         </p>
                     </div>
                 </div>
-                <div className="space-y-2 font-mono text-[10px] text-cyber-primary/80 bg-black/20 p-4 rounded-lg border border-cyber-dim/5">
+                <div className="space-y-1.5 font-mono text-[9px] text-cyber-primary/80 bg-black/20 p-3 rounded-lg border border-cyber-dim/5">
                     <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                         <span>&gt; Parsing strategy...</span>
                     </div>
                     <div>&gt; Generating logic...</div>
@@ -64,7 +64,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#4A9FE8',
         visual: (
-            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors h-full flex flex-col justify-between">
+            <div className="bg-[#000000] border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
                 <div>
                     <ShieldCheck className="w-16 h-16 text-blue-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Risk Engine</h3>
@@ -113,7 +113,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#A78BFA',
         visual: (
-            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-purple-400/30 transition-colors h-full flex flex-col justify-between">
+            <div className="bg-[#000000] border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Swords className="w-16 h-16 text-purple-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Arena Battle</h3>
@@ -157,7 +157,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#FACC15',
         visual: (
-            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-yellow-400/30 transition-colors h-full flex flex-col justify-between">
+            <div className="bg-[#000000] border border-yellow-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Coins className="w-16 h-16 text-yellow-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Token Utility</h3>
@@ -199,7 +199,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#3B82F6',
         visual: (
-            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors h-full flex flex-col justify-between">
+            <div className="bg-[#000000] border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Zap className="w-16 h-16 text-blue-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">x402 Protocol</h3>
@@ -238,7 +238,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#EF4444',
         visual: (
-            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-red-400/30 transition-colors h-full flex flex-col justify-between">
+            <div className="bg-[#000000] border border-red-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Database className="w-16 h-16 text-red-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Memory Bank</h3>
