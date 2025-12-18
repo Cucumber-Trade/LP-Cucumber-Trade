@@ -456,7 +456,13 @@ export default function CyberLanding() {
 
             {/* HEADER - Refactored for aegis.im style */}
             <header className="fixed top-0 left-0 w-full z-50 px-6 py-8">
-                <div className="max-w-6xl mx-auto flex justify-between items-center glass-liquid rounded-2xl px-6 py-3 shadow-2xl border border-white/5 relative">
+                <div
+                    className="max-w-6xl mx-auto flex justify-between items-center bg-white/[0.03] backdrop-blur-[40px] backdrop-saturate-150 rounded-2xl px-6 py-3 shadow-2xl border border-white/5 relative"
+                    style={{
+                        backdropFilter: 'blur(40px) saturate(150%)',
+                        WebkitBackdropFilter: 'blur(40px) saturate(150%)'
+                    }}
+                >
 
                     {/* Left: Logo */}
                     <div className="flex items-center gap-2 group cursor-pointer">
