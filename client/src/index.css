@@ -60,36 +60,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --color-cyber-bg: #ffffff;
-  --color-cyber-dark: #f0f4f8;
-  --color-cyber-text: #030508;
-  --color-cyber-dim: #94a3b8;
-
-  /* NEW: Brand colors */
-  --color-primary-green: #65E461;
-  --color-primary-orange: #EB8E4B;
-  --color-gray: #6B7173;
-  --color-white: #FFFFFF;
-  --color-black: #04070B;
-
-  /* NEW: Gradient stops */
-  --gradient-green: #65E461;
-  --gradient-blue: #4A9FE8;
-  --gradient-blue-deep: #2E5EAA;
-
-  /* Keep for backwards compatibility */
-  --color-cyber-primary: #65E461;
-  --color-cyber-secondary: #4A9FE8;
-  --color-cyber-tertiary: #EB8E4B;
-}
-
-.dark {
+  /* Forced Dark Theme for all modes */
   --color-cyber-bg: #04070B;
   --color-cyber-dark: #0a0f16;
   --color-cyber-text: #FFFFFF;
   --color-cyber-dim: #6B7173;
 
-  /* Brand colors same in dark mode */
+  /* Brand colors */
   --color-primary-green: #65E461;
   --color-primary-orange: #EB8E4B;
   --color-gray: #6B7173;
@@ -101,10 +78,18 @@
   --gradient-blue: #4A9FE8;
   --gradient-blue-deep: #2E5EAA;
 
-  /* Keep for backwards compatibility */
+  /* backwards compatibility */
   --color-cyber-primary: #65E461;
   --color-cyber-secondary: #4A9FE8;
   --color-cyber-tertiary: #EB8E4B;
+}
+
+/* Also ensure .dark class doesn't override with different values if applied */
+.dark {
+  --color-cyber-bg: #04070B;
+  --color-cyber-dark: #0a0f16;
+  --color-cyber-text: #FFFFFF;
+  --color-cyber-dim: #6B7173;
 }
 
 @theme inline {
@@ -165,17 +150,11 @@
   body {
     @apply font-urbanist antialiased bg-cyber-bg text-cyber-text overflow-x-hidden;
     background-image:
-      linear-gradient(var(--color-cyber-dim) 0.5px, transparent 0.5px),
-      linear-gradient(90deg, var(--color-cyber-dim) 0.5px, transparent 0.5px);
+      linear-gradient(rgba(101, 228, 97, 0.02) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(101, 228, 97, 0.02) 0.5px, transparent 0.5px);
     background-size: 50px 50px;
     background-attachment: fixed;
     opacity: 1;
-  }
-
-  .dark body {
-    background-image:
-      linear-gradient(rgba(101, 228, 97, 0.05) 0.5px, transparent 0.5px),
-      linear-gradient(90deg, rgba(101, 228, 97, 0.05) 0.5px, transparent 0.5px);
   }
 }
 

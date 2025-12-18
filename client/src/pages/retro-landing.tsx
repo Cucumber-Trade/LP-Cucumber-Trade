@@ -278,18 +278,11 @@ function FeatureShowcase() {
                         key={section.id}
                         onClick={() => setActiveTab(idx)}
                         className={`group px-6 py-3 rounded-full flex items-center gap-3 transition-all duration-300 relative overflow-hidden ${activeTab === idx
-                            ? 'bg-white/10 shadow-[0_0_20px_rgba(255,255,255,0.05)] text-white'
+                            ? 'bg-white/15 text-white'
                             : 'text-white/40 hover:text-white/70 hover:bg-white/[0.02]'
                             }`}
                     >
-                        {activeTab === idx && (
-                            <motion.div
-                                layoutId="activeTabPill"
-                                className="absolute inset-0 bg-gradient-to-r opacity-10 pointer-events-none"
-                                style={{ backgroundImage: `linear-gradient(to right, ${section.color}, transparent)` }}
-                            />
-                        )}
-                        <div className={`transition-transform duration-300 ${activeTab === idx ? 'scale-110' : 'group-hover:scale-110'}`} style={{ color: activeTab === idx ? section.color : 'inherit' }}>
+                        <div className={`transition-transform duration-300 ${activeTab === idx ? 'scale-110' : 'group-hover:scale-110'}`}>
                             {section.icon}
                         </div>
                         <span className="font-bold text-sm tracking-tight whitespace-nowrap">
@@ -436,30 +429,29 @@ export default function CyberLanding() {
     }, [visibleSections]);
 
     return (
-        <div className="relative min-h-screen w-full bg-cyber-bg text-cyber-text font-urbanist selection:bg-cyber-primary selection:text-cyber-bg overflow-x-hidden">
+        <div className="relative min-h-screen w-full bg-[#0A0F14] text-white font-urbanist selection:bg-cyber-primary/30 selection:text-white overflow-x-hidden">
 
-            {/* LAYERED GRADIENT BACKGROUND SYSTEM */}
+            {/* LAYERED GRADIENT BACKGROUND SYSTEM - Matched to design */}
             <div className="fixed inset-0 pointer-events-none z-0">
-                {/* Base gradient */}
+                {/* Base Dark Layer */}
+                <div className="absolute inset-0 bg-[#0A0F14]" />
+
+                {/* Dot Grid Pattern Overlay */}
                 <div
-                    className="absolute inset-0"
+                    className="absolute inset-0 opacity-30"
                     style={{
-                        background: 'linear-gradient(180deg, #04070B 0%, #0a0f16 50%, #04070B 100%)'
+                        backgroundImage: 'radial-gradient(circle, rgba(101, 228, 97, 0.15) 1px, transparent 1px)',
+                        backgroundSize: '40px 40px'
                     }}
                 />
 
-                {/* Blur orbs - positioned for visual interest */}
-                <div className="absolute top-0 left-0 w-[700px] h-[700px] rounded-full blur-[120px] opacity-20 bg-[#65E461] -translate-x-1/2 -translate-y-1/2" />
-                <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full blur-[100px] opacity-15 bg-[#4A9FE8] translate-x-1/3" />
-                <div className="absolute bottom-0 left-1/3 w-[700px] h-[700px] rounded-full blur-[130px] opacity-10 bg-[#2E5EAA] -translate-y-1/4" />
+                {/* Atmospheric Gradient Overlays */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0F14]/50 to-[#0A0F14]" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyber-primary/5 via-transparent to-blue-500/5" />
 
-                {/* Optional: Subtle noise texture */}
-                <div
-                    className="absolute inset-0 opacity-[0.015] mix-blend-overlay"
-                    style={{
-                        backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E")',
-                    }}
-                />
+                {/* Radial Gradients for Depth */}
+                <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-cyber-primary/10 rounded-full blur-[150px] opacity-20" />
+                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] opacity-20" />
             </div>
 
             {/* HEADER - Refactored for aegis.im style */}
@@ -506,23 +498,17 @@ export default function CyberLanding() {
 
                 {/* HERO SECTION - Immersive Cinematic Experience */}
                 <section id="section-hero" className="relative min-h-[90vh] flex items-center justify-center pt-48 pb-20">
-                    {/* Futuristic Background - Spline 3D Scene */}
-                    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-                        <div className="absolute inset-0 bg-[#020406]" />
 
-                        {/* Spline 3D Embed */}
-                        <div className="absolute inset-0 w-full h-full opacity-60">
-                            <iframe
-                                src='https://my.spline.design/claritystream-fisrocOLnXjgOxnQNDPtl1nS/'
-                                frameBorder='0'
-                                width='100%'
-                                height='100%'
-                                title="Spline 3D Scene"
-                            />
-                        </div>
-
-                        {/* Bottom fade for better readability */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#020406] z-10" />
+                    {/* Spline 3D Background */}
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden bg-black">
+                        <iframe
+                            src='https://my.spline.design/aigreymarketingbanner-hD5nbJOmTRd1ns0W7sxdmLKP/'
+                            frameBorder='0'
+                            width='100%'
+                            height='100%'
+                            className="w-full h-full"
+                            loading="eager"
+                        />
                     </div>
 
                     {/* Content wrapper */}
@@ -804,39 +790,39 @@ export default function CyberLanding() {
                     <Roadmap />
 
                     {/* Feature 8: Partners & CTA (Footer-ish) */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-cyber-dark/30 rounded-3xl p-12 border border-cyber-dim/10 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-r from-cyber-primary/5 to-transparent"></div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white/[0.02] backdrop-blur-3xl rounded-3xl p-12 border border-white/5 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-cyber-primary/10 to-transparent opacity-30"></div>
                         <div className="relative z-10">
-                            <span className="text-cyber-text/50 font-mono text-sm tracking-widest mb-2 block">08 // READY TO START?</span>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6">Join the AI <br /> Revolution</h2>
-                            <p className="text-xl text-cyber-text/70 mb-8">
-                                Deploy your first AI agent in minutes. Access the most advanced decentralized AI infrastructure today.
+                            <span className="text-cyber-primary/80 font-mono text-sm tracking-[0.4em] mb-4 block uppercase font-bold">08 // READY TO START?</span>
+                            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">Join the AI <br /> Revolution</h2>
+                            <p className="text-xl text-white/50 mb-10 leading-relaxed max-w-lg">
+                                Build, compete, and monetize your first AI agent in minutes. Access the most advanced decentralized AI infrastructure.
                             </p>
                             <div className="flex flex-wrap gap-4">
-                                <GlassButton variant="primary" size="lg">
-                                    Launch App
+                                <GlassButton variant="primary" size="lg" className="px-10">
+                                    Launch Arena
                                 </GlassButton>
-                                <GlassButton variant="outline" size="lg">
+                                <GlassButton variant="outline" size="lg" className="px-10">
                                     Join Discord
                                 </GlassButton>
                             </div>
                         </div>
                         <div className="relative z-10 grid grid-cols-2 gap-4">
-                            <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                                <div className="text-3xl font-bold text-cyber-text mb-1">50k+</div>
-                                <div className="text-sm text-cyber-text/50">Active Users</div>
+                            <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
+                                <div className="text-4xl font-black text-white mb-2">50k+</div>
+                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">Active Users</div>
                             </div>
-                            <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                                <div className="text-3xl font-bold text-cyber-text mb-1">$2B+</div>
-                                <div className="text-sm text-cyber-text/50">Volume Traded</div>
+                            <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
+                                <div className="text-4xl font-black text-white mb-2">$2B+</div>
+                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">Volume Traded</div>
                             </div>
-                            <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                                <div className="text-3xl font-bold text-cyber-text mb-1">150+</div>
-                                <div className="text-sm text-cyber-text/50">AI Models</div>
+                            <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
+                                <div className="text-4xl font-black text-white mb-2">150+</div>
+                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">AI Models</div>
                             </div>
-                            <div className="text-center p-6 bg-cyber-bg/50 rounded-2xl border border-cyber-dim/10">
-                                <div className="text-3xl font-bold text-cyber-text mb-1">24/7</div>
-                                <div className="text-sm text-cyber-text/50">Uptime</div>
+                            <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
+                                <div className="text-4xl font-black text-white mb-2">24/7</div>
+                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">Uptime</div>
                             </div>
                         </div>
                     </div>
@@ -845,8 +831,8 @@ export default function CyberLanding() {
                     <Leaderboard />
                 </div>
 
-                {/* FOOTER - Moved inside main for correct JSX structure */}
-                <footer className="relative z-10 w-full pt-20 pb-10 border-t border-cyber-dim/10 bg-cyber-bg">
+                {/* FOOTER - Updated for full dark design */}
+                <footer className="relative z-10 w-full pt-32 pb-16 border-t border-white/5 bg-transparent">
                     <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                             {/* Brand */}
