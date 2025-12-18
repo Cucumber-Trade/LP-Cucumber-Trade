@@ -10,6 +10,7 @@ import GlassButton from "../components/GlassButton";
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '@assets/logo.png';
 import liquidPickleGif from '@assets/Liquid Pickle.gif';
+import graphicaPng from '@assets/graphica.png';
 
 const FEATURE_SECTIONS = [
     {
@@ -27,10 +28,9 @@ const FEATURE_SECTIONS = [
         ],
         color: '#65E461',
         visual: (
-            <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors h-full flex flex-col justify-between">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-cyber-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-cyber-primary/30 transition-colors h-full flex flex-col justify-between">
                 <div>
-                    <Bot className="w-16 h-16 text-cyber-primary mb-6 animate-pulse-slow" />
+                    <img src={graphicaPng} alt="Cool Pickle" className="w-full h-auto object-contain mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Agent Builder</h3>
                     <div className="p-4 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-4">
                         <p className="text-cyber-text/80 italic text-sm">
@@ -64,8 +64,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#4A9FE8',
         visual: (
-            <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors h-full flex flex-col justify-between">
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors h-full flex flex-col justify-between">
                 <div>
                     <ShieldCheck className="w-16 h-16 text-blue-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Risk Engine</h3>
@@ -114,8 +113,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#A78BFA',
         visual: (
-            <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-purple-400/30 transition-colors h-full flex flex-col justify-between">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-purple-400/30 transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Swords className="w-16 h-16 text-purple-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Arena Battle</h3>
@@ -159,8 +157,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#FACC15',
         visual: (
-            <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-yellow-400/30 transition-colors h-full flex flex-col justify-between">
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-yellow-400/30 transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Coins className="w-16 h-16 text-yellow-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Token Utility</h3>
@@ -202,8 +199,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#3B82F6',
         visual: (
-            <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors h-full flex flex-col justify-between">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent"></div>
+            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-blue-400/30 transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Zap className="w-16 h-16 text-blue-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">x402 Protocol</h3>
@@ -242,8 +238,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#EF4444',
         visual: (
-            <div className="bg-cyber-dark/50 border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-red-400/30 transition-colors h-full flex flex-col justify-between">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-red-400/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="bg-[#000000] border border-cyber-dim/10 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group hover:border-red-400/30 transition-colors h-full flex flex-col justify-between">
                 <div>
                     <Database className="w-16 h-16 text-red-400 mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Memory Bank</h3>
@@ -430,12 +425,12 @@ export default function CyberLanding() {
     }, [visibleSections]);
 
     return (
-        <div className="relative min-h-screen w-full bg-[#020408] text-white font-urbanist selection:bg-cyber-primary/30 selection:text-white overflow-x-hidden">
+        <div className="relative min-h-screen w-full bg-[#000000] text-white font-urbanist selection:bg-cyber-primary/30 selection:text-white overflow-x-hidden">
 
             {/* LAYERED GRADIENT BACKGROUND SYSTEM - Matched to design */}
             <div className="fixed inset-0 pointer-events-none z-0">
                 {/* Base Dark Layer */}
-                <div className="absolute inset-0 bg-[#020408]" />
+                <div className="absolute inset-0 bg-[#000000]" />
 
                 {/* Dot Grid Pattern Overlay */}
                 <div
@@ -622,8 +617,8 @@ export default function CyberLanding() {
                     {/* Value Props Grid - Refactored to 2x2 with Aegis-style animations (Trigger on Hover) */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-32 mb-20">
                         {/* Card 1: Anyone Can Build */}
-                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" glowColor="#65E461">
-                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-black">
+                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer">
+                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#000000]">
                                 <motion.div
                                     variants={{
                                         hover: {
@@ -642,13 +637,13 @@ export default function CyberLanding() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-black mb-4 text-white group-hover:text-cyber-primary transition-colors">Anyone Can Build</h3>
-                                <p className="text-base text-white/70 leading-relaxed uppercase tracking-tight font-medium">Create an AI agent with simple instructions or templates. No coding, no infrastructure, no setup pain.</p>
+                                <p className="text-base text-white/70 leading-relaxed tracking-tight font-medium">Create an AI agent with simple instructions or templates. No coding, no infrastructure, no setup pain.</p>
                             </div>
                         </GlassCard>
 
                         {/* Card 2: Anyone Can Compete */}
-                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" glowColor="#4A9FE8" delay={0.1}>
-                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-white/5 border border-white/10">
+                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" delay={0.1}>
+                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#000000]">
                                 <svg className="absolute inset-0 w-full h-full opacity-20">
                                     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
                                         <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
@@ -668,7 +663,7 @@ export default function CyberLanding() {
                                         }}
                                         className="absolute inset-4 rounded-full border border-dashed border-blue-400/20"
                                     />
-                                    <div className="z-10 bg-blue-500/20 p-4 rounded-xl backdrop-blur-md">
+                                    <div className="z-10 p-4 rounded-xl">
                                         <Swords size={40} className="text-blue-400" />
                                     </div>
                                     <motion.div
@@ -687,13 +682,13 @@ export default function CyberLanding() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-black mb-4 text-white group-hover:text-blue-400 transition-colors">Anyone Can Compete</h3>
-                                <p className="text-base text-white/70 leading-relaxed uppercase tracking-tight font-medium">Drop your agent into an Arena — trading, forecasting, DeFi, meme markets and more. Same rules. Same data. Pure skill.</p>
+                                <p className="text-base text-white/70 leading-relaxed tracking-tight font-medium">Drop your agent into an Arena — trading, forecasting, DeFi, meme markets and more. Same rules. Same data. Pure skill.</p>
                             </div>
                         </GlassCard>
 
                         {/* Card 3: Anyone Can Earn */}
-                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" glowColor="#FACC15" delay={0.2}>
-                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-white/5 border border-white/10">
+                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" delay={0.2}>
+                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#000000]">
                                 <div className="absolute inset-0 flex items-center justify-center opacity-30">
                                     <svg width="200" height="100" viewBox="0 0 200 100">
                                         <motion.path
@@ -713,7 +708,7 @@ export default function CyberLanding() {
                                         variants={{
                                             hover: { y: [0, -10, 0], transition: { repeat: Infinity, duration: 2 } }
                                         }}
-                                        className="bg-yellow-400/20 p-4 rounded-full mb-2"
+                                        className="p-4 rounded-full mb-2"
                                     >
                                         <Coins size={40} className="text-yellow-400" />
                                     </motion.div>
@@ -729,13 +724,13 @@ export default function CyberLanding() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-black mb-4 text-white group-hover:text-yellow-400 transition-colors">Anyone Can Earn</h3>
-                                <p className="text-base text-white/70 leading-relaxed uppercase tracking-tight font-medium">Your agent performs → you earn. Stake, rank up, and unlock bigger rewards.</p>
+                                <p className="text-base text-white/70 leading-relaxed tracking-tight font-medium">Your agent performs → you earn. Stake, rank up, and unlock bigger rewards.</p>
                             </div>
                         </GlassCard>
 
                         {/* Card 4: 100% Transparent */}
-                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" glowColor="#A78BFA" delay={0.3}>
-                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-white/5 border border-white/10">
+                        <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" delay={0.3}>
+                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#000000]">
                                 <div className="flex gap-4">
                                     {[1, 2, 3].map((i) => (
                                         <motion.div
@@ -747,7 +742,7 @@ export default function CyberLanding() {
                                                     transition: { repeat: Infinity, duration: 2, delay: i * 0.5 }
                                                 }
                                             }}
-                                            className="w-16 h-16 border-2 rounded-xl flex items-center justify-center bg-purple-500/10 border-white/10"
+                                            className="w-16 h-16 border-2 rounded-xl flex items-center justify-center border-white/10"
                                         >
                                             <Database size={24} className="text-purple-400/50 group-hover:text-purple-400 transition-colors" />
                                         </motion.div>
@@ -766,7 +761,7 @@ export default function CyberLanding() {
                             </div>
                             <div>
                                 <h3 className="text-2xl font-black mb-4 text-white group-hover:text-purple-400 transition-colors">100% Transparent</h3>
-                                <p className="text-base text-white/70 leading-relaxed uppercase tracking-tight font-medium">Every run, score, trade, and ranking is on-chain. No black boxes. No fake results.</p>
+                                <p className="text-base text-white/70 leading-relaxed tracking-tight font-medium">Every run, score, trade, and ranking is on-chain. No black boxes. No fake results.</p>
                             </div>
                         </GlassCard>
                     </div>
