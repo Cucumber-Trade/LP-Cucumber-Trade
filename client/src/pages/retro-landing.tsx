@@ -9,6 +9,7 @@ import GlassCard from "../components/GlassCard";
 import GlassButton from "../components/GlassButton";
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '@assets/logo.png';
+import liquidPickleGif from '@assets/Liquid Pickle.gif';
 
 const FEATURE_SECTIONS = [
     {
@@ -622,43 +623,20 @@ export default function CyberLanding() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-32 mb-20">
                         {/* Card 1: Anyone Can Build */}
                         <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" glowColor="#65E461">
-                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-white/5 border border-white/10">
-                                <div className="absolute inset-0 bg-gradient-to-b from-cyber-primary/10 to-transparent opacity-50" />
-                                <div className="font-mono text-[10px] text-cyber-primary/60 space-y-1 absolute left-6 top-6">
-                                    <motion.div
-                                        variants={{
-                                            hover: { opacity: [0, 1, 0], transition: { repeat: Infinity, duration: 1.5 } }
-                                        }}
-                                    >&gt; INIT_BUILD</motion.div>
-                                    <motion.div
-                                        initial={{ width: 0 }}
-                                        variants={{
-                                            hover: { width: "100%", transition: { delay: 0.5, duration: 1.5, repeat: Infinity } }
-                                        }}
-                                    >&gt; GENERATING_LOGIC... [OK]</motion.div>
-                                    <motion.div
-                                        initial={{ width: 0 }}
-                                        variants={{
-                                            hover: { width: "100%", transition: { delay: 1, duration: 1, repeat: Infinity } }
-                                        }}
-                                    >&gt; DEPLOYING_AGENT...</motion.div>
-                                </div>
+                            <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-black">
                                 <motion.div
                                     variants={{
                                         hover: {
                                             scale: [1, 1.05, 1],
-                                            rotate: [0, 2, -2, 0],
                                             transition: { repeat: Infinity, duration: 4 }
                                         }
                                     }}
-                                    className="relative z-10"
+                                    className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <Bot size={64} className="text-cyber-primary drop-shadow-[0_0_15px_rgba(101,228,97,0.5)]" />
-                                    <motion.div
-                                        variants={{
-                                            hover: { height: ["0%", "100%", "0%"], transition: { repeat: Infinity, duration: 3, ease: "linear" } }
-                                        }}
-                                        className="absolute inset-x-0 top-0 w-full h-1 bg-cyber-primary/30 blur-sm"
+                                    <img
+                                        src={liquidPickleGif}
+                                        alt="Liquid Pickle Animation"
+                                        className="w-full h-full object-contain"
                                     />
                                 </motion.div>
                             </div>
