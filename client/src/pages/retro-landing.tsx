@@ -430,29 +430,29 @@ export default function CyberLanding() {
     }, [visibleSections]);
 
     return (
-        <div className="relative min-h-screen w-full bg-[#0A0F14] text-white font-urbanist selection:bg-cyber-primary/30 selection:text-white overflow-x-hidden">
+        <div className="relative min-h-screen w-full bg-[#020408] text-white font-urbanist selection:bg-cyber-primary/30 selection:text-white overflow-x-hidden">
 
             {/* LAYERED GRADIENT BACKGROUND SYSTEM - Matched to design */}
             <div className="fixed inset-0 pointer-events-none z-0">
                 {/* Base Dark Layer */}
-                <div className="absolute inset-0 bg-[#0A0F14]" />
+                <div className="absolute inset-0 bg-[#020408]" />
 
                 {/* Dot Grid Pattern Overlay */}
                 <div
-                    className="absolute inset-0 opacity-30"
+                    className="absolute inset-0 opacity-20"
                     style={{
-                        backgroundImage: 'radial-gradient(circle, rgba(101, 228, 97, 0.15) 1px, transparent 1px)',
+                        backgroundImage: 'radial-gradient(circle, rgba(101, 228, 97, 0.1) 1px, transparent 1px)',
                         backgroundSize: '40px 40px'
                     }}
                 />
 
                 {/* Atmospheric Gradient Overlays */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0A0F14]/50 to-[#0A0F14]" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-cyber-primary/5 via-transparent to-blue-500/5" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020408]/50 to-[#020408]" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyber-primary/3 via-transparent to-blue-500/3" />
 
                 {/* Radial Gradients for Depth */}
-                <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-cyber-primary/10 rounded-full blur-[150px] opacity-20" />
-                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] opacity-20" />
+                <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-cyber-primary/5 rounded-full blur-[150px] opacity-20" />
+                <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] opacity-20" />
             </div>
 
             {/* HEADER - Refactored for aegis.im style */}
@@ -521,7 +521,7 @@ export default function CyberLanding() {
                     {/* Gradient transition overlay at bottom of hero */}
                     <div className="absolute bottom-0 left-0 right-0 h-96 pointer-events-none z-10"
                         style={{
-                            background: 'linear-gradient(to bottom, transparent 0%, rgba(10, 15, 20, 0.3) 30%, rgba(10, 15, 20, 0.7) 60%, #0A0F14 100%)'
+                            background: 'linear-gradient(to bottom, transparent 0%, rgba(2, 4, 8, 0.3) 30%, rgba(2, 4, 8, 0.7) 60%, #020408 100%)'
                         }}
                     ></div>
 
