@@ -11,6 +11,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logo from '@assets/logo.png';
 import liquidPickleGif from '@assets/Liquid Pickle.gif';
 import graphicaPng from '@assets/graphica.png';
+import shinySwordsGif from '@assets/Shiny Swords.gif';
+import goldenCoinsGif from '@assets/Golden Coins.gif';
+import magnifyingGlassGif from '@assets/Maginfying Glass.gif';
 
 const FEATURE_SECTIONS = [
     {
@@ -628,7 +631,7 @@ export default function CyberLanding() {
                                     <img
                                         src={liquidPickleGif}
                                         alt="Liquid Pickle Animation"
-                                        className="w-full h-full object-contain"
+                                        className="w-full h-full object-contain mix-blend-screen"
                                     />
                                 </motion.div>
                             </div>
@@ -641,41 +644,21 @@ export default function CyberLanding() {
                         {/* Card 2: Anyone Can Compete */}
                         <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" delay={0.1}>
                             <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#000000]">
-                                <svg className="absolute inset-0 w-full h-full opacity-20">
-                                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
-                                    </pattern>
-                                    <rect width="100%" height="100%" fill="url(#grid)" />
-                                </svg>
-                                <div className="relative w-32 h-32 flex items-center justify-center">
-                                    <motion.div
-                                        variants={{
-                                            hover: { rotate: 360, transition: { repeat: Infinity, duration: 10, ease: "linear" } }
-                                        }}
-                                        className="absolute inset-0 rounded-full border border-dashed border-blue-400/30"
+                                <motion.div
+                                    variants={{
+                                        hover: {
+                                            scale: [1, 1.05, 1],
+                                            transition: { repeat: Infinity, duration: 4 }
+                                        }
+                                    }}
+                                    className="relative z-10 w-full h-full flex items-center justify-center"
+                                >
+                                    <img
+                                        src={shinySwordsGif}
+                                        alt="Shiny Swords Animation"
+                                        className="w-full h-full object-contain mix-blend-screen"
                                     />
-                                    <motion.div
-                                        variants={{
-                                            hover: { rotate: -360, transition: { repeat: Infinity, duration: 15, ease: "linear" } }
-                                        }}
-                                        className="absolute inset-4 rounded-full border border-dashed border-blue-400/20"
-                                    />
-                                    <div className="z-10 p-4 rounded-xl">
-                                        <Swords size={40} className="text-blue-400" />
-                                    </div>
-                                    <motion.div
-                                        variants={{
-                                            hover: { x: [0, 40, -40, 0], y: [0, -30, 30, 0], transition: { repeat: Infinity, duration: 5 } }
-                                        }}
-                                        className="absolute w-2 h-2 bg-red-400 rounded-full blur-[2px]"
-                                    />
-                                    <motion.div
-                                        variants={{
-                                            hover: { x: [0, -50, 50, 0], y: [0, 40, -40, 0], transition: { repeat: Infinity, duration: 6 } }
-                                        }}
-                                        className="absolute w-2 h-2 bg-green-400 rounded-full blur-[2px]"
-                                    />
-                                </div>
+                                </motion.div>
                             </div>
                             <div>
                                 <h3 className="text-2xl font-black mb-4 text-white group-hover:text-blue-400 transition-colors">Anyone Can Compete</h3>
@@ -686,38 +669,21 @@ export default function CyberLanding() {
                         {/* Card 3: Anyone Can Earn */}
                         <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" delay={0.2}>
                             <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#000000]">
-                                <div className="absolute inset-0 flex items-center justify-center opacity-30">
-                                    <svg width="200" height="100" viewBox="0 0 200 100">
-                                        <motion.path
-                                            d="M0,80 Q50,20 100,50 T200,10"
-                                            fill="none"
-                                            stroke="#FACC15"
-                                            strokeWidth="3"
-                                            initial={{ pathLength: 0 }}
-                                            variants={{
-                                                hover: { pathLength: 1, transition: { duration: 3, repeat: Infinity } }
-                                            }}
-                                        />
-                                    </svg>
-                                </div>
-                                <div className="relative z-10 flex flex-col items-center">
-                                    <motion.div
-                                        variants={{
-                                            hover: { y: [0, -10, 0], transition: { repeat: Infinity, duration: 2 } }
-                                        }}
-                                        className="p-4 rounded-full mb-2"
-                                    >
-                                        <Coins size={40} className="text-yellow-400" />
-                                    </motion.div>
-                                    <motion.div
-                                        variants={{
-                                            hover: { scale: [1, 1.1, 1], transition: { repeat: Infinity, duration: 0.5 } }
-                                        }}
-                                        className="text-2xl font-mono font-bold text-yellow-400"
-                                    >
-                                        +$5,240.00
-                                    </motion.div>
-                                </div>
+                                <motion.div
+                                    variants={{
+                                        hover: {
+                                            scale: [1, 1.05, 1],
+                                            transition: { repeat: Infinity, duration: 4 }
+                                        }
+                                    }}
+                                    className="relative z-10 w-full h-full flex items-center justify-center"
+                                >
+                                    <img
+                                        src={goldenCoinsGif}
+                                        alt="Golden Coins Animation"
+                                        className="w-full h-full object-contain mix-blend-screen"
+                                    />
+                                </motion.div>
                             </div>
                             <div>
                                 <h3 className="text-2xl font-black mb-4 text-white group-hover:text-yellow-400 transition-colors">Anyone Can Earn</h3>
@@ -728,33 +694,21 @@ export default function CyberLanding() {
                         {/* Card 4: 100% Transparent */}
                         <GlassCard variant="strong" className="p-8 h-full flex flex-col group cursor-pointer" delay={0.3}>
                             <div className="h-48 mb-8 relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#000000]">
-                                <div className="flex gap-4">
-                                    {[1, 2, 3].map((i) => (
-                                        <motion.div
-                                            key={i}
-                                            variants={{
-                                                hover: {
-                                                    opacity: [0.3, 1, 0.3],
-                                                    borderColor: ["rgba(167, 139, 250, 0.2)", "rgba(167, 139, 250, 1)", "rgba(167, 139, 250, 0.2)"],
-                                                    transition: { repeat: Infinity, duration: 2, delay: i * 0.5 }
-                                                }
-                                            }}
-                                            className="w-16 h-16 border-2 rounded-xl flex items-center justify-center border-white/10"
-                                        >
-                                            <Database size={24} className="text-purple-400/50 group-hover:text-purple-400 transition-colors" />
-                                        </motion.div>
-                                    ))}
-                                    <motion.div
-                                        variants={{
-                                            hover: { x: [-80, 80], transition: { repeat: Infinity, duration: 2, ease: "linear" } }
-                                        }}
-                                        className="absolute w-1 h-32 bg-purple-400/40 blur-md"
+                                <motion.div
+                                    variants={{
+                                        hover: {
+                                            scale: [1, 1.05, 1],
+                                            transition: { repeat: Infinity, duration: 4 }
+                                        }
+                                    }}
+                                    className="relative z-10 w-full h-full flex items-center justify-center"
+                                >
+                                    <img
+                                        src={magnifyingGlassGif}
+                                        alt="Magnifying Glass Animation"
+                                        className="w-full h-full object-contain mix-blend-screen"
                                     />
-                                </div>
-                                <div className="absolute bottom-4 flex items-center gap-2">
-                                    <ShieldCheck size={16} className="text-purple-400" />
-                                    <span className="text-[10px] font-mono font-bold text-purple-400/80 uppercase">Verified On-Chain</span>
-                                </div>
+                                </motion.div>
                             </div>
                             <div>
                                 <h3 className="text-2xl font-black mb-4 text-white group-hover:text-purple-400 transition-colors">100% Transparent</h3>
