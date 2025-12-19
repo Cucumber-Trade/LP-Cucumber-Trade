@@ -11,9 +11,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import logo from '@assets/logo.png';
 import liquidPickleGif from '@assets/Liquid Pickle.gif';
 import graphicaPng from '@assets/graphica.png';
-import shinySwordsGif from '@assets/Shiny Swords.gif';
-import goldenCoinsGif from '@assets/Golden Coins.gif';
-import magnifyingGlassGif from '@assets/Maginfying Glass.gif';
+import shinySwordsMp4 from '@assets/Shiny Swords.mp4';
+import goldenCoinsMp4 from '@assets/Golden Coins.mp4';
+import magnifyingGlassMp4 from '@assets/Maginfying Glass.mp4';
 
 const FEATURE_SECTIONS = [
     {
@@ -653,9 +653,12 @@ export default function CyberLanding() {
                                     }}
                                     className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <img
-                                        src={shinySwordsGif}
-                                        alt="Shiny Swords Animation"
+                                    <video
+                                        src={shinySwordsMp4}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
                                         className="w-full h-full object-contain mix-blend-screen"
                                     />
                                 </motion.div>
@@ -678,9 +681,12 @@ export default function CyberLanding() {
                                     }}
                                     className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <img
-                                        src={goldenCoinsGif}
-                                        alt="Golden Coins Animation"
+                                    <video
+                                        src={goldenCoinsMp4}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
                                         className="w-full h-full object-contain mix-blend-screen"
                                     />
                                 </motion.div>
@@ -703,9 +709,12 @@ export default function CyberLanding() {
                                     }}
                                     className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <img
-                                        src={magnifyingGlassGif}
-                                        alt="Magnifying Glass Animation"
+                                    <video
+                                        src={magnifyingGlassMp4}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
                                         className="w-full h-full object-contain mix-blend-screen"
                                     />
                                 </motion.div>
