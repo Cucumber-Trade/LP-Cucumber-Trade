@@ -311,7 +311,7 @@ function FeatureShowcase() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className="flex flex-col gap-6 items-center">
+        <div className="flex flex-col gap-2 items-center">
             {/* Horizontal Pill Navigation */}
             <div className="flex flex-wrap justify-center items-center gap-3 p-2 bg-white/[0.02] border border-white/5 rounded-full backdrop-blur-md">
                 {FEATURE_SECTIONS.map((section, idx) => (
