@@ -75,7 +75,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#4A9FE8',
         visual: (
-            <div className="bg-[#000000] border border-blue-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/50 border border-blue-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={engineImage} alt="Risk Engine" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -130,7 +130,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#A78BFA',
         visual: (
-            <div className="bg-[#000000] border border-purple-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/50 border border-purple-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={swordsImage} alt="Arena Battle" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -176,7 +176,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#FACC15',
         visual: (
-            <div className="bg-[#000000] border border-yellow-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/50 border border-yellow-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={goldCoinsImage} alt="Token Utility" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -227,7 +227,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#e455d6',
         visual: (
-            <div className="bg-[#000000] border border-[#e455d6]/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/50 border border-[#e455d6]/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={lightningImage} alt="x402 Protocol" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -275,7 +275,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#EF4444',
         visual: (
-            <div className="bg-[#000000] border border-red-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/50 border border-red-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={brainImage} alt="Memory Bank" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -344,10 +344,6 @@ function FeatureShowcase() {
                         transition={{ duration: 0.5, ease: "anticipate" }}
                         className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch bg-white/[0.03] p-10 md:p-16 rounded-[4rem] border border-white/5 backdrop-blur-2xl relative overflow-x-hidden shadow-2xl"
                     >
-                        {/* Dynamic Background Glow */}
-                        <div className="absolute -top-20 -right-20 w-96 h-96 opacity-[0.05] pointer-events-none blur-[120px] rounded-full"
-                            style={{ backgroundColor: FEATURE_SECTIONS[activeTab].color }} />
-
                         <div className="space-y-8 relative z-10">
                             <div>
                                 <div className="flex items-center gap-4 mb-4">
@@ -505,7 +501,7 @@ export default function CyberLanding() {
                     {/* Left: Logo */}
                     <div className="flex items-center gap-2 group cursor-pointer">
                         <div className="flex items-center justify-center relative">
-                            <img src={logo} alt="Logo" className="h-6 relative z-10 object-contain transition-all duration-100 group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
+                            <img src={logo} alt="Logo" className="h-6 relative z-10 object-contain transition-all  group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
                         </div>
                     </div>
 
