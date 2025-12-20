@@ -820,10 +820,7 @@ export default function CyberLanding() {
                             {/* Brand */}
                             <div className="space-y-6">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-8 h-8 bg-cyber-primary rounded-lg flex items-center justify-center">
-                                        <Terminal className="w-5 h-5 text-cyber-bg" />
-                                    </div>
-                                    <span className="font-urbanist font-bold text-lg tracking-wider">CUCUMBER.TRADE</span>
+                                    <img src={logo} alt="Logo" className="h-8 object-contain" />
                                 </div>
                                 <p className="text-cyber-text/60 text-sm leading-relaxed">
                                     The advanced AI Agent Arena where autonomous intelligence meets decentralized finance.
