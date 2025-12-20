@@ -8,12 +8,18 @@ import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
 import GlassCard from "../components/GlassCard";
 import GlassButton from "../components/GlassButton";
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '@assets/logo.png';
+import logo from '@assets/../attached_assets/Frame 141.png';
 import liquidPickleGif from '@assets/Liquid Pickle.gif';
 import graphicaPng from '@assets/graphica.png';
 import shinySwordsMp4 from '@assets/Shiny Swords.mp4';
 import goldenCoinsMp4 from '@assets/Golden Coins.mp4';
 import magnifyingGlassMp4 from '@assets/Maginfying Glass.mp4';
+import pickleImage from '@assets/../attached_assets/Pickle 1.png';
+import engineImage from '@assets/../attached_assets/Engine 1.png';
+import swordsImage from '@assets/../attached_assets/Swords 1.png';
+import goldCoinsImage from '@assets/../attached_assets/Gold Coins 1.png';
+import lightningImage from '@assets/../attached_assets/Lightning 1.png';
+import brainImage from '@assets/../attached_assets/Brain 1.png';
 
 const FEATURE_SECTIONS = [
     {
@@ -31,19 +37,21 @@ const FEATURE_SECTIONS = [
         ],
         color: '#65E461',
         visual: (
-            <div className="bg-black/50 border border-cyber-primary/30 rounded-3xl p-6 backdrop-blur-sm relative overflow-hidden group transition-colors flex flex-col justify-between max-w-md h-full">
-                <div className="flex flex-col items-center">
-                    <img src={graphicaPng} alt="Cool Pickle" className="w-3/4 h-auto object-contain mb-4 mix-blend-screen" />
-                    <h3 className="text-xl font-bold mb-3 text-center">Agent Builder</h3>
-                    <div className="p-3 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-3 w-full">
-                        <p className="text-cyber-text/80 italic text-xs text-center">
-                            "Create a market making agent that trades ETH/USDC on Uniswap..."
+            <div className="bg-black/50 border border-cyber-primary/30 rounded-3xl backdrop-blur-sm relative group transition-colors flex flex-col w-full h-full pt-6 pb-6 px-6">
+                <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
+                    <img src={pickleImage} alt="Agent Builder" className="w-full h-full object-contain drop-shadow-2xl" />
+                </div>
+                <div className="flex flex-col items-start flex-1 mt-32">
+                    <h3 className="text-2xl font-bold mb-4">Agent Builder</h3>
+                    <div className="p-4 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-4 w-full">
+                        <p className="text-cyber-text/80 italic text-sm">
+                            "Create a market making agent that trades ETH/USDC on Uniswap with 0.5% spread"
                         </p>
                     </div>
                 </div>
-                <div className="space-y-1.5 font-mono text-[9px] text-cyber-primary/80 bg-black/20 p-3 rounded-lg border border-cyber-dim/5">
+                <div className="space-y-2 font-mono text-xs text-cyber-primary/80 bg-black/20 p-4 rounded-lg border border-cyber-dim/5">
                     <div className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                         <span>&gt; Parsing strategy...</span>
                     </div>
                     <div>&gt; Generating logic...</div>
@@ -67,34 +75,40 @@ const FEATURE_SECTIONS = [
         ],
         color: '#4A9FE8',
         visual: (
-            <div className="bg-[#000000] border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
-                <div>
-                    <ShieldCheck className="w-16 h-16 text-blue-400 mb-6" />
-                    <h3 className="text-2xl font-bold mb-4">Risk Engine</h3>
-                    <div className="p-4 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-4">
-                        <div className="flex justify-between items-center mb-2">
-                            <span className="text-cyber-text/60 text-xs">Status</span>
-                            <span className="text-blue-400 text-xs font-bold flex items-center gap-1">
-                                <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
+            <div className="bg-[#000000] border border-blue-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+                <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
+                    <img src={engineImage} alt="Risk Engine" className="w-full h-full object-contain drop-shadow-2xl" />
+                </div>
+                <div className="flex-1 mt-32">
+                    <h3 className="text-3xl font-bold mb-6">Risk Engine</h3>
+                    <div className="p-5 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-6">
+                        <div className="flex justify-between items-center mb-3">
+                            <span className="text-cyber-text/60 text-sm">Status</span>
+                            <span className="text-blue-400 text-sm font-bold flex items-center gap-2">
+                                <div className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse"></div>
                                 ACTIVE
                             </span>
                         </div>
-                        <div className="w-full bg-cyber-dim/20 rounded-full h-1.5 mb-1">
-                            <div className="bg-blue-400 h-1.5 rounded-full" style={{ width: '15%' }}></div>
+                        <div className="w-full bg-cyber-dim/20 rounded-full h-2 mb-2">
+                            <div className="bg-blue-400 h-2 rounded-full" style={{ width: '15%' }}></div>
                         </div>
-                        <div className="flex justify-between text-[10px] text-cyber-text/40 font-mono">
+                        <div className="flex justify-between text-xs text-cyber-text/40 font-mono">
                             <span>Budget Used</span>
                             <span>15%</span>
                         </div>
                     </div>
                 </div>
-                <div className="space-y-2 font-mono text-[10px] text-cyber-text/60">
-                    <div className="flex justify-between border-b border-white/5 pb-1">
+                <div className="space-y-3 font-mono text-sm text-cyber-text/60">
+                    <div className="flex justify-between border-b border-white/5 pb-2">
                         <span>Max Drawdown</span>
                         <span className="text-white">5.0%</span>
                     </div>
+                    <div className="flex justify-between border-b border-white/5 pb-2">
+                        <span>Slippage Limit</span>
+                        <span className="text-white">0.5%</span>
+                    </div>
                     <div className="flex justify-between">
-                        <span>Permitted</span>
+                        <span>Permitted Tokens</span>
                         <span className="text-white">USDC, ETH</span>
                     </div>
                 </div>
@@ -116,31 +130,33 @@ const FEATURE_SECTIONS = [
         ],
         color: '#A78BFA',
         visual: (
-            <div className="bg-[#000000] border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
-                <div>
-                    <Swords className="w-16 h-16 text-purple-400 mb-6" />
-                    <h3 className="text-2xl font-bold mb-4">Arena Battle</h3>
-                    <div className="space-y-3">
-                        <div className="p-3 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                                <div className="w-6 h-6 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-[10px]">A1</div>
-                                <span className="text-xs font-bold">Alpha_Bot</span>
+            <div className="bg-[#000000] border border-purple-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+                <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
+                    <img src={swordsImage} alt="Arena Battle" className="w-full h-full object-contain drop-shadow-2xl" />
+                </div>
+                <div className="flex-1 mt-32">
+                    <h3 className="text-3xl font-bold mb-6">Arena Battle</h3>
+                    <div className="space-y-4 mb-8">
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xs">A1</div>
+                                <span className="text-sm font-bold">Alpha_Bot</span>
                             </div>
-                            <span className="text-green-400 font-mono font-bold text-xs">+24.5%</span>
+                            <span className="text-green-400 font-mono font-bold text-sm">+24.5%</span>
                         </div>
-                        <div className="flex justify-center text-[10px] text-white/20 font-mono">VS</div>
-                        <div className="p-3 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between opacity-80">
-                            <div className="flex items-center gap-2">
-                                <div className="w-6 h-6 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-[10px]">B2</div>
-                                <span className="text-xs font-bold">Beta_Trader</span>
+                        <div className="flex justify-center text-xs text-white/20 font-mono">VS</div>
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between opacity-80">
+                            <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">B2</div>
+                                <span className="text-sm font-bold">Beta_Trader</span>
                             </div>
-                            <span className="text-green-400 font-mono font-bold text-xs">+18.2%</span>
+                            <span className="text-green-400 font-mono font-bold text-sm">+18.2%</span>
                         </div>
                     </div>
                 </div>
-                <div className="mt-6 flex items-center gap-2 text-[10px] font-mono text-purple-400 bg-purple-500/10 p-2 rounded border border-purple-500/20 justify-center">
-                    <Trophy className="w-3 h-3" />
-                    <span>Prize Pool: $50,000</span>
+                <div className="flex items-center gap-2 text-xs font-mono text-purple-400 bg-purple-500/10 p-3 rounded border border-purple-500/20 justify-center">
+                    <Trophy className="w-4 h-4" />
+                    <span>Current Prize Pool: $50,000</span>
                 </div>
             </div>
         )
@@ -160,28 +176,37 @@ const FEATURE_SECTIONS = [
         ],
         color: '#FACC15',
         visual: (
-            <div className="bg-[#000000] border border-yellow-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
-                <div>
-                    <Coins className="w-16 h-16 text-yellow-400 mb-6" />
-                    <h3 className="text-2xl font-bold mb-4">Token Utility</h3>
-                    <div className="grid grid-cols-2 gap-3 mb-4">
-                        <div className="p-3 bg-white/5 rounded-xl border border-white/5 text-center">
-                            <div className="text-[10px] text-white/50 mb-1 font-mono">APY</div>
-                            <div className="text-lg font-bold text-yellow-400">12.5%</div>
+            <div className="bg-[#000000] border border-yellow-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+                <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
+                    <img src={goldCoinsImage} alt="Token Utility" className="w-full h-full object-contain drop-shadow-2xl" />
+                </div>
+                <div className="flex-1 mt-32">
+                    <h3 className="text-3xl font-bold mb-6">Token Utility</h3>
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 text-center">
+                            <div className="text-xs text-white/50 mb-2 font-mono">Staking APY</div>
+                            <div className="text-2xl font-bold text-yellow-400">12.5%</div>
                         </div>
-                        <div className="p-3 bg-white/5 rounded-xl border border-white/5 text-center">
-                            <div className="text-[10px] text-white/50 mb-1 font-mono">Tier</div>
-                            <div className="text-lg font-bold text-yellow-400">Gold</div>
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 text-center">
+                            <div className="text-xs text-white/50 mb-2 font-mono">Arena Tier</div>
+                            <div className="text-2xl font-bold text-yellow-400">Gold</div>
                         </div>
                     </div>
                 </div>
-                <div className="space-y-2">
-                    <div className="flex items-center justify-between p-2 bg-white/5 rounded-lg border border-white/5">
+                <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-white/5">
                         <div className="flex items-center gap-3">
-                            <Swords size={12} className="text-yellow-400" />
-                            <span className="text-[10px]">Access Pro Arena</span>
+                            <Swords size={16} className="text-yellow-400" />
+                            <span className="text-xs">Access Pro Arena</span>
                         </div>
-                        <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                        <div className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></div>
+                    </div>
+                    <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-white/5">
+                        <div className="flex items-center gap-3">
+                            <Activity size={16} className="text-yellow-400" />
+                            <span className="text-xs">Vote on Proposal #42</span>
+                        </div>
+                        <ArrowRight size={16} className="text-white/20" />
                     </div>
                 </div>
             </div>
@@ -200,27 +225,36 @@ const FEATURE_SECTIONS = [
             { label: 'Speed', text: 'Instant signature-based settlement.' },
             { label: 'Efficiency', text: 'Pay-per-request pricing rails.' }
         ],
-        color: '#3B82F6',
+        color: '#e455d6',
         visual: (
-            <div className="bg-[#000000] border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
-                <div>
-                    <Zap className="w-16 h-16 text-blue-400 mb-6" />
-                    <h3 className="text-2xl font-bold mb-4">x402 Protocol</h3>
-                    <div className="flex flex-col gap-2">
-                        <div className="p-2 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                                <Cpu size={12} className="text-blue-400" />
-                                <span className="text-[10px]">Compute Power</span>
+            <div className="bg-[#000000] border border-[#e455d6]/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+                <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
+                    <img src={lightningImage} alt="x402 Protocol" className="w-full h-full object-contain drop-shadow-2xl" />
+                </div>
+                <div className="flex-1 mt-32">
+                    <h3 className="text-3xl font-bold mb-6">x402 Protocol</h3>
+                    <div className="flex flex-col gap-4">
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <Database size={18} className="text-[#e455d6]" />
+                                <span className="text-sm">Data Purchase</span>
                             </div>
-                            <span className="text-blue-400 font-mono text-[10px]">-0.012 ETH</span>
+                            <span className="text-[#e455d6] font-mono text-sm font-bold">-0.004 ETH</span>
+                        </div>
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <Cpu size={18} className="text-[#e455d6]" />
+                                <span className="text-sm">Compute Power</span>
+                            </div>
+                            <span className="text-[#e455d6] font-mono text-sm font-bold">-0.012 ETH</span>
                         </div>
                     </div>
                 </div>
-                <div className="relative h-12 w-full bg-cyber-dim/5 rounded-xl border border-white/5 overflow-hidden flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent animate-scan-horizontal"></div>
-                    <span className="font-mono text-[9px] text-blue-400 uppercase tracking-widest px-2 text-center flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></div>
-                        M2M Channel Open
+                <div className="relative h-14 w-full bg-cyber-dim/5 rounded-xl border border-white/5 overflow-hidden flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e455d6]/10 to-transparent animate-scan-horizontal"></div>
+                    <span className="font-mono text-xs text-[#e455d6] uppercase tracking-widest px-2 text-center flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-[#e455d6] animate-pulse"></div>
+                        /// M2M Channel Open /// Signature Verified
                     </span>
                 </div>
             </div>
@@ -241,24 +275,32 @@ const FEATURE_SECTIONS = [
         ],
         color: '#EF4444',
         visual: (
-            <div className="bg-[#000000] border border-red-400/30 rounded-3xl p-8 backdrop-blur-sm relative overflow-hidden group transition-colors h-full flex flex-col justify-between">
-                <div>
-                    <Database className="w-16 h-16 text-red-400 mb-6" />
-                    <h3 className="text-2xl font-bold mb-4">Memory Bank</h3>
-                    <div className="space-y-3">
-                        <div className="p-3 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between text-[10px]">
-                            <span className="font-bold">Arbitrage Logs</span>
-                            <span className="text-red-400 font-mono">2.5 ETH</span>
+            <div className="bg-[#000000] border border-red-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+                <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
+                    <img src={brainImage} alt="Memory Bank" className="w-full h-full object-contain drop-shadow-2xl" />
+                </div>
+                <div className="flex-1 mt-32">
+                    <h3 className="text-3xl font-bold mb-6">Memory Bank</h3>
+                    <div className="space-y-4">
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between text-sm">
+                            <div className="flex items-center gap-3">
+                                <div className="w-7 h-7 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">M1</div>
+                                <span className="font-bold">Arbitrage Logs</span>
+                            </div>
+                            <span className="text-red-400 font-mono font-bold">2.5 ETH</span>
                         </div>
-                        <div className="p-3 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between text-[10px] opacity-70">
-                            <span className="font-bold">Sentiment Data</span>
-                            <span className="text-red-400 font-mono">1.2 ETH</span>
+                        <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between text-sm opacity-70">
+                            <div className="flex items-center gap-3">
+                                <div className="w-7 h-7 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">M2</div>
+                                <span className="font-bold">Sentiment Dataset</span>
+                            </div>
+                            <span className="text-red-400 font-mono font-bold">1.2 ETH</span>
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center gap-2 text-[10px] font-mono text-red-400 bg-red-500/10 p-2 rounded border border-red-500/20 justify-center">
-                    <Box className="w-3 h-3" />
-                    <span>Memory Stored: 4.2 PB</span>
+                <div className="flex items-center gap-2 text-sm font-mono text-red-400 bg-red-500/10 p-3 rounded border border-red-500/20 justify-center">
+                    <Database className="w-4 h-4" />
+                    <span>Total Memory Stored: 4.2 PB</span>
                 </div>
             </div>
         )
@@ -269,7 +311,7 @@ function FeatureShowcase() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className="flex flex-col gap-12 items-center">
+        <div className="flex flex-col gap-6 items-center">
             {/* Horizontal Pill Navigation */}
             <div className="flex flex-wrap justify-center items-center gap-3 p-2 bg-white/[0.02] border border-white/5 rounded-full backdrop-blur-md">
                 {FEATURE_SECTIONS.map((section, idx) => (
@@ -292,7 +334,7 @@ function FeatureShowcase() {
             </div>
 
             {/* Feature Slider Content */}
-            <div className="w-full relative min-h-[500px]">
+            <div className="w-full relative min-h-[500px] pt-8">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeTab}
@@ -300,7 +342,7 @@ function FeatureShowcase() {
                         animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
                         exit={{ opacity: 0, x: -50, filter: 'blur(10px)' }}
                         transition={{ duration: 0.5, ease: "anticipate" }}
-                        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch bg-white/[0.03] p-10 md:p-16 rounded-[4rem] border border-white/5 backdrop-blur-2xl relative overflow-hidden shadow-2xl"
+                        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch bg-white/[0.03] p-10 md:p-16 rounded-[4rem] border border-white/5 backdrop-blur-2xl relative overflow-x-hidden shadow-2xl"
                     >
                         {/* Dynamic Background Glow */}
                         <div className="absolute -top-20 -right-20 w-96 h-96 opacity-[0.05] pointer-events-none blur-[120px] rounded-full"
@@ -344,7 +386,7 @@ function FeatureShowcase() {
                             </div>
                         </div>
 
-                        <div className="relative h-full min-h-[400px] flex items-stretch justify-center">
+                        <div className="relative h-full min-h-[500px] flex items-stretch justify-center pt-16">
                             <motion.div
                                 initial={{ scale: 0.9, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
@@ -462,11 +504,9 @@ export default function CyberLanding() {
 
                     {/* Left: Logo */}
                     <div className="flex items-center gap-2 group cursor-pointer">
-                        <div className="w-10 h-10 flex items-center justify-center relative">
-                            <div className="absolute inset-0 bg-gradient-primary rounded-xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity" />
-                            <img src={logo} alt="Cucumber Logo" className="w-8 h-8 relative z-10 object-contain" />
+                        <div className="flex items-center justify-center relative">
+                            <img src={logo} alt="Logo" className="h-6 relative z-10 object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
                         </div>
-                        <span className="font-urbanist font-extrabold text-xl tracking-tighter bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">CUCUMBER</span>
                     </div>
 
                     {/* Center: Navigation Links */}
