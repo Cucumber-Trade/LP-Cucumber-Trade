@@ -505,7 +505,7 @@ export default function CyberLanding() {
                     {/* Left: Logo */}
                     <div className="flex items-center gap-2 group cursor-pointer">
                         <div className="flex items-center justify-center relative">
-                            <img src={logo} alt="Logo" className="h-6 relative z-10 object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
+                            <img src={logo} alt="Logo" className="h-6 relative z-10 object-contain transition-all duration-100 group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
                         </div>
                     </div>
 
