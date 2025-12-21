@@ -126,7 +126,7 @@ export default function Leaderboard() {
                         </div>
                     </div>
                     {/* Base */}
-                    <div className="w-[85%] h-24 md:h-32 bg-gradient-to-t from-cyber-dim/10 to-transparent border-x border-t border-cyber-dim/10 rounded-t-2xl mt-[-24px] pt-8 relative z-0"></div>
+                    <div className="w-[85%] h-24 md:h-32 bg-gradient-to-b from-green-500/15 via-green-500/8 to-transparent border-x border-t border-cyber-dim/10 rounded-t-2xl mt-[-24px] pt-8 relative z-0"></div>
                 </div>
 
                 {/* Rank 1 */}
@@ -179,9 +179,7 @@ export default function Leaderboard() {
                         </div>
                     </div>
                     {/* Base */}
-                    <div className="w-[90%] h-32 md:h-48 bg-gradient-to-t from-yellow-500/10 to-transparent border-x border-t border-yellow-500/20 rounded-t-2xl mt-[-24px] pt-8 relative z-0">
-                        <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-yellow-500/5 to-transparent"></div>
-                    </div>
+                    <div className="w-[90%] h-32 md:h-48 bg-gradient-to-b from-yellow-500/20 via-yellow-500/10 via-yellow-500/5 to-transparent border-x border-t border-yellow-500/20 rounded-t-2xl mt-[-24px] pt-8 relative z-0"></div>
                 </div>
 
                 {/* Rank 3 */}
@@ -222,7 +220,7 @@ export default function Leaderboard() {
                         </div>
                     </div>
                     {/* Base */}
-                    <div className="w-[85%] h-16 md:h-24 bg-gradient-to-t from-cyber-dim/10 to-transparent border-x border-t border-cyber-dim/10 rounded-t-2xl mt-[-24px] pt-8 relative z-0"></div>
+                    <div className="w-[85%] h-16 md:h-24 bg-gradient-to-b from-blue-500/15 via-blue-500/8 to-transparent border-x border-t border-cyber-dim/10 rounded-t-2xl mt-[-24px] pt-8 relative z-0"></div>
                 </div>
             </div>
 
