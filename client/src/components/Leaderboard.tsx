@@ -5,6 +5,7 @@ import { Trophy, TrendingUp, AlertTriangle, Shield, ArrowUpRight } from 'lucide-
 import pickle1 from '@assets/Overleveraged_-_Megadegenerate_Pickle_1765475337524.png';
 import pickle2 from '@assets/Bottom-Selling_-_Oracle_Pickle_1765475339290.png';
 import pickle3 from '@assets/FOMO_Frenzy_-_Farmer_Pickle_1765475341476.png';
+import pickleAvatarsGrid from '@assets/pickle-avatars-grid.jpg';
 
 const leaderboardData = [
     {
@@ -49,10 +50,10 @@ const leaderboardData = [
         borderColor: "border-yellow-500/20",
         bonus: "+1,000 CUC"
     },
-    { rank: 4, name: "Neural_Net_V2", mmr: 2550, pnl: "+2,100%", sharpe: 2.5, drawdown: "-8.4%" },
-    { rank: 5, name: "Alpha_Sniper", mmr: 2490, pnl: "+1,850%", sharpe: 2.1, drawdown: "-10.2%" },
-    { rank: 6, name: "Safe_Haven_Bot", mmr: 2410, pnl: "+950%", sharpe: 4.5, drawdown: "-1.5%" },
-    { rank: 7, name: "Quant_Daddy", mmr: 2380, pnl: "+1,200%", sharpe: 1.9, drawdown: "-18.5%" },
+    { rank: 4, name: "Neural_Net_V2", mmr: 2550, pnl: "+2,100%", sharpe: 2.5, drawdown: "-8.4%", avatarPosition: { x: 2, y: 1 } },
+    { rank: 5, name: "Alpha_Sniper", mmr: 2490, pnl: "+1,850%", sharpe: 2.1, drawdown: "-10.2%", avatarPosition: { x: 5, y: 3 } },
+    { rank: 6, name: "Safe_Haven_Bot", mmr: 2410, pnl: "+950%", sharpe: 4.5, drawdown: "-1.5%", avatarPosition: { x: 1, y: 5 } },
+    { rank: 7, name: "Quant_Daddy", mmr: 2380, pnl: "+1,200%", sharpe: 1.9, drawdown: "-18.5%", avatarPosition: { x: 6, y: 2 } },
 ];
 
 export default function Leaderboard() {
@@ -239,16 +240,32 @@ export default function Leaderboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {leaderboardData.slice(3).map((agent, index) => (
-                                <tr key={index} className="border-b border-cyber-dim/5 hover:bg-cyber-dim/5 transition-colors group">
-                                    <td className="p-6 font-bold text-cyber-text/70 group-hover:text-white">#{agent.rank}</td>
-                                    <td className="p-6 font-bold text-white group-hover:text-cyber-primary transition-colors">{agent.name}</td>
-                                    <td className="p-6 font-mono text-right text-cyber-text">{agent.mmr}</td>
-                                    <td className="p-6 font-mono text-right text-green-400">{agent.pnl}</td>
-                                    <td className="p-6 font-mono text-right text-cyber-text">{agent.sharpe}</td>
-                                    <td className="p-6 font-mono text-right text-red-400">{agent.drawdown}</td>
-                                </tr>
-                            ))}
+                            {leaderboardData.slice(3).map((agent, index) => {
+                                const bgPosX = (agent.avatarPosition.x / 7) * 100;
+                                const bgPosY = (agent.avatarPosition.y / 11) * 100;
+                                return (
+                                    <tr key={index} className="border-b border-cyber-dim/5 hover:bg-cyber-dim/5 transition-colors group">
+                                        <td className="p-6 font-bold text-cyber-text/70 group-hover:text-white">#{agent.rank}</td>
+                                        <td className="p-6">
+                                            <div className="flex items-center gap-3">
+                                                <div
+                                                    className="w-10 h-10 rounded-full shadow-lg overflow-hidden border-2 border-cyber-primary/30"
+                                                    style={{
+                                                        backgroundImage: `url(${pickleAvatarsGrid})`,
+                                                        backgroundSize: '800%',
+                                                        backgroundPosition: `${bgPosX}% ${bgPosY}%`
+                                                    }}
+                                                />
+                                                <span className="font-bold text-white group-hover:text-cyber-primary transition-colors">{agent.name}</span>
+                                            </div>
+                                        </td>
+                                        <td className="p-6 font-mono text-right text-cyber-text">{agent.mmr}</td>
+                                        <td className="p-6 font-mono text-right text-green-400">{agent.pnl}</td>
+                                        <td className="p-6 font-mono text-right text-cyber-text">{agent.sharpe}</td>
+                                        <td className="p-6 font-mono text-right text-red-400">{agent.drawdown}</td>
+                                    </tr>
+                                );
+                            })}
                         </tbody>
                     </table>
                 </div>
