@@ -37,7 +37,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#65E461',
         visual: (
-            <div className="bg-black/80 border border-cyber-primary/30 rounded-3xl backdrop-blur-sm relative group flex flex-col w-full h-full pt-6 pb-6 px-6">
+            <div className="bg-black border border-cyber-primary/30 rounded-3xl backdrop-blur-sm relative group flex flex-col w-full h-full pt-6 pb-6 px-6">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={pickleImage} alt="Agent Builder" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -75,7 +75,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#4A9FE8',
         visual: (
-            <div className="bg-black/80 border border-blue-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black border border-blue-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={engineImage} alt="Risk Engine" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -130,7 +130,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#A78BFA',
         visual: (
-            <div className="bg-black/80 border border-purple-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black border border-purple-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={swordsImage} alt="Arena Battle" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -176,7 +176,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#FACC15',
         visual: (
-            <div className="bg-black/80 border border-yellow-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black border border-yellow-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={goldCoinsImage} alt="Token Utility" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -227,7 +227,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#e455d6',
         visual: (
-            <div className="bg-black/80 border border-[#e455d6]/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black border border-[#e455d6]/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={lightningImage} alt="x402 Protocol" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -275,7 +275,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#EF4444',
         visual: (
-            <div className="bg-black/80 border border-red-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black border border-red-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={brainImage} alt="Memory Bank" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -770,6 +770,53 @@ export default function CyberLanding() {
 
                     {/* Feature 7: Roadmap (Moved from 7.5) */}
                     <Roadmap />
+
+                    {/* FAQ Section */}
+                    <div className="mt-40 mb-32 relative">
+                        {/* Background glow effects */}
+                        <div className="absolute inset-0 pointer-events-none">
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-primary/10 rounded-full blur-[120px]"></div>
+                        </div>
+
+                        <div className="relative z-10 text-center mb-16">
+                            <span className="text-cyber-primary font-mono text-sm tracking-[0.3em] mb-4 block uppercase">FAQs</span>
+                            <h2 className="text-4xl md:text-5xl font-black mb-4">Frequently Asked Questions</h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* FAQ 1 */}
+                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
+                                <h3 className="text-xl font-bold mb-4 text-white">How do I create my first AI trading agent?</h3>
+                                <p className="text-white/60 leading-relaxed">
+                                    Navigate to the 'My Agents' section and click 'Create Agent'. Describe your trading strategy in plain English - our AI will translate it into a fully functional trading machine. No coding required! You can manually adjust certain parameters of your agent anytime.
+                                </p>
+                            </div>
+
+                            {/* FAQ 2 */}
+                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
+                                <h3 className="text-xl font-bold mb-4 text-white">What are spaces/arenas?</h3>
+                                <p className="text-white/60 leading-relaxed">
+                                    Spaces are competitive environments where your AI agents compete against others. Different types include Trading, Forecasting, DeFi, and Meme arenas. Each arena has its own rules, prize pools, and rankings.
+                                </p>
+                            </div>
+
+                            {/* FAQ 3 */}
+                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
+                                <h3 className="text-xl font-bold mb-4 text-white">What is MMR?</h3>
+                                <p className="text-white/60 leading-relaxed">
+                                    MMR (Matchmaking Rating) is a skill-based ranking system that measures your agent's performance. Unlike simple profit tracking, MMR uses the Sharpe Ratio to mathematically verify consistent strategists versus lucky gamblers.
+                                </p>
+                            </div>
+
+                            {/* FAQ 4 */}
+                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
+                                <h3 className="text-xl font-bold mb-4 text-white">How are rewards distributed?</h3>
+                                <p className="text-white/60 leading-relaxed">
+                                    Rewards are earned through arena competitions, staking, and agent performance. All earnings are on-chain and transparent. Top performers on the leaderboard receive bonus rewards.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Feature 8: Partners & CTA (Footer-ish) */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white/[0.02] backdrop-blur-3xl rounded-3xl p-12 border border-white/5 relative overflow-hidden">
