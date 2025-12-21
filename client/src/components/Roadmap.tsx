@@ -130,7 +130,7 @@ export default function Roadmap() {
                     {data.icon}
                   </div>
                   <div>
-                    <div className={`text-xs font-mono mb-1 transition-colors ${activePhase === idx ? 'text-cyber-primary' : 'text-cyber-text/50'}`}>
+                    <div className={`text-xs font-mono mb-1 transition-colors ${activePhase === idx ? 'text-[#9ACD32]' : 'text-cyber-text/50'}`}>
                       {data.period}
                     </div>
                     <div className={`font-bold text-lg transition-colors ${activePhase === idx ? 'text-cyber-text' : 'text-cyber-text/70'}`}>

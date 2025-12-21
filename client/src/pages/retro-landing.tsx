@@ -37,7 +37,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#65E461',
         visual: (
-            <div className="bg-black/50 border border-cyber-primary/30 rounded-3xl backdrop-blur-sm relative group transition-colors flex flex-col w-full h-full pt-6 pb-6 px-6">
+            <div className="bg-black/80 border border-cyber-primary/30 rounded-3xl backdrop-blur-sm relative group flex flex-col w-full h-full pt-6 pb-6 px-6">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={pickleImage} alt="Agent Builder" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -75,7 +75,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#4A9FE8',
         visual: (
-            <div className="bg-black/50 border border-blue-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/80 border border-blue-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={engineImage} alt="Risk Engine" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -130,7 +130,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#A78BFA',
         visual: (
-            <div className="bg-black/50 border border-purple-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/80 border border-purple-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={swordsImage} alt="Arena Battle" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -176,7 +176,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#FACC15',
         visual: (
-            <div className="bg-black/50 border border-yellow-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/80 border border-yellow-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={goldCoinsImage} alt="Token Utility" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -227,7 +227,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#e455d6',
         visual: (
-            <div className="bg-black/50 border border-[#e455d6]/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/80 border border-[#e455d6]/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={lightningImage} alt="x402 Protocol" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -275,7 +275,7 @@ const FEATURE_SECTIONS = [
         ],
         color: '#EF4444',
         visual: (
-            <div className="bg-black/50 border border-red-400/30 rounded-3xl backdrop-blur-sm relative group transition-colors h-full flex flex-col pt-6 pb-8 px-8">
+            <div className="bg-black/80 border border-red-400/30 rounded-3xl backdrop-blur-sm relative group h-full flex flex-col pt-6 pb-8 px-8">
                 <div className="absolute -top-20 right-8 w-56 h-56 flex items-center justify-center">
                     <img src={brainImage} alt="Memory Bank" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
@@ -369,7 +369,7 @@ function FeatureShowcase() {
 
                             <div className="flex flex-wrap gap-6 pt-4">
                                 {FEATURE_SECTIONS[activeTab].points.map((point, i) => (
-                                    <div key={i} className="flex flex-col gap-1 items-start bg-white/[0.02] border border-white/5 p-4 rounded-2xl min-w-[200px]">
+                                    <div key={i} className="flex flex-col gap-1 items-start bg-black/50 border border-white/5 p-4 rounded-2xl min-w-[200px]">
                                         <div className="flex items-center gap-2 mb-1">
                                             <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: FEATURE_SECTIONS[activeTab].color, boxShadow: `0 0 10px ${FEATURE_SECTIONS[activeTab].color}` }} />
                                             <span className="text-[10px] font-mono tracking-widest uppercase text-white/40">{point.label}</span>
