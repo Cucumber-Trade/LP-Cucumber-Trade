@@ -1,5 +1,6 @@
 import Roadmap from "../components/Roadmap";
 import Leaderboard from "../components/Leaderboard";
+import ProtocolMarquee from "../components/ProtocolMarquee";
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords } from "lucide-react";
 import { useState, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
@@ -507,16 +508,16 @@ export default function CyberLanding() {
 
                     {/* Center: Navigation Links */}
                     <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-8">
-                        {['Builder', 'Leaderboard', 'Docs'].map((item) => (
-                            <a
-                                key={item}
-                                href={`#${item.toLowerCase()}`}
-                                className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
-                            >
-                                {item}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
-                            </a>
-                        ))}
+                        <a
+                            href="#leaderboard"
+                            className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
+                        >
+                            Leaderboard
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
+                        </a>
+                        <span className="text-sm font-medium text-white/50 cursor-not-allowed">
+                            Docs
+                        </span>
                     </nav>
 
                     {/* Right: Actions */}
@@ -524,7 +525,7 @@ export default function CyberLanding() {
 
                         <div className="flex items-center gap-4">
                             <GlassButton variant="primary" size="sm" className="!px-8">
-                                Launch
+                                Launch DApp
                             </GlassButton>
                         </div>
                     </div>
@@ -583,10 +584,13 @@ export default function CyberLanding() {
                                     className="max-w-xl mx-auto"
                                 >
                                     <h2 className="text-xs md:text-sm font-mono text-cyber-primary tracking-[0.4em] uppercase mb-4 opacity-80">
-                                        The Future of On-Chain Intelligence
+                                        THE FUTURE OF AI AGENTS IS HERE
                                     </h2>
                                     <p className="text-lg md:text-xl text-white/50 leading-relaxed font-medium">
-                                        Build, compete, and monetize autonomous AI agents in a high-stakes decentralized environment. 100% On-Chain.
+                                        Create. Trade. Compete. Earn.
+                                    </p>
+                                    <p className="text-lg md:text-xl text-white/50 leading-relaxed font-medium mt-2">
+                                        Build and optimize AI agents that perform in live markets.
                                     </p>
                                 </motion.div>
                             </div>
@@ -599,10 +603,10 @@ export default function CyberLanding() {
                                 transition={{ duration: 0.8, delay: 0.6 }}
                             >
                                 <GlassButton variant="primary" size="lg" className="w-full sm:w-80 shadow-[0_0_20px_rgba(101,228,97,0.2)]">
-                                    Launch Arena
+                                    Launch DApp
                                 </GlassButton>
                                 <GlassButton variant="outline" size="lg" className="w-full sm:w-60">
-                                    Read Docs
+                                    Read the Docs
                                 </GlassButton>
                             </motion.div>
 
@@ -620,15 +624,15 @@ export default function CyberLanding() {
                                 </div>
                                 <div className="flex gap-8 md:gap-16">
                                     <div className="text-center">
-                                        <div className="text-xl md:text-2xl font-black text-white">50K+</div>
+                                        <div className="text-xl md:text-2xl font-black text-white">1.2K+</div>
                                         <div className="text-[9px] font-mono text-cyber-primary/40 uppercase tracking-widest">Agents</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-xl md:text-2xl font-black text-white">$2B+</div>
+                                        <div className="text-xl md:text-2xl font-black text-white">$115K+</div>
                                         <div className="text-[9px] font-mono text-cyber-primary/40 uppercase tracking-widest">Volume</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-xl md:text-2xl font-black text-white">150+</div>
+                                        <div className="text-xl md:text-2xl font-black text-white">8+</div>
                                         <div className="text-[9px] font-mono text-cyber-primary/40 uppercase tracking-widest">Models</div>
                                     </div>
                                 </div>
@@ -640,13 +644,16 @@ export default function CyberLanding() {
                                         transition={{ duration: 2, repeat: Infinity }}
                                         className="w-[1px] h-8 bg-gradient-to-b from-cyber-primary to-transparent"
                                     />
-                                    <p className="text-[9px] font-mono text-cyber-primary/40 tracking-[0.5em] uppercase">Enter Arena</p>
+                                    <p className="text-[9px] font-mono text-cyber-primary/40 tracking-[0.5em] uppercase">Scroll for more</p>
                                 </div>
                             </motion.div>
                         </motion.div>
                     </div>
 
                 </section>
+
+                {/* PROTOCOL MARQUEE */}
+                <ProtocolMarquee />
 
                 {/* WRAPPER FOR CONSTRAINED WIDTH BELOW HERO */}
                 <div className="max-w-6xl mx-auto px-6 relative z-10">
