@@ -1,23 +1,31 @@
-import hyperliquidLogo from '@assets/hyperliquid-dark.png';
-import injectiveLogo from '@assets/Injectivelabs_logo.png';
-import agglayerLogo from '@assets/agglayer-logo (1).png';
-import forknetLogo from '@assets/forknetlogo-removebg-preview (1).png';
-import polygonLogo from '@assets/Polygon_blockchain_logo.png';
+import deepseekLogo from '@assets/DeepSeek_logo.svg.png';
+import grokLogo from '@assets/grok.png';
+import chatgptLogo from '@assets/chatgpt.png';
+import claudeLogo from '@assets/Claude_AI_logo.svg.png';
+import geminiLogo from '@assets/Google_Gemini_logo_2025.svg.png';
+import pickleaiLogo from '@assets/pickleaipng-removebg-preview.png';
+import elizaosLogo from '@assets/elisaos-removebg-preview.png';
 
 const protocols = [
-    { name: 'Hyperliquid', logo: hyperliquidLogo, height: 'h-8' },
-    { name: 'Injective', logo: injectiveLogo, height: 'h-12' },
-    { name: 'Agglayer', logo: agglayerLogo, height: 'h-8' },
-    { name: 'Forknet', logo: forknetLogo, height: 'h-8' },
-    { name: 'Polygon', logo: polygonLogo, height: 'h-12' },
+    { name: 'DeepSeek', logo: deepseekLogo, height: 'h-8' },
+    { name: 'Grok', logo: grokLogo, height: 'h-8' },
+    { name: 'ChatGPT', logo: chatgptLogo, height: 'h-16' },
+    { name: 'Claude', logo: claudeLogo, height: 'h-8' },
+    { name: 'Gemini', logo: geminiLogo, height: 'h-8' },
+    { name: 'Pickle AI', logo: pickleaiLogo, height: 'h-8' },
+    { name: 'Eliza OS', logo: elizaosLogo, height: 'h-8' },
 ];
 
 export default function ProtocolMarquee() {
     return (
-        <div className="relative w-full overflow-hidden bg-white/[0.02] border-y border-white/5 py-6">
-            <div className="flex items-center gap-4 px-6">
-                <span className="text-sm font-medium text-white/60 whitespace-nowrap">Built on:</span>
+        <div className="relative w-full overflow-hidden bg-white/[0.02] border-y border-white/5 h-20">
+            <div className="flex items-center gap-4 px-6 h-full">
+                <span className="text-sm font-medium text-white/60 whitespace-nowrap">Powered by:</span>
                 <div className="relative flex-1 overflow-hidden">
+                    {/* Left fade */}
+                    <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
+                    {/* Right fade */}
+                    <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
                     <div className="flex animate-scroll">
                         {/* First set of logos */}
                         {protocols.map((protocol, idx) => (

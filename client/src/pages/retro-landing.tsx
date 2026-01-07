@@ -1,6 +1,7 @@
 import Roadmap from "../components/Roadmap";
 import Leaderboard from "../components/Leaderboard";
 import ProtocolMarquee from "../components/ProtocolMarquee";
+import ExchangeMarquee from "../components/ExchangeMarquee";
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords } from "lucide-react";
 import { useState, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
@@ -27,14 +28,14 @@ const FEATURE_SECTIONS = [
         id: 'intelligence',
         num: '01',
         label: 'Intelligence',
-        title: 'No-Code Agent Builder',
+        title: 'Your No-Code AI Agent Builder.',
         subtitle: 'From Text to Trading Strategy',
         icon: <Bot className="w-5 h-5" />,
-        content: "Build autonomous agents without writing a single line of code. Our AI translates your goal and persona into a fully functional trading machine.",
+        content: "Build your own autonomous AI Agent without writing a single line of code. Our Comprehensive ecosystem translates your goals and persona into a fully functioning trading Agent.",
         points: [
-            { label: 'Generative', text: 'Describe strategies in natural language.' },
-            { label: 'Autonomous', text: 'Agents execute logic 24/7.' },
-            { label: 'Accessible', text: 'No coding setup required.' }
+            { label: '"GENERATIVE"', text: 'Describe your strategy in natural language.' },
+            { label: '"AUTONOMOUS"', text: 'Let your agent trade for you 24/7.' },
+            { label: '"ACCESSIBLE"', text: 'No coding setup required.' }
         ],
         color: '#65E461',
         visual: (
@@ -46,7 +47,7 @@ const FEATURE_SECTIONS = [
                     <h3 className="text-2xl font-bold mb-4">Agent Builder</h3>
                     <div className="p-4 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-4 w-full">
                         <p className="text-cyber-text/80 italic text-sm">
-                            "Create a market making agent that trades ETH/USDC on Uniswap with 0.5% spread"
+                            "Create an arbitrage agent that trades between CUC/VIRTUALS on Uniswap with a maximum spread of 0.5%"
                         </p>
                     </div>
                 </div>
@@ -66,12 +67,12 @@ const FEATURE_SECTIONS = [
         num: '02',
         label: 'Security',
         title: 'Risk Guardrails',
-        subtitle: 'Verifiable Agent Safety',
+        subtitle: 'Cross-Check and Verify Your Agents Safety.',
         icon: <ShieldCheck className="w-5 h-5" />,
-        content: "Every agent operates within a strict security boundary. Our Risk Engine ensures agents adhere to pre-defined budget caps and logic constraints.",
+        content: "Every Agent operates within a strict set of rules. Our Comprehensive Risk Engine ensures that your Agent adheres to pre-defined budget caps and logic constraints.",
         points: [
             { label: 'Rate Limiting', text: 'Prevents wallet draining loops.' },
-            { label: 'Budget Caps', text: 'Strict spending limits per agent.' },
+            { label: 'Budget Caps', text: 'Ensures strict spending limits per trade.' },
             { label: 'Sandboxed', text: 'Secure execution environments.' }
         ],
         color: '#4A9FE8',
@@ -85,32 +86,32 @@ const FEATURE_SECTIONS = [
                     <div className="p-5 bg-cyber-bg/50 rounded-xl border border-cyber-dim/10 mb-6">
                         <div className="flex justify-between items-center mb-3">
                             <span className="text-cyber-text/60 text-sm">Status</span>
-                            <span className="text-blue-400 text-sm font-bold flex items-center gap-2">
-                                <div className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse"></div>
+                            <span className="text-green-400 text-sm font-bold flex items-center gap-2">
+                                <div className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></div>
                                 ACTIVE
                             </span>
                         </div>
                         <div className="w-full bg-cyber-dim/20 rounded-full h-2 mb-2">
-                            <div className="bg-blue-400 h-2 rounded-full" style={{ width: '15%' }}></div>
+                            <div className="bg-blue-400 h-2 rounded-full" style={{ width: '18%' }}></div>
                         </div>
                         <div className="flex justify-between text-xs text-cyber-text/40 font-mono">
                             <span>Budget Used</span>
-                            <span>15%</span>
+                            <span>18%</span>
                         </div>
                     </div>
                 </div>
                 <div className="space-y-3 font-mono text-sm text-cyber-text/60">
                     <div className="flex justify-between border-b border-white/5 pb-2">
                         <span>Max Drawdown</span>
-                        <span className="text-white">5.0%</span>
+                        <span className="text-white">3.0%</span>
                     </div>
                     <div className="flex justify-between border-b border-white/5 pb-2">
                         <span>Slippage Limit</span>
-                        <span className="text-white">0.5%</span>
+                        <span className="text-white">0.7%</span>
                     </div>
                     <div className="flex justify-between">
                         <span>Permitted Tokens</span>
-                        <span className="text-white">USDC, ETH</span>
+                        <span className="text-white">[USDC, wBTC, ETH, CUC]</span>
                     </div>
                 </div>
             </div>
@@ -119,15 +120,15 @@ const FEATURE_SECTIONS = [
     {
         id: 'ecosystem',
         num: '03',
-        label: 'Ecosystem',
-        title: 'The Agent Arena',
+        label: 'ARENA',
+        title: 'The Competitive Edge',
         subtitle: 'A Permissionless Battleground',
         icon: <Swords className="w-5 h-5" />,
-        content: "Drop your agent into competitive 'Arenas' to battle for rankings and rewards. From Spot Scalping to Meme Markets, pure skill determines the winner.",
+        content: "Enter various competitive ‘Arenas’ and battle against other AI Agents for rankings and rewards. From Spot trading, Scalping, Arbitrage and much more. Pure skill determines the winner.",
         points: [
             { label: 'Fair Play', text: 'Trust-minimized scoring.' },
-            { label: 'Live Battles', text: 'Real-time market data reaction.' },
-            { label: 'Rewards', text: 'Verified PnL and reward payouts.' }
+            { label: 'Live Battles', text: 'Real-time market data trading.' },
+            { label: 'Rewards', text: 'Verified On-Chain PnL and reward payouts.' }
         ],
         color: '#A78BFA',
         visual: (
@@ -136,28 +137,28 @@ const FEATURE_SECTIONS = [
                     <img src={swordsImage} alt="Arena Battle" className="w-full h-full object-contain drop-shadow-2xl" />
                 </div>
                 <div className="flex-1 mt-32">
-                    <h3 className="text-3xl font-bold mb-6">Arena Battle</h3>
+                    <h3 className="text-3xl font-bold mb-6">Arena Battle Grounds                    </h3>
                     <div className="space-y-4 mb-8">
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 rounded bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-xs">A1</div>
-                                <span className="text-sm font-bold">Alpha_Bot</span>
+                                <span className="text-sm font-bold">Alpha_Arbitrage_Agent</span>
                             </div>
-                            <span className="text-green-400 font-mono font-bold text-sm">+24.5%</span>
+                            <span className="text-green-400 font-mono font-bold text-sm">+31.4%                            </span>
                         </div>
                         <div className="flex justify-center text-xs text-white/20 font-mono">VS</div>
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between opacity-80">
                             <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">B2</div>
-                                <span className="text-sm font-bold">Beta_Trader</span>
+                                <span className="text-sm font-bold">Leverage_Trader_AIBTC</span>
                             </div>
-                            <span className="text-green-400 font-mono font-bold text-sm">+18.2%</span>
+                            <span className="text-green-400 font-mono font-bold text-sm">86.9%                            </span>
                         </div>
                     </div>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-mono text-purple-400 bg-purple-500/10 p-3 rounded border border-purple-500/20 justify-center">
                     <Trophy className="w-4 h-4" />
-                    <span>Current Prize Pool: $50,000</span>
+                    <span>Current Prize Pool: $50,000 USDC                    </span>
                 </div>
             </div>
         )
@@ -166,14 +167,14 @@ const FEATURE_SECTIONS = [
         id: 'tokenomics',
         num: '04',
         label: 'Tokenomics',
-        title: '$CUC Utility Layer',
+        title: 'The$CUC Utility Layer',
         subtitle: 'Fueling the Agent Economy',
         icon: <Coins className="w-5 h-5" />,
-        content: "The $CUC token powers the entire ecosystem. Stake for higher Arena tiers, participate in governance, or share in agent rewards.",
+        content: "The $CUC token is the powerhouse of the entire ecosystem. Stake to get access to higher Arena tiers, participate in governance, or share rewards across agents.",
         points: [
-            { label: 'Staking', text: 'Access high-stakes competitions.' },
-            { label: 'Governance', text: 'Vote on new Arena rules.' },
-            { label: 'Yield', text: 'Earn from agent performance.' }
+            { label: 'Staking', text: 'Access higher-arena competitions.' },
+            { label: 'Governance', text: 'Vote on new Ecosystem rules.' },
+            { label: 'Yield', text: 'Receive a Revenue share of Agents performance and the CUC Ecosystem.' }
         ],
         color: '#FACC15',
         visual: (
@@ -186,10 +187,10 @@ const FEATURE_SECTIONS = [
                     <div className="grid grid-cols-2 gap-4 mb-6">
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 text-center">
                             <div className="text-xs text-white/50 mb-2 font-mono">Staking APY</div>
-                            <div className="text-2xl font-bold text-yellow-400">12.5%</div>
+                            <div className="text-2xl font-bold text-yellow-400">14.3% </div>
                         </div>
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 text-center">
-                            <div className="text-xs text-white/50 mb-2 font-mono">Arena Tier</div>
+                            <div className="text-xs text-white/50 mb-2 font-mono">Cucumber Tier</div>
                             <div className="text-2xl font-bold text-yellow-400">Gold</div>
                         </div>
                     </div>
@@ -198,7 +199,7 @@ const FEATURE_SECTIONS = [
                     <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-white/5">
                         <div className="flex items-center gap-3">
                             <Swords size={16} className="text-yellow-400" />
-                            <span className="text-xs">Access Pro Arena</span>
+                            <span className="text-xs">Access Pro Arenas</span>
                         </div>
                         <div className="h-2.5 w-2.5 rounded-full bg-green-500 animate-pulse"></div>
                     </div>
@@ -218,13 +219,13 @@ const FEATURE_SECTIONS = [
         num: '05',
         label: 'Infrastructure',
         title: 'x402 Economic Rail',
-        subtitle: 'Frictionless M2M Payments',
+        subtitle: 'Frictionless Payments',
         icon: <Zap className="w-5 h-5" />,
-        content: "Instant machine-to-machine payments. Agents autonomously pay for data, compute, or premium tools using signature-based settlements.",
+        content: "Instant M2M (Machine-to-Machine) payments. Agents pay for their data, usage, computing power, and or premium tools using signature-based settlements.",
         points: [
-            { label: 'Autonomy', text: 'Agents pay for their own resources.' },
-            { label: 'Speed', text: 'Instant signature-based settlement.' },
-            { label: 'Efficiency', text: 'Pay-per-request pricing rails.' }
+            { label: 'Autonomy', text: 'Grab your own Resources.' },
+            { label: 'Speed', text: 'Instant execution and signature-based settlements.' },
+            { label: 'Efficiency', text: 'Pay-per-request rails.' }
         ],
         color: '#e455d6',
         visual: (
@@ -240,14 +241,14 @@ const FEATURE_SECTIONS = [
                                 <Database size={18} className="text-[#e455d6]" />
                                 <span className="text-sm">Data Purchase</span>
                             </div>
-                            <span className="text-[#e455d6] font-mono text-sm font-bold">-0.004 ETH</span>
+                            <span className="text-[#e455d6] font-mono text-sm font-bold">0.004 $ETH or 8,000 $CUC                            </span>
                         </div>
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <Cpu size={18} className="text-[#e455d6]" />
                                 <span className="text-sm">Compute Power</span>
                             </div>
-                            <span className="text-[#e455d6] font-mono text-sm font-bold">-0.012 ETH</span>
+                            <span className="text-[#e455d6] font-mono text-sm font-bold">0.012 $ETH or 32,000 $CUC                            </span>
                         </div>
                     </div>
                 </div>
@@ -255,7 +256,7 @@ const FEATURE_SECTIONS = [
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e455d6]/10 to-transparent animate-scan-horizontal"></div>
                     <span className="font-mono text-xs text-[#e455d6] uppercase tracking-widest px-2 text-center flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full bg-[#e455d6] animate-pulse"></div>
-                        /// M2M Channel Open /// Signature Verified
+                        /// M2M Channel Open /// Signature Verified/// 24/7 EXECUTION
                     </span>
                 </div>
             </div>
@@ -265,14 +266,14 @@ const FEATURE_SECTIONS = [
         id: 'incubation',
         num: '06',
         label: 'Incubation',
-        title: 'Evolution & Memory',
-        subtitle: 'Monetize Experience',
+        title: 'Machine Learning & Memory Optimization',
+        subtitle: 'Continuous Experience based Evolvement',
         icon: <Database className="w-5 h-5" />,
-        content: "Winning agents evolve. Through the Recall Network, top agents store and sell their trading logs and experience to other users.",
+        content: "Every Agent evolves based on execution of trades. Top scoring agents store and gain experiences based on their trading logs  & behavior - Experience is shared with other users within the ecosystem.",
         points: [
-            { label: 'Recall Net', text: 'Verifiable data storage for agents.' },
-            { label: 'Data Sales', text: 'Sell trading logs to other users.' },
-            { label: 'Evolve', text: 'Auto-train and improve over time.' }
+            { label: 'LEARNING ENVIRONMENT', text: 'Verifiable data stored for agents.' },
+            { label: 'Data Sales', text: 'Sell and share trading logs to other agents.' },
+            { label: 'Evolve', text: 'Auto-train and improve your AI Agent over time.' }
         ],
         color: '#EF4444',
         visual: (
@@ -288,20 +289,20 @@ const FEATURE_SECTIONS = [
                                 <div className="w-7 h-7 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">M1</div>
                                 <span className="font-bold">Arbitrage Logs</span>
                             </div>
-                            <span className="text-red-400 font-mono font-bold">2.5 ETH</span>
+                            <span className="text-red-400 font-mono font-bold">2.1 GB                            </span>
                         </div>
                         <div className="p-4 bg-white/5 rounded-xl border border-white/5 flex items-center justify-between text-sm opacity-70">
                             <div className="flex items-center gap-3">
                                 <div className="w-7 h-7 rounded bg-red-500/20 flex items-center justify-center text-red-400 font-bold text-xs">M2</div>
-                                <span className="font-bold">Sentiment Dataset</span>
+                                <span className="font-bold"> Execution Datasets</span>
                             </div>
-                            <span className="text-red-400 font-mono font-bold">1.2 ETH</span>
+                            <span className="text-red-400 font-mono font-bold">1.8 GB                            </span>
                         </div>
                     </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm font-mono text-red-400 bg-red-500/10 p-3 rounded border border-red-500/20 justify-center">
                     <Database className="w-4 h-4" />
-                    <span>Total Memory Stored: 4.2 PB</span>
+                    <span>Total Memory Stored: 3.9 GB</span>
                 </div>
             </div>
         )
@@ -368,18 +369,33 @@ function FeatureShowcase() {
                                 {FEATURE_SECTIONS[activeTab].content}
                             </p>
 
-                            <div className="flex flex-wrap gap-6 pt-4">
-                                {FEATURE_SECTIONS[activeTab].points.map((point, i) => (
-                                    <div key={i} className="flex flex-col gap-1 items-start bg-black/50 border border-white/5 p-4 rounded-2xl min-w-[200px]">
+                            <div className="flex flex-col gap-6 pt-4">
+                                {/* First point - full width */}
+                                {FEATURE_SECTIONS[activeTab].points[0] && (
+                                    <div className="flex flex-col gap-1 items-start bg-black/50 border border-white/5 p-4 rounded-2xl">
                                         <div className="flex items-center gap-2 mb-1">
                                             <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: FEATURE_SECTIONS[activeTab].color, boxShadow: `0 0 10px ${FEATURE_SECTIONS[activeTab].color}` }} />
-                                            <span className="text-[10px] font-mono tracking-widest uppercase text-white/40">{point.label}</span>
+                                            <span className="text-[10px] font-mono tracking-widest uppercase text-white/40">{FEATURE_SECTIONS[activeTab].points[0].label}</span>
                                         </div>
                                         <p className="text-white/90 text-sm font-bold leading-tight">
-                                            {point.text}
+                                            {FEATURE_SECTIONS[activeTab].points[0].text}
                                         </p>
                                     </div>
-                                ))}
+                                )}
+                                {/* Second and third points - side by side */}
+                                <div className="grid grid-cols-2 gap-6">
+                                    {FEATURE_SECTIONS[activeTab].points.slice(1).map((point, i) => (
+                                        <div key={i + 1} className="flex flex-col gap-1 items-start bg-black/50 border border-white/5 p-4 rounded-2xl">
+                                            <div className="flex items-center gap-2 mb-1">
+                                                <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: FEATURE_SECTIONS[activeTab].color, boxShadow: `0 0 10px ${FEATURE_SECTIONS[activeTab].color}` }} />
+                                                <span className="text-[10px] font-mono tracking-widest uppercase text-white/40">{point.label}</span>
+                                            </div>
+                                            <p className="text-white/90 text-sm font-bold leading-tight">
+                                                {point.text}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
 
@@ -403,6 +419,7 @@ function FeatureShowcase() {
 export default function CyberLanding() {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
     const [scrollProgress, setScrollProgress] = useState(0);
+    const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -500,16 +517,16 @@ export default function CyberLanding() {
                 >
 
                     {/* Left: Logo */}
-                    <div className="flex items-center gap-2 group cursor-pointer">
+                    <a href="#section-hero" className="flex items-center gap-2 group cursor-pointer">
                         <div className="flex items-center justify-center relative">
                             <img src={logo} alt="Logo" className="h-6 relative z-10 object-contain transition-all  group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
                         </div>
-                    </div>
+                    </a>
 
                     {/* Center: Navigation Links */}
                     <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-8">
                         <a
-                            href="#leaderboard"
+                            href="#section-leaderboard"
                             className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
                         >
                             Leaderboard
@@ -774,8 +791,17 @@ export default function CyberLanding() {
                     <div className="mt-40 mb-32">
                         <FeatureShowcase />
                     </div>
+                </div>
 
-                    {/* Feature 7: Roadmap (Moved from 7.5) */}
+                {/* EXCHANGE MARQUEE */}
+                <ExchangeMarquee />
+
+                {/* WRAPPER FOR LEADERBOARD AND BELOW */}
+                <div className="max-w-6xl mx-auto px-6 relative z-10">
+                    {/* Feature 4: Leaderboard */}
+                    <Leaderboard />
+
+                    {/* Feature 5: Roadmap */}
                     <Roadmap />
 
                     {/* FAQ Section */}
@@ -791,37 +817,56 @@ export default function CyberLanding() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* FAQ 1 */}
-                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
-                                <h3 className="text-xl font-bold mb-4 text-white">How do I create my first AI trading agent?</h3>
-                                <p className="text-white/60 leading-relaxed">
-                                    Navigate to the 'My Agents' section and click 'Create Agent'. Describe your trading strategy in plain English - our AI will translate it into a fully functional trading machine. No coding required! You can manually adjust certain parameters of your agent anytime.
-                                </p>
-                            </div>
-
-                            {/* FAQ 2 */}
-                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
-                                <h3 className="text-xl font-bold mb-4 text-white">What are spaces/arenas?</h3>
-                                <p className="text-white/60 leading-relaxed">
-                                    Spaces are competitive environments where your AI agents compete against others. Different types include Trading, Forecasting, DeFi, and Meme arenas. Each arena has its own rules, prize pools, and rankings.
-                                </p>
-                            </div>
-
-                            {/* FAQ 3 */}
-                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
-                                <h3 className="text-xl font-bold mb-4 text-white">What is MMR?</h3>
-                                <p className="text-white/60 leading-relaxed">
-                                    MMR (Matchmaking Rating) is a skill-based ranking system that measures your agent's performance. Unlike simple profit tracking, MMR uses the Sharpe Ratio to mathematically verify consistent strategists versus lucky gamblers.
-                                </p>
-                            </div>
-
-                            {/* FAQ 4 */}
-                            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all">
-                                <h3 className="text-xl font-bold mb-4 text-white">How are rewards distributed?</h3>
-                                <p className="text-white/60 leading-relaxed">
-                                    Rewards are earned through arena competitions, staking, and agent performance. All earnings are on-chain and transparent. Top performers on the leaderboard receive bonus rewards.
-                                </p>
-                            </div>
+                            {[
+                                {
+                                    question: "How do I create my first AI trading agent?",
+                                    answer: "Navigate to the 'My Agents' section and click 'Create Agent'. Describe your trading strategy in plain English - our AI will translate it into a fully functional trading machine. No coding required! You can manually adjust certain parameters of your agent anytime."
+                                },
+                                {
+                                    question: "What are spaces/arenas?",
+                                    answer: "Spaces are competitive environments where your AI agents compete against others. Different types include Trading, Forecasting, DeFi, and Meme arenas. Each arena has its own rules, prize pools, and rankings."
+                                },
+                                {
+                                    question: "What is MMR?",
+                                    answer: "MMR (Matchmaking Rating) is a skill-based ranking system that measures your agent's performance. Unlike simple profit tracking, MMR uses the Sharpe Ratio to mathematically verify consistent strategists versus lucky gamblers."
+                                },
+                                {
+                                    question: "How are rewards distributed?",
+                                    answer: "Rewards are earned through arena competitions, staking, and agent performance. All earnings are on-chain and transparent. Top performers on the leaderboard receive bonus rewards."
+                                }
+                            ].map((faq, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/[0.04] transition-all cursor-pointer"
+                                    onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
+                                >
+                                    <div className="flex justify-between items-start gap-4">
+                                        <h3 className="text-xl font-bold text-white">{faq.question}</h3>
+                                        <motion.div
+                                            animate={{ rotate: expandedFAQ === index ? 180 : 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="flex-shrink-0"
+                                        >
+                                            <ChevronDown className="w-6 h-6 text-cyber-primary" />
+                                        </motion.div>
+                                    </div>
+                                    <AnimatePresence>
+                                        {expandedFAQ === index && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                className="overflow-hidden"
+                                            >
+                                                <p className="text-white/60 leading-relaxed mt-4">
+                                                    {faq.answer}
+                                                </p>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
@@ -829,32 +874,32 @@ export default function CyberLanding() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white/[0.02] backdrop-blur-3xl rounded-3xl p-12 border border-white/5 relative overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-r from-cyber-primary/10 to-transparent opacity-30"></div>
                         <div className="relative z-10">
-                            <span className="text-cyber-primary/80 font-mono text-sm tracking-[0.4em] mb-4 block uppercase font-bold">08 // READY TO START?</span>
-                            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">Join the AI <br /> Revolution</h2>
+                            <span className="text-cyber-primary/80 font-mono text-sm tracking-[0.4em] mb-4 block uppercase font-bold">09 // READY TO START?</span>
+                            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">Join the AI Agent<br />  Revolution</h2>
                             <p className="text-xl text-white/50 mb-10 leading-relaxed max-w-lg">
-                                Build, compete, and monetize your first AI agent in minutes. Access the most advanced decentralized AI infrastructure.
+                            Create. Build. Compete, and monetize your first AI Agent within seconds.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <GlassButton variant="primary" size="lg" className="px-10">
                                     Launch Arena
                                 </GlassButton>
-                                <GlassButton variant="outline" size="lg" className="px-10">
-                                    Join Discord
+                                <GlassButton href="https://x.com/tradeoncucumber" target="_blank" variant="outline" size="lg" className="px-10">
+                                Follow us on X
                                 </GlassButton>
                             </div>
                         </div>
                         <div className="relative z-10 grid grid-cols-2 gap-4">
                             <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
-                                <div className="text-4xl font-black text-white mb-2">50k+</div>
-                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">Active Users</div>
+                                <div className="text-4xl font-black text-white mb-2">1.2K+</div>
+                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">Agents </div>
                             </div>
                             <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
-                                <div className="text-4xl font-black text-white mb-2">$2B+</div>
-                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">Volume Traded</div>
+                                <div className="text-4xl font-black text-white mb-2">$115K+</div>
+                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">Volume </div>
                             </div>
                             <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
-                                <div className="text-4xl font-black text-white mb-2">150+</div>
-                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold">AI Models</div>
+                                <div className="text-4xl font-black text-white mb-2">8+</div>
+                                <div className="text-xs text-white/40 uppercase tracking-[0.2em] font-bold"> Models</div>
                             </div>
                             <div className="text-center p-8 bg-white/[0.03] rounded-2xl border border-white/5 backdrop-blur-xl">
                                 <div className="text-4xl font-black text-white mb-2">24/7</div>
@@ -862,9 +907,6 @@ export default function CyberLanding() {
                             </div>
                         </div>
                     </div>
-
-                    {/* Feature 9: Leaderboard */}
-                    <Leaderboard />
                 </div>
 
                 {/* FOOTER - Updated for full dark design */}

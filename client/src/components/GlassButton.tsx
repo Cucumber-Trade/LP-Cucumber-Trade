@@ -8,6 +8,8 @@ interface GlassButtonProps {
   onClick?: () => void;
   className?: string;
   icon?: ReactNode;
+  href?: string;
+  target?: string;
 }
 
 export default function GlassButton({
@@ -16,7 +18,9 @@ export default function GlassButton({
   size = 'md',
   onClick,
   className = '',
-  icon
+  icon,
+  href,
+  target
 }: GlassButtonProps) {
   const styles = {
     primary: {
@@ -47,25 +51,27 @@ export default function GlassButton({
 
   const config = styles[variant];
 
-  return (
-    <motion.button
-      onClick={onClick}
-      className={`relative ${sizes[size]} rounded-full overflow-hidden ${className} transition-transform duration-300 ease-out`}
-      style={{
-        background: config.background,
-        color: config.color,
-        border: config.border,
-        backdropFilter: 'blur(4px)',
-        WebkitBackdropFilter: 'blur(4px)',
-        boxShadow: `inset 0 1px 1px rgba(255,255,255,0.3), 0 4px 10px rgba(0,0,0,0.3)`,
-      }}
-      whileHover={{
-        scale: 1.02,
-        y: -1,
-        boxShadow: `inset 0 1px 2px rgba(255,255,255,0.4), 0 0 20px ${config.glow}30, 0 10px 25px rgba(0,0,0,0.4)`,
-      }}
-      whileTap={{ scale: 0.98 }}
-    >
+  const commonProps = {
+    className: `relative inline-block ${sizes[size]} rounded-full overflow-hidden ${className} transition-transform duration-300 ease-out`,
+    style: {
+      background: config.background,
+      color: config.color,
+      border: config.border,
+      backdropFilter: 'blur(4px)',
+      WebkitBackdropFilter: 'blur(4px)',
+      boxShadow: `inset 0 1px 1px rgba(255,255,255,0.3), 0 4px 10px rgba(0,0,0,0.3)`,
+      textDecoration: 'none',
+    },
+    whileHover: {
+      scale: 1.02,
+      y: -1,
+      boxShadow: `inset 0 1px 2px rgba(255,255,255,0.4), 0 0 20px ${config.glow}30, 0 10px 25px rgba(0,0,0,0.4)`,
+    },
+    whileTap: { scale: 0.98 },
+  };
+
+  const content = (
+    <>
       {/* Liquid fluid shine - simplified */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 pointer-events-none"
@@ -84,6 +90,28 @@ export default function GlassButton({
         {children}
         {icon}
       </span>
+    </>
+  );
+
+  if (href) {
+    return (
+      <motion.a
+        href={href}
+        target={target}
+        rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+        {...commonProps}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
+  return (
+    <motion.button
+      onClick={onClick}
+      {...commonProps}
+    >
+      {content}
     </motion.button>
   );
 }

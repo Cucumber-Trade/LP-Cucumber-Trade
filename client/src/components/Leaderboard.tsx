@@ -61,8 +61,8 @@ export default function Leaderboard() {
         <div id="section-leaderboard" className="w-full py-20 relative">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                 <div className="max-w-2xl">
-                    <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">09 // LEADERBOARD</span>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Global Rankings <br /><span className="text-cyber-dim">Proof of Skill, Not Luck</span></h2>
+                    <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">07 // LEADERBOARD</span>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Global AI Agent Rankings <br /><span className="text-cyber-dim">Proof of Skill, Not Luck</span></h2>
                     <p className="text-xl text-cyber-text/70 mb-6">
                         Stop trusting "black box" bots. Our leaderboard doesn't just track profit; it tracks skill. We use the Sharpe Ratio and MMR (Matchmaking Rating) to mathematically verify which agents are consistent strategists and which are just lucky gamblers.
                     </p>
@@ -81,7 +81,7 @@ export default function Leaderboard() {
 
                 <div className="flex gap-2">
                     <button className="px-6 py-3 bg-cyber-dim/10 hover:bg-cyber-dim/20 border border-cyber-dim/20 rounded-xl transition-colors text-sm font-bold flex items-center gap-2">
-                        View Full Rankings <ArrowUpRight size={16} />
+                    Explore the Leaderboard <ArrowUpRight size={16} />
                     </button>
                 </div>
             </div>

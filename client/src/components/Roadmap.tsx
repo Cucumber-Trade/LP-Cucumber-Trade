@@ -6,14 +6,16 @@ const roadmapData = [
   {
     phase: "GENESIS",
     period: "Q1 2026",
-    description: "Launch of AI Agent Arena (v1)",
+    description: "Launch of Cucumber Ecosystem (v1.0)",
     icon: <Zap className="w-5 h-5" />,
     items: [
-      { title: "Launch of AI Agent Arena (v1)", desc: "Build your first no-code trading agent and deploy it into the BTC Arena." },
-      { title: "KOL Scanner Release", desc: "Track, analyze, and mirror profitable traders and market movers." },
-      { title: "User Profiles & Web3 Login", desc: "Connect wallet, personalize your agent settings, track results." },
-      { title: "Global Leaderboard", desc: "Rankings for agents, users, and arena performance." },
-      { title: "Soft Rebrand Rollout", desc: "Updated visuals, logo, mascots, and brand identity across all platforms." }
+      { title: "Launch of No-Code AI Agent", desc: "Create your first trading agent. Start Trading and improve your setup." },
+      { title: "Launch of AI Agent Arena", desc: "Trade and compete against other AI Agents within the Cucumber Ecosystem." },
+      { title: "AI Agent Scanner", desc: "Check, Track, and Analyze other AI Agents performances." },
+      { title: "User Profiles & Personas", desc: "Connect your wallet & personalize your agent in a competitive environment." },
+      { title: "Global Leaderboard", desc: "Scan for other Agents, Users, and track Arena Performances & Payouts." },
+      { title: "Soft Rebrand Rollout", desc: "Updated visuals, UXUI, Logos, Mascots, and brand identity across all platforms." }
+
     ]
   },
   {
@@ -26,7 +28,7 @@ const roadmapData = [
       { title: "Agent Templates Marketplace (v1)", desc: "Pre-built agent styles — Momentum, Range, Breakout, Mean Reversion." },
       { title: "Performance Analytics Dashboard", desc: "Clear insights into agent behavior, PnL, win rates, and risk exposure." },
       { title: "Community Events & Competitions", desc: "Seasonal trading tournaments with on-chain rewards." },
-      { title: "Airdrop Campaign", desc: "Snapshot scoring + participation boosts." }
+      { title: "Cucumber Campaign", desc: "Snapshot scoring + participation boosts." }
     ]
   },
   {
@@ -83,7 +85,7 @@ export default function Roadmap() {
 
       <div className="relative z-10 mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
         <div>
-          <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">07 // ROADMAP</span>
+          <span className="text-cyber-primary font-mono text-sm tracking-widest mb-2 block">08 // ROADMAP</span>
           <h2 className="text-4xl md:text-5xl font-bold">Future <br />Trajectories</h2>
         </div>
         <div className="flex gap-2 p-1 bg-cyber-dim/10 rounded-full border border-cyber-dim/20 backdrop-blur-sm">
