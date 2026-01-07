@@ -21,11 +21,7 @@ export default function ProtocolMarquee() {
         <div className="relative w-full overflow-hidden bg-white/[0.02] border-y border-white/5 h-20">
             <div className="flex items-center gap-4 px-6 h-full">
                 <span className="text-sm font-medium text-white/60 whitespace-nowrap">Powered by:</span>
-                <div className="relative flex-1 overflow-hidden">
-                    {/* Left fade */}
-                    <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
-                    {/* Right fade */}
-                    <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
+                <div className="relative flex-1 overflow-hidden marquee-fade">
                     <div className="flex animate-scroll">
                         {/* First set of logos */}
                         {protocols.map((protocol, idx) => (
@@ -75,6 +71,17 @@ export default function ProtocolMarquee() {
 
                 .animate-scroll:hover {
                     animation-play-state: paused;
+                }
+
+                @media (max-width: 768px) {
+                    .animate-scroll {
+                        animation: scroll 8s linear infinite;
+                    }
+                }
+
+                .marquee-fade {
+                    -webkit-mask-image: linear-gradient(to right, transparent, black 150px, black calc(100% - 150px), transparent);
+                    mask-image: linear-gradient(to right, transparent, black 150px, black calc(100% - 150px), transparent);
                 }
             `}</style>
         </div>
