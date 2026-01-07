@@ -37,7 +37,7 @@ function App() {
     sessionStorage.setItem('cucumber-entrance-seen', 'true');
     setTimeout(() => {
       setEntranceComplete(true);
-    }, 300); // Wait for exit animation
+    }, 500); // Wait for exit animation
   };
 
   return (
