@@ -3,10 +3,11 @@ import Leaderboard from "../components/Leaderboard";
 import ProtocolMarquee from "../components/ProtocolMarquee";
 import ExchangeMarquee from "../components/ExchangeMarquee";
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords, Menu, X } from "lucide-react";
-import { useState, useEffect, useMemo } from 'react';
+import { useState,useRef, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
 import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
+import arenaMusic from '@assets/../attached_assets/arenaMusic.mp3';
 import GlassCard from "../components/GlassCard";
 import GlassButton from "../components/GlassButton";
 import { motion, AnimatePresence } from 'framer-motion';
@@ -426,7 +427,7 @@ function FeatureShowcase() {
     );
 }
 
-export default function CyberLanding() {
+export default function CyberLanding({ isPlaying, toggleMusic }) {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
     const [scrollProgress, setScrollProgress] = useState(0);
     const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
@@ -561,6 +562,13 @@ export default function CyberLanding() {
 
                     {/* Center: Navigation Links */}
                     <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-6 lg:gap-8">
+                        <button
+                                onClick={toggleMusic}
+                                className="cursor-pointer text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
+                            >
+                                Radio
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
+                        </button>
                         <a
                             href="#section-hero"
                             className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"

@@ -6,15 +6,18 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProviderWrapper } from "@/components/theme-provider";
 import NotFound from "@/pages/not-found";
 import RetroLanding from "@/pages/retro-landing";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import EntranceLoader from "@/components/EntranceLoader";
 import MusicButton from "@/components/MusicButton";
+import arenaMusic from '@assets/../attached_assets/arenaMusic.mp3';
 
-function Router() {
+function Router({ isPlaying, toggleMusic }) {
   return (
     <Switch>
-      <Route path="/" component={RetroLanding} />
+      <Route path="/">
+        <RetroLanding isPlaying={isPlaying} toggleMusic={toggleMusic} />
+      </Route>
       <Route component={NotFound} />
     </Switch>
   );
@@ -23,15 +26,42 @@ function Router() {
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
   const [entranceComplete, setEntranceComplete] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
+    // Initialize audio element
+    audioRef.current = new Audio(arenaMusic);
+    audioRef.current.loop = true;
+
     // Check if entrance has been seen in this session
     const hasSeenEntrance = sessionStorage.getItem('cucumber-entrance-seen');
     if (hasSeenEntrance === 'true') {
       setShowEntrance(false);
       setEntranceComplete(true);
     }
+
+    return () => {
+      // Cleanup
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
   }, []);
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(error => {
+          console.error('Failed to play audio:', error);
+        });
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   const handleEntranceComplete = () => {
     setShowEntrance(false);
@@ -59,12 +89,12 @@ function App() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Router />
+              <Router isPlaying={isPlaying} toggleMusic={toggleMusic} />
             </motion.div>
           )}
 
           {/* Music Button - Always visible */}
-          {entranceComplete && <MusicButton />}
+          {entranceComplete && <MusicButton isPlaying={isPlaying} toggleMusic={toggleMusic} />}
         </TooltipProvider>
       </ThemeProviderWrapper>
     </QueryClientProvider>

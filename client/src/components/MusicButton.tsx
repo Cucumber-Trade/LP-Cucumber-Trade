@@ -1,39 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import { motion } from 'framer-motion';
-import arenaMusic from '@assets/../attached_assets/arenaMusic.mp3';
 
-export default function MusicButton() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    // Initialize audio element
-    audioRef.current = new Audio(arenaMusic);
-    audioRef.current.loop = true;
-
-    return () => {
-      // Cleanup
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
-    };
-  }, []);
-
-  const toggleMusic = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(error => {
-          console.error('Failed to play audio:', error);
-        });
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
+export default function MusicButton({ isPlaying, toggleMusic }) {
   return (
     <motion.button
       onClick={toggleMusic}
