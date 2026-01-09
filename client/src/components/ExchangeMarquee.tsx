@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import icon1 from '@assets/set1_icon_1.png';
 import icon2 from '@assets/set1_icon_2.png';
 import icon3 from '@assets/set1_icon_3.png';
@@ -31,12 +32,37 @@ const exchanges = [
 ];
 
 export default function ExchangeMarquee() {
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    useEffect(() => {
+        const preloadImages = async () => {
+            const imagePromises = exchanges.map((exchange) => {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.onload = resolve;
+                    img.onerror = reject;
+                    img.src = exchange.logo;
+                });
+            });
+
+            try {
+                await Promise.all(imagePromises);
+                setImagesLoaded(true);
+            } catch (error) {
+                console.error('Error preloading images:', error);
+                setImagesLoaded(true); // Show anyway if there's an error
+            }
+        };
+
+        preloadImages();
+    }, []);
+
     return (
         <div className="relative w-full overflow-hidden bg-white/[0.02] border-y border-white/5 h-20">
             <div className="flex items-center gap-4 px-6 h-full">
                 <span className="text-sm font-medium text-white/60 whitespace-nowrap">Compatible with:</span>
                 <div className="relative flex-1 overflow-hidden marquee-fade">
-                    <div className="flex animate-scroll">
+                    <div className={`flex transition-opacity duration-500 ${imagesLoaded ? 'animate-scroll opacity-100' : 'opacity-0'}`}>
                         {/* First set of logos */}
                         {exchanges.map((exchange, idx) => (
                             <div
@@ -47,6 +73,8 @@ export default function ExchangeMarquee() {
                                 <img
                                     src={exchange.logo}
                                     alt={exchange.name}
+                                    loading="eager"
+                                    fetchPriority="high"
                                     className={`${exchange.height} object-contain opacity-80 hover:opacity-100 transition-opacity exchange-icon`}
                                 />
                             </div>
@@ -61,6 +89,8 @@ export default function ExchangeMarquee() {
                                 <img
                                     src={exchange.logo}
                                     alt={exchange.name}
+                                    loading="eager"
+                                    fetchPriority="high"
                                     className={`${exchange.height} object-contain opacity-80 hover:opacity-100 transition-opacity exchange-icon`}
                                 />
                             </div>

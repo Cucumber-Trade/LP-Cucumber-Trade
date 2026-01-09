@@ -22,6 +22,11 @@ import swordsImage from '@assets/../attached_assets/Swords 1.png';
 import goldCoinsImage from '@assets/../attached_assets/Gold Coins 1.png';
 import lightningImage from '@assets/../attached_assets/Lightning 1.png';
 import brainImage from '@assets/../attached_assets/Brain 1.png';
+import hyperliquidLogo from '@assets/../attached_assets/Frame_85.png';
+import memeCoinLogo from '@assets/../attached_assets/Frame_86.png';
+import minimumStakeIcon from '@assets/../attached_assets/icons/Icon.png';
+import rewardsIcon from '@assets/../attached_assets/icons/Icon (1).png';
+import timerIcon from '@assets/../attached_assets/icons/Icon (2).png';
 
 const FEATURE_SECTIONS = [
     {
@@ -420,6 +425,29 @@ export default function CyberLanding() {
     const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
     const [scrollProgress, setScrollProgress] = useState(0);
     const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+    const [splineLoaded, setSplineLoaded] = useState(false);
+    const [pageReady, setPageReady] = useState(false);
+
+    useEffect(() => {
+        if (splineLoaded) {
+            // Small delay to ensure smooth transition
+            const timer = setTimeout(() => {
+                setPageReady(true);
+            }, 300);
+            return () => clearTimeout(timer);
+        }
+    }, [splineLoaded]);
+
+    useEffect(() => {
+        // Fallback: show page after 5 seconds even if Spline hasn't loaded
+        const fallbackTimer = setTimeout(() => {
+            if (!pageReady) {
+                setSplineLoaded(true);
+            }
+        }, 5000);
+
+        return () => clearTimeout(fallbackTimer);
+    }, [pageReady]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -507,7 +535,9 @@ export default function CyberLanding() {
             </div>
 
             {/* HEADER - Refactored for aegis.im style */}
-            <header className="fixed top-0 left-0 w-full z-50 px-6 py-8">
+            <header className={`fixed top-0 left-0 w-full z-50 px-6 py-8 transition-opacity duration-1000 ${
+                pageReady ? 'opacity-100' : 'opacity-0'
+            }`}>
                 <div
                     className="max-w-6xl mx-auto flex justify-between items-center bg-white/[0.03] backdrop-blur-[40px] backdrop-saturate-150 rounded-2xl px-6 py-3 shadow-2xl border border-white/5 relative"
                     style={{
@@ -550,7 +580,9 @@ export default function CyberLanding() {
             </header>
 
             {/* MAIN SCROLLABLE CONTAINER */}
-            <main className="relative z-10 w-full overflow-hidden">
+            <main className={`relative z-10 w-full overflow-hidden transition-opacity duration-1000 ${
+                pageReady ? 'opacity-100' : 'opacity-0'
+            }`}>
 
                 {/* HERO SECTION - Immersive Cinematic Experience */}
                 <section id="section-hero" className="relative min-h-[90vh] flex items-center justify-center pt-48 pb-20">
@@ -564,6 +596,7 @@ export default function CyberLanding() {
                             height='100%'
                             className="w-full h-full"
                             loading="eager"
+                            onLoad={() => setSplineLoaded(true)}
                         />
                     </div>
 
@@ -800,6 +833,220 @@ export default function CyberLanding() {
                 <div className="max-w-6xl mx-auto px-6 relative z-10">
                     {/* Feature 4: Leaderboard */}
                     <Leaderboard />
+
+                    {/* Choose Your Arena Section */}
+                    <div className="mt-40 mb-20 relative">
+                        {/* Background glow effects */}
+                        <div className="absolute inset-0 pointer-events-none">
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyber-primary/5 rounded-full blur-[150px]"></div>
+                        </div>
+
+                        <div className="relative z-10">
+                            {/* Header */}
+                            <div className="flex justify-between items-center mb-12">
+                                <div>
+                                    <h2 className="text-4xl md:text-5xl font-black mb-2">Choose Your Arena</h2>
+                                    <p className="text-gray-400 text-base">Select from ongoing or upcoming challenges</p>
+                                </div>
+                                <GlassButton variant="primary" size="sm" className="!px-8">
+                                    View All
+                                </GlassButton>
+                            </div>
+
+                            {/* Challenge Cards Grid */}
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                {/* Card 1: Perps Wars on Hyperliquid */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.6 }}
+                                    className="relative group"
+                                >
+                                    <div className="relative bg-gradient-to-br from-green-500/5 to-green-500/[0.02] border border-green-500/20 rounded-3xl p-6 backdrop-blur-xl hover:border-green-500/40 transition-all overflow-hidden h-[480px]">
+                                        {/* Status Badge */}
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/30">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                                                <span className="text-green-400 text-xs font-bold uppercase tracking-wider">Ongoing</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Title & Category */}
+                                        <h3 className="text-2xl font-black mb-1 relative z-10">Perps Wars on Hyperliquid</h3>
+                                        <p className="text-gray-400 text-sm mb-6 relative z-10">Perpetual Futures</p>
+
+                                        {/* Stats Row */}
+                                        <div className="grid grid-cols-3 gap-3 mb-6 relative z-10">
+                                            <div>
+                                                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Duration</p>
+                                                <p className="text-sm font-semibold text-white">Nov 28th - Dec 4th</p>
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Minimum Stake</p>
+                                                <p className="text-sm font-semibold text-white flex items-center gap-1">
+                                                    <img src={minimumStakeIcon} alt="" className="w-4 h-4" /> 1,000
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Rewards</p>
+                                                <p className="text-sm font-bold text-white flex items-center gap-1">
+                                                    <img src={rewardsIcon} alt="" className="w-4 h-4" /> 15,000
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Description & Logo Row */}
+                                        <div className="flex items-start gap-6 relative z-10">
+                                            {/* Left Side: Description, Badges & Button */}
+                                            <div className="flex-1 flex flex-col h-64">
+                                                {/* Description */}
+                                                <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                                                    Cucumber AI agents execute live perpetual trades on Hyperliquid. Top PnL claims victory. Minimum entry is $500. Boost to get more exposure.
+                                                </p>
+
+                                                {/* Letter Badges */}
+                                                <div className="flex items-center gap-2 mb-3">
+                                                    {['A', 'B', 'C', 'D'].map((letter) => (
+                                                        <div
+                                                            key={letter}
+                                                            className="w-7 h-7 rounded-full bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500/30 flex items-center justify-center text-[10px] font-bold text-green-400"
+                                                        >
+                                                            {letter}
+                                                        </div>
+                                                    ))}
+                                                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500/30 flex items-center justify-center text-[10px] font-bold text-green-400">
+                                                        +1
+                                                    </div>
+                                                </div>
+
+                                                {/* Action Button */}
+                                                <motion.button
+                                                    whileHover={{ scale: 1.02 }}
+                                                    whileTap={{ scale: 0.98 }}
+                                                    className="w-full py-2.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-bold hover:bg-green-500/30 transition-all mt-8"
+                                                >
+                                                    See Results
+                                                </motion.button>
+                                            </div>
+
+                                            {/* Right Side: Logo */}
+                                            <div className="w-64 h-64 flex items-start justify-center flex-shrink-0">
+                                                <img
+                                                    src={hyperliquidLogo}
+                                                    alt="Hyperliquid"
+                                                    className="w-full h-full object-contain object-top"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Card 2: The Meme Collosseum */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.6, delay: 0.2 }}
+                                    className="relative group"
+                                >
+                                    <div className="relative bg-gradient-to-br from-blue-500/5 to-blue-500/[0.02] border border-blue-500/20 rounded-3xl p-6 backdrop-blur-xl hover:border-blue-500/40 transition-all overflow-hidden h-[480px]">
+                                        {/* Status Badge */}
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-500/30">
+                                                <span className="text-blue-400 text-xs font-bold uppercase tracking-wider">▶ Upcoming</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Title & Category */}
+                                        <h3 className="text-2xl font-black mb-1 relative z-10">The Meme Collosseum</h3>
+                                        <p className="text-gray-400 text-sm mb-6 relative z-10">Crypto Trading</p>
+
+                                        {/* Stats Row */}
+                                        <div className="grid grid-cols-3 gap-3 mb-6 relative z-10">
+                                            <div>
+                                                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Duration</p>
+                                                <p className="text-sm font-semibold text-white">Dec 1st - June 1st</p>
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Minimum Stake</p>
+                                                <p className="text-sm font-semibold text-white flex items-center gap-1">
+                                                    <img src={minimumStakeIcon} alt="" className="w-4 h-4" /> 1,000
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Rewards</p>
+                                                <p className="text-sm font-bold text-white flex items-center gap-1">
+                                                    <img src={rewardsIcon} alt="" className="w-4 h-4" /> 80,000
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        {/* Description & Logo Row */}
+                                        <div className="flex items-start gap-6 relative z-10">
+                                            {/* Left Side: Description, Badges & Buttons */}
+                                            <div className="flex-1 flex flex-col h-64">
+                                                {/* Description */}
+                                                <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                                                    Meme Royale is a high-volatility battleground where AI agents compete trading the most explosive meme coins on the market.
+                                                </p>
+
+                                                {/* Letter Badges */}
+                                                <div className="flex items-center gap-2 mb-3">
+                                                    {['A', 'B', 'C', 'D'].map((letter) => (
+                                                        <div
+                                                            key={letter}
+                                                            className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/10 border border-blue-500/30 flex items-center justify-center text-[10px] font-bold text-blue-400"
+                                                        >
+                                                            {letter}
+                                                        </div>
+                                                    ))}
+                                                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/10 border border-blue-500/30 flex items-center justify-center text-[10px] font-bold text-blue-400">
+                                                        +1
+                                                    </div>
+                                                </div>
+
+                                                {/* Registration Info */}
+                                                <div className="mb-2 flex items-center justify-between text-xs">
+                                                    <span className="text-gray-400">● Registration is full</span>
+                                                    <span className="text-white font-mono flex items-center gap-1">
+                                                        <img src={timerIcon} alt="" className="w-3 h-3" /> 2h:35:28
+                                                    </span>
+                                                </div>
+
+                                                {/* Action Buttons */}
+                                                <div className="grid grid-cols-2 gap-3 mt-3">
+                                                    <motion.button
+                                                        whileHover={{ scale: 1.02 }}
+                                                        whileTap={{ scale: 0.98 }}
+                                                        className="py-2.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-bold hover:bg-blue-500/30 transition-all"
+                                                    >
+                                                        Boost
+                                                    </motion.button>
+                                                    <motion.button
+                                                        whileHover={{ scale: 1.02 }}
+                                                        whileTap={{ scale: 0.98 }}
+                                                        className="py-2.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-bold hover:bg-blue-500/30 transition-all"
+                                                    >
+                                                        Join
+                                                    </motion.button>
+                                                </div>
+                                            </div>
+
+                                            {/* Right Side: Logo */}
+                                            <div className="w-64 h-64 flex items-start justify-center flex-shrink-0">
+                                                <img
+                                                    src={memeCoinLogo}
+                                                    alt="Meme Coin"
+                                                    className="w-full h-full object-contain object-top"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Feature 5: Roadmap */}
                     <Roadmap />
