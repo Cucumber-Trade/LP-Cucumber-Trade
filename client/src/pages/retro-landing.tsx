@@ -2,7 +2,7 @@ import Roadmap from "../components/Roadmap";
 import Leaderboard from "../components/Leaderboard";
 import ProtocolMarquee from "../components/ProtocolMarquee";
 import ExchangeMarquee from "../components/ExchangeMarquee";
-import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords } from "lucide-react";
+import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords, Menu, X } from "lucide-react";
 import { useState, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
@@ -432,6 +432,7 @@ export default function CyberLanding() {
     const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
     const [splineLoaded, setSplineLoaded] = useState(false);
     const [pageReady, setPageReady] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         if (splineLoaded) {
@@ -594,16 +595,115 @@ export default function CyberLanding() {
                     </nav>
 
                     {/* Right: Actions */}
-                    <div className="flex items-center gap-6">
-
-                        <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4">
+                        <div className="hidden md:flex items-center gap-4">
                             <GlassButton variant="primary" size="sm" className="!px-8">
                                 Launch DApp
                             </GlassButton>
                         </div>
+
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            className="md:hidden w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
+                            aria-label="Toggle menu"
+                        >
+                            {mobileMenuOpen ? (
+                                <X className="w-5 h-5 text-white" />
+                            ) : (
+                                <Menu className="w-5 h-5 text-white" />
+                            )}
+                        </button>
                     </div>
                 </div>
             </header>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <>
+                        {/* Backdrop */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 md:hidden"
+                            onClick={() => setMobileMenuOpen(false)}
+                        />
+
+                        {/* Menu Panel */}
+                        <motion.div
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ type: 'tween', duration: 0.3 }}
+                            className="fixed top-0 right-0 h-full w-[280px] bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 md:hidden overflow-y-auto"
+                        >
+                            <div className="flex flex-col h-full">
+                                {/* Header */}
+                                <div className="flex items-center justify-between p-6 border-b border-white/10">
+                                    <img src={logo} alt="Logo" className="h-6" />
+                                    <button
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
+                                        aria-label="Close menu"
+                                    >
+                                        <X className="w-4 h-4 text-white" />
+                                    </button>
+                                </div>
+
+                                {/* Navigation Links */}
+                                <nav className="flex flex-col p-6 gap-2">
+                                    <a
+                                        href="#section-hero"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="text-base font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 px-4 py-3 rounded-lg"
+                                    >
+                                        Home
+                                    </a>
+                                    <a
+                                        href="#section-intelligence"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="text-base font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 px-4 py-3 rounded-lg"
+                                    >
+                                        AI Agents
+                                    </a>
+                                    <a
+                                        href="#section-leaderboard"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="text-base font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 px-4 py-3 rounded-lg"
+                                    >
+                                        Leaderboard
+                                    </a>
+                                    <a
+                                        href="#section-faq"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="text-base font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 px-4 py-3 rounded-lg"
+                                    >
+                                        F.A.Q
+                                    </a>
+                                    <span className="text-base font-medium text-white/30 cursor-not-allowed px-4 py-3 rounded-lg" title="Coming Soon">
+                                        Docs
+                                    </span>
+                                </nav>
+
+                                {/* Action Button */}
+                                <div className="mt-auto p-6 border-t border-white/10">
+                                    <GlassButton
+                                        variant="primary"
+                                        size="md"
+                                        className="w-full"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        Launch DApp
+                                    </GlassButton>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
 
             {/* MAIN SCROLLABLE CONTAINER */}
             <main className={`relative z-10 w-full overflow-hidden transition-opacity duration-1000 ${
