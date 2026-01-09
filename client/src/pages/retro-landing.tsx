@@ -597,9 +597,15 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                             F.A.Q
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
                         </a>
-                        <span className="text-sm font-medium text-white/50 cursor-not-allowed" title="Coming Soon">
+                        <a
+                            href="https://docs.cucumber.trade/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
+                        >
                             Docs
-                        </span>
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
+                        </a>
                     </nav>
 
                     {/* Right: Actions */}
@@ -691,9 +697,15 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                     >
                                         F.A.Q
                                     </a>
-                                    <span className="text-base font-medium text-white/30 cursor-not-allowed px-4 py-3 rounded-lg" title="Coming Soon">
+                                    <a
+                                        href="https://docs.cucumber.trade/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="text-base font-medium text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 px-4 py-3 rounded-lg"
+                                    >
                                         Docs
-                                    </span>
+                                    </a>
                                 </nav>
 
                                 {/* Action Button */}
@@ -789,7 +801,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                 <GlassButton variant="primary" size="lg" className="w-full sm:w-80 shadow-[0_0_20px_rgba(101,228,97,0.2)]">
                                     Launch DApp
                                 </GlassButton>
-                                <GlassButton variant="outline" size="lg" className="w-full sm:w-60">
+                                <GlassButton href="https://docs.cucumber.trade/" target="_blank" variant="outline" size="lg" className="w-full sm:w-60">
                                     Read the Docs
                                 </GlassButton>
                             </motion.div>
@@ -1326,7 +1338,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
                                     <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Builder</a></li>
                                     <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Dashboard</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">API Documentation</a></li>
+                                    <li><a href="https://docs.cucumber.trade/" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-primary transition-colors">API Documentation</a></li>
                                 </ul>
                             </div>
 
