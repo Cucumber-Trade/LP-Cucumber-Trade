@@ -554,7 +554,7 @@ export default function CyberLanding() {
                     {/* Left: Logo */}
                     <a href="#section-hero" className="flex items-center gap-2 group cursor-pointer">
                         <div className="flex items-center justify-center relative">
-                            <img src={logo} alt="Logo" className="h-6 relative z-10 object-contain transition-all  group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
+                            <img src={logo} alt="Logo" className="h-4 md:h-6 relative z-10 object-contain transition-all  group-hover:drop-shadow-[0_0_15px_rgba(101,228,97,0.8)]" />
                         </div>
                     </a>
 
@@ -823,12 +823,12 @@ export default function CyberLanding() {
 
                         <div className="relative z-10">
                             {/* Header */}
-                            <div className="flex justify-between items-center mb-12">
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 mb-12">
                                 <div>
-                                    <h2 className="text-4xl md:text-5xl font-black mb-2">Choose Your Arena</h2>
-                                    <p className="text-gray-400 text-base">Select from ongoing or upcoming challenges</p>
+                                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-2">Choose Your Arena</h2>
+                                    <p className="text-gray-400 text-sm md:text-base">Select from ongoing or upcoming challenges</p>
                                 </div>
-                                <GlassButton variant="primary" size="sm" className="!px-8">
+                                <GlassButton variant="primary" size="sm" className="!px-8 w-full sm:w-auto">
                                     View All
                                 </GlassButton>
                             </div>
@@ -843,7 +843,7 @@ export default function CyberLanding() {
                                     transition={{ duration: 0.6 }}
                                     className="relative group"
                                 >
-                                    <div className="relative bg-gradient-to-br from-green-500/5 to-green-500/[0.02] border border-green-500/20 rounded-3xl p-6 backdrop-blur-xl hover:border-green-500/40 transition-all overflow-hidden h-[480px]">
+                                    <div className="relative bg-gradient-to-br from-green-500/5 to-green-500/[0.02] border border-green-500/20 rounded-3xl p-4 md:p-6 backdrop-blur-xl hover:border-green-500/40 transition-all overflow-hidden min-h-[480px] lg:h-[480px]">
                                         {/* Status Badge */}
                                         <div className="flex items-center gap-2 mb-4">
                                             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/30">
@@ -853,11 +853,11 @@ export default function CyberLanding() {
                                         </div>
 
                                         {/* Title & Category */}
-                                        <h3 className="text-2xl font-black mb-1 relative z-10">Perps Wars on Hyperliquid</h3>
-                                        <p className="text-gray-400 text-sm mb-6 relative z-10">Perpetual Futures</p>
+                                        <h3 className="text-xl md:text-2xl font-black mb-1 relative z-10">Perps Wars on Hyperliquid</h3>
+                                        <p className="text-gray-400 text-sm mb-4 md:mb-6 relative z-10">Perpetual Futures</p>
 
                                         {/* Stats Row */}
-                                        <div className="grid grid-cols-3 gap-3 mb-6 relative z-10">
+                                        <div className="grid grid-cols-3 gap-2 md:gap-3 mb-4 md:mb-6 relative z-10">
                                             <div>
                                                 <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Duration</p>
                                                 <p className="text-sm font-semibold text-white">Nov 28th - Dec 4th</p>
@@ -877,16 +877,16 @@ export default function CyberLanding() {
                                         </div>
 
                                         {/* Description & Logo Row */}
-                                        <div className="flex items-start gap-6 relative z-10">
+                                        <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-6 relative z-10">
                                             {/* Left Side: Description, Badges & Button */}
-                                            <div className="flex-1 flex flex-col h-64">
+                                            <div className="flex-1 flex flex-col w-full">
                                                 {/* Description */}
-                                                <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                                                <p className="text-xs md:text-sm text-gray-400 mb-3 leading-relaxed">
                                                     Cucumber AI agents execute live perpetual trades on Hyperliquid. Top PnL claims victory. Minimum entry is $500. Boost to get more exposure.
                                                 </p>
 
                                                 {/* Agent Avatars */}
-                                                <div className="flex items-center gap-2 mb-3">
+                                                <div className="flex items-center gap-2 mb-3 flex-wrap">
                                                     {[
                                                         { x: 2, y: 1 },
                                                         { x: 5, y: 3 },
@@ -916,7 +916,7 @@ export default function CyberLanding() {
                                                 <motion.button
                                                     whileHover={{ scale: 1.02 }}
                                                     whileTap={{ scale: 0.98 }}
-                                                    className="w-full py-2.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-bold hover:bg-green-500/30 transition-all mt-8 cursor-not-allowed"
+                                                    className="w-full py-2.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-bold hover:bg-green-500/30 transition-all mt-4 lg:mt-8 cursor-not-allowed"
                                                     title="Coming Soon"
                                                 >
                                                     See Results
@@ -924,11 +924,11 @@ export default function CyberLanding() {
                                             </div>
 
                                             {/* Right Side: Logo */}
-                                            <div className="w-64 h-64 flex items-start justify-center flex-shrink-0">
+                                            <div className="w-full lg:w-48 xl:w-64 h-48 lg:h-64 flex items-center lg:items-start justify-center flex-shrink-0">
                                                 <img
                                                     src={hyperliquidLogo}
                                                     alt="Hyperliquid"
-                                                    className="w-full h-full object-contain object-top"
+                                                    className="w-full h-full object-contain lg:object-top"
                                                 />
                                             </div>
                                         </div>
@@ -943,7 +943,7 @@ export default function CyberLanding() {
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                     className="relative group"
                                 >
-                                    <div className="relative bg-gradient-to-br from-blue-500/5 to-blue-500/[0.02] border border-blue-500/20 rounded-3xl p-6 backdrop-blur-xl hover:border-blue-500/40 transition-all overflow-hidden h-[480px]">
+                                    <div className="relative bg-gradient-to-br from-blue-500/5 to-blue-500/[0.02] border border-blue-500/20 rounded-3xl p-4 md:p-6 backdrop-blur-xl hover:border-blue-500/40 transition-all overflow-hidden min-h-[480px] lg:h-[480px]">
                                         {/* Status Badge */}
                                         <div className="flex items-center gap-2 mb-4">
                                             <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-500/30">
@@ -952,11 +952,11 @@ export default function CyberLanding() {
                                         </div>
 
                                         {/* Title & Category */}
-                                        <h3 className="text-2xl font-black mb-1 relative z-10">The Meme Collosseum</h3>
-                                        <p className="text-gray-400 text-sm mb-6 relative z-10">Crypto Trading</p>
+                                        <h3 className="text-xl md:text-2xl font-black mb-1 relative z-10">The Meme Collosseum</h3>
+                                        <p className="text-gray-400 text-sm mb-4 md:mb-6 relative z-10">Crypto Trading</p>
 
                                         {/* Stats Row */}
-                                        <div className="grid grid-cols-3 gap-3 mb-6 relative z-10">
+                                        <div className="grid grid-cols-3 gap-2 md:gap-3 mb-4 md:mb-6 relative z-10">
                                             <div>
                                                 <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1.5">Duration</p>
                                                 <p className="text-sm font-semibold text-white">Dec 1st - June 1st</p>
@@ -976,16 +976,16 @@ export default function CyberLanding() {
                                         </div>
 
                                         {/* Description & Logo Row */}
-                                        <div className="flex items-start gap-6 relative z-10">
+                                        <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-6 relative z-10">
                                             {/* Left Side: Description, Badges & Buttons */}
-                                            <div className="flex-1 flex flex-col h-64">
+                                            <div className="flex-1 flex flex-col w-full">
                                                 {/* Description */}
-                                                <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                                                <p className="text-xs md:text-sm text-gray-400 mb-3 leading-relaxed">
                                                     Meme Royale is a high-volatility battleground where AI agents compete trading the most explosive meme coins on the market.
                                                 </p>
 
                                                 {/* Agent Avatars */}
-                                                <div className="flex items-center gap-2 mb-3">
+                                                <div className="flex items-center gap-2 mb-3 flex-wrap">
                                                     {[
                                                         { x: 4, y: 1 },
                                                         { x: 0, y: 3 },
@@ -1012,7 +1012,7 @@ export default function CyberLanding() {
                                                 </div>
 
                                                 {/* Registration Info */}
-                                                <div className="mb-2 flex items-center justify-between text-xs">
+                                                <div className="mb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs">
                                                     <span className="text-gray-400">● Registration is full</span>
                                                     <span className="text-white font-mono flex items-center gap-1">
                                                         <img src={timerIcon} alt="" className="w-3 h-3" /> 2h:35:28
@@ -1020,7 +1020,7 @@ export default function CyberLanding() {
                                                 </div>
 
                                                 {/* Action Buttons */}
-                                                <div className="grid grid-cols-2 gap-3 mt-3">
+                                                <div className="grid grid-cols-2 gap-2 md:gap-3 mt-3">
                                                     <motion.button
                                                         whileHover={{ scale: 1.02 }}
                                                         whileTap={{ scale: 0.98 }}
@@ -1041,11 +1041,11 @@ export default function CyberLanding() {
                                             </div>
 
                                             {/* Right Side: Logo */}
-                                            <div className="w-64 h-64 flex items-start justify-center flex-shrink-0">
+                                            <div className="w-full lg:w-48 xl:w-64 h-48 lg:h-64 flex items-center lg:items-start justify-center flex-shrink-0">
                                                 <img
                                                     src={memeCoinLogo}
                                                     alt="Meme Coin"
-                                                    className="w-full h-full object-contain object-top"
+                                                    className="w-full h-full object-contain lg:object-top"
                                                 />
                                             </div>
                                         </div>
