@@ -9,6 +9,7 @@ import RetroLanding from "@/pages/retro-landing";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import EntranceLoader from "@/components/EntranceLoader";
+import MusicButton from "@/components/MusicButton";
 
 function Router() {
   return (
@@ -61,6 +62,9 @@ function App() {
               <Router />
             </motion.div>
           )}
+
+          {/* Music Button - Always visible */}
+          {entranceComplete && <MusicButton />}
         </TooltipProvider>
       </ThemeProviderWrapper>
     </QueryClientProvider>
