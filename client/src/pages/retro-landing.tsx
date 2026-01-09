@@ -1356,8 +1356,8 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                             <div>
                                 <h4 className="font-bold mb-6 text-white">Legal</h4>
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
-                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors">Terms of Service</a></li>
-                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors">Privacy Policy</a></li>
+                                    <li><a href="/terms-and-conditions" className="hover:text-cyber-primary transition-colors">Terms of Service</a></li>
+                                    <li><a href="/privacy-policy" className="hover:text-cyber-primary transition-colors">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>

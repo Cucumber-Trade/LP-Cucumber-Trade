@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProviderWrapper } from "@/components/theme-provider";
 import NotFound from "@/pages/not-found";
 import RetroLanding from "@/pages/retro-landing";
+import PrivacyPolicy from "@/pages/privacy-policy";
+import TermsAndConditions from "@/pages/terms-and-conditions";
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import EntranceLoader from "@/components/EntranceLoader";
@@ -17,6 +19,12 @@ function Router({ isPlaying, toggleMusic }) {
     <Switch>
       <Route path="/">
         <RetroLanding isPlaying={isPlaying} toggleMusic={toggleMusic} />
+      </Route>
+      <Route path="/privacy-policy">
+        <PrivacyPolicy />
+      </Route>
+      <Route path="/terms-and-conditions">
+        <TermsAndConditions />
       </Route>
       <Route component={NotFound} />
     </Switch>
