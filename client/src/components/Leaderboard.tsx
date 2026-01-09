@@ -80,7 +80,7 @@ export default function Leaderboard() {
                 </div>
 
                 <div className="flex gap-2">
-                    <button className="px-6 py-3 bg-cyber-dim/10 hover:bg-cyber-dim/20 border border-cyber-dim/20 rounded-xl transition-colors text-sm font-bold flex items-center gap-2">
+                    <button className="px-6 py-3 bg-cyber-dim/10 hover:bg-cyber-dim/20 border border-cyber-dim/20 rounded-xl transition-colors text-sm font-bold flex items-center gap-2 cursor-not-allowed" title="Coming Soon">
                     Explore the Leaderboard <ArrowUpRight size={16} />
                     </button>
                 </div>
@@ -270,7 +270,7 @@ export default function Leaderboard() {
                     </table>
                 </div>
                 <div className="p-4 text-center border-t border-cyber-dim/10 bg-cyber-dim/5">
-                    <button className="text-sm text-cyber-primary hover:text-white transition-colors font-bold">
+                    <button className="text-sm text-cyber-primary hover:text-white transition-colors font-bold cursor-not-allowed" title="Coming Soon">
                         Load More Agents
                     </button>
                 </div>

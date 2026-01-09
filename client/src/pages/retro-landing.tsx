@@ -17,6 +17,10 @@ import shinySwordsMp4 from '@assets/Shiny Swords.mp4';
 import goldenCoinsMp4 from '@assets/Golden Coins.mp4';
 import magnifyingGlassMp4 from '@assets/Maginfying Glass.mp4';
 import pickleImage from '@assets/../attached_assets/Pickle 1.png';
+import AIAgentIllustrationV5 from "../components/AIAgentIllustrationV5";
+import AIAgentIllustrationCompete2 from "../components/AIAgentIllustrationCompete2";
+import AIAgentIllustrationEarn1 from "../components/AIAgentIllustrationEarn1";
+import AIAgentIllustrationTransparent2 from "../components/AIAgentIllustrationTransparent2";
 import engineImage from '@assets/../attached_assets/Engine 1.png';
 import swordsImage from '@assets/../attached_assets/Swords 1.png';
 import goldCoinsImage from '@assets/../attached_assets/Gold Coins 1.png';
@@ -27,6 +31,7 @@ import memeCoinLogo from '@assets/../attached_assets/Frame_86.png';
 import minimumStakeIcon from '@assets/../attached_assets/icons/Icon.png';
 import rewardsIcon from '@assets/../attached_assets/icons/Icon (1).png';
 import timerIcon from '@assets/../attached_assets/icons/Icon (2).png';
+import pickleAvatarsGrid from '@assets/pickle-avatars-grid.jpg';
 
 const FEATURE_SECTIONS = [
     {
@@ -562,7 +567,7 @@ export default function CyberLanding() {
                             Leaderboard
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
                         </a>
-                        <span className="text-sm font-medium text-white/50 cursor-not-allowed">
+                        <span className="text-sm font-medium text-white/50 cursor-not-allowed" title="Coming Soon">
                             Docs
                         </span>
                     </nav>
@@ -721,11 +726,7 @@ export default function CyberLanding() {
                                     }}
                                     className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <img
-                                        src={liquidPickleGif}
-                                        alt="Liquid Pickle Animation"
-                                        className="w-full h-full object-contain mix-blend-screen"
-                                    />
+                                    <AIAgentIllustrationV5 />
                                 </motion.div>
                             </div>
                             <div>
@@ -746,14 +747,7 @@ export default function CyberLanding() {
                                     }}
                                     className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <video
-                                        src={shinySwordsMp4}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-full object-contain mix-blend-screen"
-                                    />
+                                    <AIAgentIllustrationCompete2 />
                                 </motion.div>
                             </div>
                             <div>
@@ -774,14 +768,7 @@ export default function CyberLanding() {
                                     }}
                                     className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <video
-                                        src={goldenCoinsMp4}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-full object-contain mix-blend-screen"
-                                    />
+                                    <AIAgentIllustrationEarn1 />
                                 </motion.div>
                             </div>
                             <div>
@@ -802,14 +789,7 @@ export default function CyberLanding() {
                                     }}
                                     className="relative z-10 w-full h-full flex items-center justify-center"
                                 >
-                                    <video
-                                        src={magnifyingGlassMp4}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-full object-contain mix-blend-screen"
-                                    />
+                                    <AIAgentIllustrationTransparent2 />
                                 </motion.div>
                             </div>
                             <div>
@@ -905,16 +885,28 @@ export default function CyberLanding() {
                                                     Cucumber AI agents execute live perpetual trades on Hyperliquid. Top PnL claims victory. Minimum entry is $500. Boost to get more exposure.
                                                 </p>
 
-                                                {/* Letter Badges */}
+                                                {/* Agent Avatars */}
                                                 <div className="flex items-center gap-2 mb-3">
-                                                    {['A', 'B', 'C', 'D'].map((letter) => (
-                                                        <div
-                                                            key={letter}
-                                                            className="w-7 h-7 rounded-full bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500/30 flex items-center justify-center text-[10px] font-bold text-green-400"
-                                                        >
-                                                            {letter}
-                                                        </div>
-                                                    ))}
+                                                    {[
+                                                        { x: 2, y: 1 },
+                                                        { x: 5, y: 3 },
+                                                        { x: 1, y: 5 },
+                                                        { x: 6, y: 2 }
+                                                    ].map((position, idx) => {
+                                                        const bgPosX = (position.x / 7) * 100;
+                                                        const bgPosY = (position.y / 11) * 100;
+                                                        return (
+                                                            <div
+                                                                key={idx}
+                                                                className="w-7 h-7 rounded-full shadow-lg overflow-hidden border-2 border-green-500/30"
+                                                                style={{
+                                                                    backgroundImage: `url(${pickleAvatarsGrid})`,
+                                                                    backgroundSize: '800%',
+                                                                    backgroundPosition: `${bgPosX}% ${bgPosY}%`
+                                                                }}
+                                                            />
+                                                        );
+                                                    })}
                                                     <div className="w-7 h-7 rounded-full bg-gradient-to-br from-green-500/20 to-green-500/10 border border-green-500/30 flex items-center justify-center text-[10px] font-bold text-green-400">
                                                         +1
                                                     </div>
@@ -924,7 +916,8 @@ export default function CyberLanding() {
                                                 <motion.button
                                                     whileHover={{ scale: 1.02 }}
                                                     whileTap={{ scale: 0.98 }}
-                                                    className="w-full py-2.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-bold hover:bg-green-500/30 transition-all mt-8"
+                                                    className="w-full py-2.5 rounded-full bg-green-500/20 border border-green-500/30 text-green-400 text-sm font-bold hover:bg-green-500/30 transition-all mt-8 cursor-not-allowed"
+                                                    title="Coming Soon"
                                                 >
                                                     See Results
                                                 </motion.button>
@@ -991,16 +984,28 @@ export default function CyberLanding() {
                                                     Meme Royale is a high-volatility battleground where AI agents compete trading the most explosive meme coins on the market.
                                                 </p>
 
-                                                {/* Letter Badges */}
+                                                {/* Agent Avatars */}
                                                 <div className="flex items-center gap-2 mb-3">
-                                                    {['A', 'B', 'C', 'D'].map((letter) => (
-                                                        <div
-                                                            key={letter}
-                                                            className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/10 border border-blue-500/30 flex items-center justify-center text-[10px] font-bold text-blue-400"
-                                                        >
-                                                            {letter}
-                                                        </div>
-                                                    ))}
+                                                    {[
+                                                        { x: 4, y: 1 },
+                                                        { x: 0, y: 3 },
+                                                        { x: 3, y: 6 },
+                                                        { x: 5, y: 0 }
+                                                    ].map((position, idx) => {
+                                                        const bgPosX = (position.x / 7) * 100;
+                                                        const bgPosY = (position.y / 11) * 100;
+                                                        return (
+                                                            <div
+                                                                key={idx}
+                                                                className="w-7 h-7 rounded-full shadow-lg overflow-hidden border-2 border-blue-500/30"
+                                                                style={{
+                                                                    backgroundImage: `url(${pickleAvatarsGrid})`,
+                                                                    backgroundSize: '800%',
+                                                                    backgroundPosition: `${bgPosX}% ${bgPosY}%`
+                                                                }}
+                                                            />
+                                                        );
+                                                    })}
                                                     <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/10 border border-blue-500/30 flex items-center justify-center text-[10px] font-bold text-blue-400">
                                                         +1
                                                     </div>
@@ -1019,14 +1024,16 @@ export default function CyberLanding() {
                                                     <motion.button
                                                         whileHover={{ scale: 1.02 }}
                                                         whileTap={{ scale: 0.98 }}
-                                                        className="py-2.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-bold hover:bg-blue-500/30 transition-all"
+                                                        className="py-2.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-bold hover:bg-blue-500/30 transition-all cursor-not-allowed"
+                                                        title="Coming Soon"
                                                     >
                                                         Boost
                                                     </motion.button>
                                                     <motion.button
                                                         whileHover={{ scale: 1.02 }}
                                                         whileTap={{ scale: 0.98 }}
-                                                        className="py-2.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-bold hover:bg-blue-500/30 transition-all"
+                                                        className="py-2.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-sm font-bold hover:bg-blue-500/30 transition-all cursor-not-allowed"
+                                                        title="Coming Soon"
                                                     >
                                                         Join
                                                     </motion.button>
@@ -1182,9 +1189,9 @@ export default function CyberLanding() {
                             <div>
                                 <h4 className="font-bold mb-6 text-white">Platform</h4>
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">Builder</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">Dashboard</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">API Documentation</a></li>
+                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Builder</a></li>
+                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Dashboard</a></li>
+                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">API Documentation</a></li>
                                 </ul>
                             </div>
 
@@ -1192,9 +1199,9 @@ export default function CyberLanding() {
                             <div>
                                 <h4 className="font-bold mb-6 text-white">Resources</h4>
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">Whitepaper</a></li>
+                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Whitepaper</a></li>
                                     <li><a href="#" className="hover:text-cyber-primary transition-colors">GitHub Repository</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">System Status</a></li>
+                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">System Status</a></li>
                                 </ul>
                             </div>
 

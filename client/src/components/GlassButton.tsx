@@ -51,8 +51,10 @@ export default function GlassButton({
 
   const config = styles[variant];
 
+  const isInactive = !href && !onClick;
+
   const commonProps = {
-    className: `relative inline-block ${sizes[size]} rounded-full overflow-hidden ${className} transition-transform duration-300 ease-out`,
+    className: `relative inline-block ${sizes[size]} rounded-full overflow-hidden ${className} transition-transform duration-300 ease-out ${isInactive ? 'cursor-not-allowed' : ''}`,
     style: {
       background: config.background,
       color: config.color,
@@ -68,6 +70,7 @@ export default function GlassButton({
       boxShadow: `inset 0 1px 2px rgba(255,255,255,0.4), 0 0 20px ${config.glow}30, 0 10px 25px rgba(0,0,0,0.4)`,
     },
     whileTap: { scale: 0.98 },
+    title: isInactive ? 'Coming Soon' : undefined,
   };
 
   const content = (
