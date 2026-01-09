@@ -559,12 +559,33 @@ export default function CyberLanding() {
                     </a>
 
                     {/* Center: Navigation Links */}
-                    <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-8">
+                    <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-6 lg:gap-8">
+                        <a
+                            href="#section-hero"
+                            className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
+                        >
+                            Home
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
+                        </a>
+                        <a
+                            href="#section-intelligence"
+                            className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
+                        >
+                            AI Agents
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
+                        </a>
                         <a
                             href="#section-leaderboard"
                             className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
                         >
                             Leaderboard
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
+                        </a>
+                        <a
+                            href="#section-faq"
+                            className="text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
+                        >
+                            F.A.Q
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
                         </a>
                         <span className="text-sm font-medium text-white/50 cursor-not-allowed" title="Coming Soon">
@@ -801,7 +822,7 @@ export default function CyberLanding() {
 
                     {/* CONTINUOUS SCROLL CONTENT */}
                     {/* FEATURE SHOWCASE - Consolidating sections 1-6 into a single efficient container */}
-                    <div className="mt-40 mb-32">
+                    <div id="section-intelligence" className="mt-40 mb-32">
                         <FeatureShowcase />
                     </div>
                 </div>
@@ -1059,7 +1080,7 @@ export default function CyberLanding() {
                     <Roadmap />
 
                     {/* FAQ Section */}
-                    <div className="mt-40 mb-32 relative">
+                    <div id="section-faq" className="mt-40 mb-32 relative">
                         {/* Background glow effects */}
                         <div className="absolute inset-0 pointer-events-none">
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyber-primary/10 rounded-full blur-[120px]"></div>
