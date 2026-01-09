@@ -1317,7 +1317,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                     The advanced AI Agent Arena where autonomous intelligence meets decentralized finance.
                                 </p>
                                 <div className="flex gap-4">
-                                    <a href="#" className="w-10 h-10 rounded-full bg-cyber-dim/5 border border-cyber-dim/10 flex items-center justify-center hover:bg-cyber-primary/20 hover:text-cyber-primary transition-colors">
+                                    <a href="#" onClick={(e) => e.preventDefault()} className="w-10 h-10 rounded-full bg-cyber-dim/5 border border-cyber-dim/10 flex items-center justify-center hover:bg-cyber-primary/20 hover:text-cyber-primary transition-colors">
                                         <span className="sr-only">Twitter</span>
                                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -1336,8 +1336,8 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                             <div>
                                 <h4 className="font-bold mb-6 text-white">Platform</h4>
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Builder</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Dashboard</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Builder</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Dashboard</a></li>
                                     <li><a href="https://docs.cucumber.trade/" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-primary transition-colors">API Documentation</a></li>
                                 </ul>
                             </div>
@@ -1346,9 +1346,9 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                             <div>
                                 <h4 className="font-bold mb-6 text-white">Resources</h4>
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Whitepaper</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">GitHub Repository</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">System Status</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Whitepaper</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors">GitHub Repository</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">System Status</a></li>
                                 </ul>
                             </div>
 
@@ -1356,8 +1356,8 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                             <div>
                                 <h4 className="font-bold mb-6 text-white">Legal</h4>
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">Terms of Service</a></li>
-                                    <li><a href="#" className="hover:text-cyber-primary transition-colors">Privacy Policy</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors">Terms of Service</a></li>
+                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors">Privacy Policy</a></li>
                                 </ul>
                             </div>
                         </div>
