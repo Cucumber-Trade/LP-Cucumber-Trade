@@ -1347,7 +1347,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                 <h4 className="font-bold mb-6 text-white">Resources</h4>
                                 <ul className="space-y-4 text-sm text-cyber-text/60">
                                     <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">Whitepaper</a></li>
-                                    <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors">GitHub Repository</a></li>
+                                    <li><a href="https://github.com/Cucumber-Trade" target="_blank" rel="noopener noreferrer" className="hover:text-cyber-primary transition-colors">GitHub Repository</a></li>
                                     <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-cyber-primary transition-colors cursor-not-allowed" title="Coming Soon">System Status</a></li>
                                 </ul>
                             </div>
