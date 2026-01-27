@@ -3,7 +3,7 @@ import Leaderboard from "../components/Leaderboard";
 import ProtocolMarquee from "../components/ProtocolMarquee";
 import ExchangeMarquee from "../components/ExchangeMarquee";
 import { ChevronDown, Terminal, Wallet, Bot, Cpu, Zap, Search, ShieldCheck, Database, Layers, Coins, FlaskConical, Network, ArrowRight, Activity, Box, Code, Trophy, Swords, Menu, X } from "lucide-react";
-import { useState,useRef, useEffect, useMemo } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import RotatingText from "../components/RotatingText";
 import GradualBlur from "../components/GradualBlur";
 import { AnimatedThemeToggler } from "../components/ui/animated-theme-toggler";
@@ -542,9 +542,8 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
             </div>
 
             {/* HEADER - Refactored for aegis.im style */}
-            <header className={`fixed top-0 left-0 w-full z-50 px-6 py-8 transition-opacity duration-1000 ${
-                pageReady ? 'opacity-100' : 'opacity-0'
-            }`}>
+            <header className={`fixed top-0 left-0 w-full z-50 px-6 py-8 transition-opacity duration-1000 ${pageReady ? 'opacity-100' : 'opacity-0'
+                }`}>
                 <div
                     className="max-w-6xl mx-auto flex justify-between items-center bg-white/[0.03] backdrop-blur-[40px] backdrop-saturate-150 rounded-2xl px-6 py-3 shadow-2xl border border-white/5 relative"
                     style={{
@@ -563,10 +562,10 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                     {/* Center: Navigation Links */}
                     <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex items-center gap-6 lg:gap-8">
                         <button
-                                onClick={toggleMusic}
-                                className="cursor-pointer text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
-                            >
-                                Radio
+                            onClick={toggleMusic}
+                            className="cursor-pointer text-sm font-medium text-white/50 hover:text-white transition-all duration-300 relative group"
+                        >
+                            Radio
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full" />
                         </button>
                         <a
@@ -726,9 +725,8 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
             </AnimatePresence>
 
             {/* MAIN SCROLLABLE CONTAINER */}
-            <main className={`relative z-10 w-full overflow-hidden transition-opacity duration-1000 ${
-                pageReady ? 'opacity-100' : 'opacity-0'
-            }`}>
+            <main className={`relative z-10 w-full overflow-hidden transition-opacity duration-1000 ${pageReady ? 'opacity-100' : 'opacity-0'
+                }`}>
 
                 {/* HERO SECTION - Immersive Cinematic Experience */}
                 <section id="section-hero" className="relative min-h-[90vh] flex items-center justify-center pt-48 pb-20">
@@ -745,6 +743,8 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                             onLoad={() => setSplineLoaded(true)}
                         />
                     </div>
+
+                    <div className="absolute bottom-0 left-0 w-full h-12 bg-black z-[5]"></div>
 
                     {/* Gradient transition overlay at bottom of hero */}
                     <div className="absolute bottom-0 left-0 right-0 h-96 pointer-events-none z-10"
@@ -1272,14 +1272,14 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                             <span className="text-cyber-primary/80 font-mono text-sm tracking-[0.4em] mb-4 block uppercase font-bold">09 // READY TO START?</span>
                             <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">Join the AI Agent<br />  Revolution</h2>
                             <p className="text-xl text-white/50 mb-10 leading-relaxed max-w-lg">
-                            Create. Build. Compete, and monetize your first AI Agent within seconds.
+                                Create. Build. Compete, and monetize your first AI Agent within seconds.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <GlassButton variant="primary" size="lg" className="px-10">
                                     Launch Arena
                                 </GlassButton>
                                 <GlassButton href="https://x.com/tradeoncucumber" target="_blank" variant="outline" size="lg" className="px-10">
-                                Follow us on X
+                                    Follow us on X
                                 </GlassButton>
                             </div>
                         </div>
@@ -1326,7 +1326,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                     <a href="https://www.youtube.com/@CucumberTrade" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-cyber-dim/5 border border-cyber-dim/10 flex items-center justify-center hover:bg-cyber-primary/20 hover:text-cyber-primary transition-colors">
                                         <span className="sr-only">YouTube</span>
                                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                                         </svg>
                                     </a>
                                 </div>
