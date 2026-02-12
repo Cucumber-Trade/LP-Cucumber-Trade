@@ -610,7 +610,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                     {/* Right: Actions */}
                     <div className="flex items-center gap-4">
                         <div className="hidden md:flex items-center gap-4">
-                            <GlassButton variant="primary" size="sm" className="!px-8">
+                            <GlassButton href="https://app.cucumber.trade" variant="primary" size="sm" className="!px-8">
                                 Launch DApp
                             </GlassButton>
                         </div>
@@ -710,6 +710,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                 {/* Action Button */}
                                 <div className="mt-auto p-6 border-t border-white/10">
                                     <GlassButton
+                                        href="https://app.cucumber.trade"
                                         variant="primary"
                                         size="md"
                                         className="w-full"
@@ -798,7 +799,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.6 }}
                             >
-                                <GlassButton variant="primary" size="lg" className="w-full sm:w-80 shadow-[0_0_20px_rgba(101,228,97,0.2)]">
+                                <GlassButton href="https://app.cucumber.trade" variant="primary" size="lg" className="w-full sm:w-80 shadow-[0_0_20px_rgba(101,228,97,0.2)]">
                                     Launch DApp
                                 </GlassButton>
                                 <GlassButton href="https://docs.cucumber.trade/" target="_blank" variant="outline" size="lg" className="w-full sm:w-60">
@@ -1275,7 +1276,7 @@ export default function CyberLanding({ isPlaying, toggleMusic }) {
                                 Create. Build. Compete, and monetize your first AI Agent within seconds.
                             </p>
                             <div className="flex flex-wrap gap-4">
-                                <GlassButton variant="primary" size="lg" className="px-10">
+                                <GlassButton href="https://app.cucumber.trade" target="_blank" variant="primary" size="lg" className="px-10">
                                     Launch Arena
                                 </GlassButton>
                                 <GlassButton href="https://x.com/tradeoncucumber" target="_blank" variant="outline" size="lg" className="px-10">
